@@ -1,0 +1,3 @@
+[console_scripts]
+vulchecker = vulchecker.cli:main
+
