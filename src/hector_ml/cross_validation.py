@@ -11,11 +11,11 @@ from matplotlib import pyplot as plt
 from sklearn import metrics
 from structure2vec.graph_collate import REDUCTIONS
 
-from vulchecker.click_helpers import smart_open
-from vulchecker.features import EDGE_FEATURES, feature_set, node_features
-from vulchecker.graphs import GraphDataset, JSONGraphs
-from vulchecker.model import Predictor
-from vulchecker.train import TrainingData, training_loop
+from hector_ml.click_helpers import smart_open
+from hector_ml.features import EDGE_FEATURES, feature_set, node_features
+from hector_ml.graphs import GraphDataset, JSONGraphs
+from hector_ml.model import Predictor
+from hector_ml.train import TrainingData, training_loop
 
 
 @click.group()
@@ -282,7 +282,7 @@ def stats(roc_file: str | None, output: str | None, results: tuple[str, ...]):
         plt.ylim([0.0, 1.05])
         plt.xlabel("False positive rate")
         plt.ylabel("True positive rate")
-        plt.title(f"vulchecker - CWE{cwe} (AUC = {auc:.3})")
+        plt.title(f"HECTOR - CWE{cwe} (AUC = {auc:.3})")
         plt.savefig(roc_file)
 
     cm = metrics.confusion_matrix(labels, predictions)

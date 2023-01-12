@@ -5,8 +5,8 @@ from unittest import mock
 import networkx as nx
 import pytest
 
-from vulchecker.configure import ninja
-from vulchecker.configure.base import SourceFile
+from hector_ml.configure import ninja
+from hector_ml.configure.base import SourceFile
 from tests.test_graphs import assert_same_graph
 
 SIMPLE_DOT = """digraph ninja {
@@ -59,7 +59,7 @@ SIMPLE_DEP_GRAPH.add_edge("main.c", "build-3")
 
 def test_load_dependency_graph():
     with mock.patch(
-        "vulchecker.configure.ninja.ninja", autospec=True, return_value=SIMPLE_DOT
+        "hector_ml.configure.ninja.ninja", autospec=True, return_value=SIMPLE_DOT
     ):
         result = ninja.load_dependency_graph(None)
 
@@ -89,7 +89,7 @@ def test_parse_compile_command():
 
 def test_get_extra_flags():
     with mock.patch(
-        "vulchecker.configure.ninja.ninja",
+        "hector_ml.configure.ninja.ninja",
         side_effect=[
             "foo\n",
             json.dumps(
@@ -107,14 +107,14 @@ def test_get_extra_flags():
 
 def test_get_sources_no_build_ninja(tmp_path):
     with pytest.raises(FileNotFoundError):
-        list(ninja.get_sources(tmp_path / "build", tmp_path / "vulchecker", "foo"))
+        list(ninja.get_sources(tmp_path / "build", tmp_path / "hector", "foo"))
 
 
 def test_get_sources(tmp_path):
     (tmp_path / "build").mkdir()
     (tmp_path / "build/build.ninja").touch()
     with mock.patch(
-        "vulchecker.configure.ninja.get_extra_flags",
+        "hector_ml.configure.ninja.get_extra_flags",
         autospec=True,
         return_value={
             tmp_path / "build/foo.c": ("-I/build",),
@@ -122,12 +122,12 @@ def test_get_sources(tmp_path):
             tmp_path / "build/main.c": ("-I/build",),
         },
     ), mock.patch(
-        "vulchecker.configure.ninja.load_dependency_graph",
+        "hector_ml.configure.ninja.load_dependency_graph",
         autospec=True,
         return_value=SIMPLE_DEP_GRAPH,
     ):
         sources = list(
-            ninja.get_sources(tmp_path / "build", tmp_path / "vulchecker", "foo.o")
+            ninja.get_sources(tmp_path / "build", tmp_path / "hector", "foo.o")
         )
     assert sources == [SourceFile(tmp_path / "build/foo.c", ("-I/build",))]
 
@@ -136,9 +136,9 @@ def test_get_targets(tmp_path):
     (tmp_path / "build").mkdir()
     (tmp_path / "build/build.ninja").touch()
     with mock.patch(
-        "vulchecker.configure.ninja.load_dependency_graph",
+        "hector_ml.configure.ninja.load_dependency_graph",
         autospec=True,
         return_value=SIMPLE_DEP_GRAPH,
     ):
-        targets = set(ninja.get_targets(tmp_path / "build", tmp_path / "vulchecker"))
+        targets = set(ninja.get_targets(tmp_path / "build", tmp_path / "hector"))
     assert targets == {"foo.o", "bar.o", "main.o", "main"}

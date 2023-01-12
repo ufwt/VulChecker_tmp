@@ -3,12 +3,12 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {
-        "name": "vulchecker._features",
+        "name": "hector_ml._features",
         "sources": [
-            "src/vulchecker/_features.pyx"
+            "src/hector_ml/_features.pyx"
         ]
     },
-    "module_name": "vulchecker._features"
+    "module_name": "hector_ml._features"
 }
 END: Cython Metadata */
 
@@ -616,8 +616,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__vulchecker___features
-#define __PYX_HAVE_API__vulchecker___features
+#define __PYX_HAVE__hector_ml___features
+#define __PYX_HAVE_API__hector_ml___features
 /* Early includes */
 #include "pythread.h"
 #include <string.h>
@@ -832,9 +832,9 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "src/vulchecker/_features.pyx",
+  "src/hector_ml/_features.pyx",
   "stringsource",
-  "src/vulchecker/_features.pxd",
+  "src/hector_ml/_features.pxd",
 };
 /* MemviewSliceStruct.proto */
 struct __pyx_memoryview_obj;
@@ -946,107 +946,107 @@ typedef struct {
 
 
 /*--- Type declarations ---*/
-struct __pyx_obj_9vulchecker_9_features_FeatureSet;
-struct __pyx_obj_9vulchecker_9_features_Feature;
-struct __pyx_obj_9vulchecker_9_features_NumericFeature;
-struct __pyx_obj_9vulchecker_9_features_OptionalNumericFeature;
-struct __pyx_obj_9vulchecker_9_features_CategoricalFeature;
-struct __pyx_obj_9vulchecker_9_features_CategoricalSetFeature;
+struct __pyx_obj_9hector_ml_9_features_FeatureSet;
+struct __pyx_obj_9hector_ml_9_features_Feature;
+struct __pyx_obj_9hector_ml_9_features_NumericFeature;
+struct __pyx_obj_9hector_ml_9_features_OptionalNumericFeature;
+struct __pyx_obj_9hector_ml_9_features_CategoricalFeature;
+struct __pyx_obj_9hector_ml_9_features_CategoricalSetFeature;
 struct __pyx_obj___Pyx_EnumMeta;
 struct __pyx_array_obj;
 struct __pyx_MemviewEnum_obj;
 struct __pyx_memoryview_obj;
 struct __pyx_memoryviewslice_obj;
 
-/* "vulchecker/_features.pyx":4
+/* "hector_ml/_features.pyx":4
  * 
  * 
  * cpdef enum FeatureKind:             # <<<<<<<<<<<<<<
  *     numeric = 1
  *     optional_numeric = 2
  */
-enum __pyx_t_9vulchecker_9_features_FeatureKind {
-  __pyx_e_9vulchecker_9_features_numeric = 1,
-  __pyx_e_9vulchecker_9_features_optional_numeric = 2,
-  __pyx_e_9vulchecker_9_features_categorical = 3,
-  __pyx_e_9vulchecker_9_features_categorical_set = 4
+enum __pyx_t_9hector_ml_9_features_FeatureKind {
+  __pyx_e_9hector_ml_9_features_numeric = 1,
+  __pyx_e_9hector_ml_9_features_optional_numeric = 2,
+  __pyx_e_9hector_ml_9_features_categorical = 3,
+  __pyx_e_9hector_ml_9_features_categorical_set = 4
 };
 
-/* "vulchecker/_features.pxd":4
+/* "hector_ml/_features.pxd":4
  * 
  * 
  * cdef class FeatureSet:             # <<<<<<<<<<<<<<
  *     cdef readonly tuple features
  *     cdef readonly Py_ssize_t total_width
  */
-struct __pyx_obj_9vulchecker_9_features_FeatureSet {
+struct __pyx_obj_9hector_ml_9_features_FeatureSet {
   PyObject_HEAD
-  struct __pyx_vtabstruct_9vulchecker_9_features_FeatureSet *__pyx_vtab;
+  struct __pyx_vtabstruct_9hector_ml_9_features_FeatureSet *__pyx_vtab;
   PyObject *features;
   Py_ssize_t total_width;
 };
 
 
-/* "vulchecker/_features.pyx":11
+/* "hector_ml/_features.pyx":11
  * 
  * 
  * cdef class Feature:             # <<<<<<<<<<<<<<
  *     cdef readonly object name
  *     cdef readonly Py_ssize_t width
  */
-struct __pyx_obj_9vulchecker_9_features_Feature {
+struct __pyx_obj_9hector_ml_9_features_Feature {
   PyObject_HEAD
-  struct __pyx_vtabstruct_9vulchecker_9_features_Feature *__pyx_vtab;
+  struct __pyx_vtabstruct_9hector_ml_9_features_Feature *__pyx_vtab;
   PyObject *name;
   Py_ssize_t width;
 };
 
 
-/* "vulchecker/_features.pyx":29
+/* "hector_ml/_features.pyx":29
  * 
  * 
  * cdef class NumericFeature(Feature):             # <<<<<<<<<<<<<<
  *     feature_kind = FeatureKind.numeric
  * 
  */
-struct __pyx_obj_9vulchecker_9_features_NumericFeature {
-  struct __pyx_obj_9vulchecker_9_features_Feature __pyx_base;
+struct __pyx_obj_9hector_ml_9_features_NumericFeature {
+  struct __pyx_obj_9hector_ml_9_features_Feature __pyx_base;
 };
 
 
-/* "vulchecker/_features.pyx":42
+/* "hector_ml/_features.pyx":42
  * 
  * 
  * cdef class OptionalNumericFeature(Feature):             # <<<<<<<<<<<<<<
  *     feature_kind = FeatureKind.optional_numeric
  * 
  */
-struct __pyx_obj_9vulchecker_9_features_OptionalNumericFeature {
-  struct __pyx_obj_9vulchecker_9_features_Feature __pyx_base;
+struct __pyx_obj_9hector_ml_9_features_OptionalNumericFeature {
+  struct __pyx_obj_9hector_ml_9_features_Feature __pyx_base;
 };
 
 
-/* "vulchecker/_features.pyx":58
+/* "hector_ml/_features.pyx":58
  * 
  * 
  * cdef class CategoricalFeature(Feature):             # <<<<<<<<<<<<<<
  *     feature_kind = FeatureKind.categorical
  * 
  */
-struct __pyx_obj_9vulchecker_9_features_CategoricalFeature {
-  struct __pyx_obj_9vulchecker_9_features_Feature __pyx_base;
+struct __pyx_obj_9hector_ml_9_features_CategoricalFeature {
+  struct __pyx_obj_9hector_ml_9_features_Feature __pyx_base;
 };
 
 
-/* "vulchecker/_features.pyx":78
+/* "hector_ml/_features.pyx":78
  * 
  * 
  * cdef class CategoricalSetFeature(Feature):             # <<<<<<<<<<<<<<
  *     feature_kind = FeatureKind.categorical_set
  * 
  */
-struct __pyx_obj_9vulchecker_9_features_CategoricalSetFeature {
-  struct __pyx_obj_9vulchecker_9_features_Feature __pyx_base;
+struct __pyx_obj_9hector_ml_9_features_CategoricalSetFeature {
+  struct __pyx_obj_9hector_ml_9_features_Feature __pyx_base;
 };
 
 
@@ -1140,7 +1140,7 @@ struct __pyx_memoryviewslice_obj {
 
 
 
-/* "vulchecker/_features.pyx":99
+/* "hector_ml/_features.pyx":99
  * 
  * 
  * cdef class FeatureSet:             # <<<<<<<<<<<<<<
@@ -1148,13 +1148,13 @@ struct __pyx_memoryviewslice_obj {
  *     #
  */
 
-struct __pyx_vtabstruct_9vulchecker_9_features_FeatureSet {
-  int (*feature_row)(struct __pyx_obj_9vulchecker_9_features_FeatureSet *, __Pyx_memviewslice, PyObject *, Py_ssize_t, int __pyx_skip_dispatch);
+struct __pyx_vtabstruct_9hector_ml_9_features_FeatureSet {
+  int (*feature_row)(struct __pyx_obj_9hector_ml_9_features_FeatureSet *, __Pyx_memviewslice, PyObject *, Py_ssize_t, int __pyx_skip_dispatch);
 };
-static struct __pyx_vtabstruct_9vulchecker_9_features_FeatureSet *__pyx_vtabptr_9vulchecker_9_features_FeatureSet;
+static struct __pyx_vtabstruct_9hector_ml_9_features_FeatureSet *__pyx_vtabptr_9hector_ml_9_features_FeatureSet;
 
 
-/* "vulchecker/_features.pyx":11
+/* "hector_ml/_features.pyx":11
  * 
  * 
  * cdef class Feature:             # <<<<<<<<<<<<<<
@@ -1162,13 +1162,13 @@ static struct __pyx_vtabstruct_9vulchecker_9_features_FeatureSet *__pyx_vtabptr_
  *     cdef readonly Py_ssize_t width
  */
 
-struct __pyx_vtabstruct_9vulchecker_9_features_Feature {
-  int (*feature_row)(struct __pyx_obj_9vulchecker_9_features_Feature *, __Pyx_memviewslice, PyObject *, Py_ssize_t, Py_ssize_t);
+struct __pyx_vtabstruct_9hector_ml_9_features_Feature {
+  int (*feature_row)(struct __pyx_obj_9hector_ml_9_features_Feature *, __Pyx_memviewslice, PyObject *, Py_ssize_t, Py_ssize_t);
 };
-static struct __pyx_vtabstruct_9vulchecker_9_features_Feature *__pyx_vtabptr_9vulchecker_9_features_Feature;
+static struct __pyx_vtabstruct_9hector_ml_9_features_Feature *__pyx_vtabptr_9hector_ml_9_features_Feature;
 
 
-/* "vulchecker/_features.pyx":29
+/* "hector_ml/_features.pyx":29
  * 
  * 
  * cdef class NumericFeature(Feature):             # <<<<<<<<<<<<<<
@@ -1176,13 +1176,13 @@ static struct __pyx_vtabstruct_9vulchecker_9_features_Feature *__pyx_vtabptr_9vu
  * 
  */
 
-struct __pyx_vtabstruct_9vulchecker_9_features_NumericFeature {
-  struct __pyx_vtabstruct_9vulchecker_9_features_Feature __pyx_base;
+struct __pyx_vtabstruct_9hector_ml_9_features_NumericFeature {
+  struct __pyx_vtabstruct_9hector_ml_9_features_Feature __pyx_base;
 };
-static struct __pyx_vtabstruct_9vulchecker_9_features_NumericFeature *__pyx_vtabptr_9vulchecker_9_features_NumericFeature;
+static struct __pyx_vtabstruct_9hector_ml_9_features_NumericFeature *__pyx_vtabptr_9hector_ml_9_features_NumericFeature;
 
 
-/* "vulchecker/_features.pyx":42
+/* "hector_ml/_features.pyx":42
  * 
  * 
  * cdef class OptionalNumericFeature(Feature):             # <<<<<<<<<<<<<<
@@ -1190,13 +1190,13 @@ static struct __pyx_vtabstruct_9vulchecker_9_features_NumericFeature *__pyx_vtab
  * 
  */
 
-struct __pyx_vtabstruct_9vulchecker_9_features_OptionalNumericFeature {
-  struct __pyx_vtabstruct_9vulchecker_9_features_Feature __pyx_base;
+struct __pyx_vtabstruct_9hector_ml_9_features_OptionalNumericFeature {
+  struct __pyx_vtabstruct_9hector_ml_9_features_Feature __pyx_base;
 };
-static struct __pyx_vtabstruct_9vulchecker_9_features_OptionalNumericFeature *__pyx_vtabptr_9vulchecker_9_features_OptionalNumericFeature;
+static struct __pyx_vtabstruct_9hector_ml_9_features_OptionalNumericFeature *__pyx_vtabptr_9hector_ml_9_features_OptionalNumericFeature;
 
 
-/* "vulchecker/_features.pyx":58
+/* "hector_ml/_features.pyx":58
  * 
  * 
  * cdef class CategoricalFeature(Feature):             # <<<<<<<<<<<<<<
@@ -1204,13 +1204,13 @@ static struct __pyx_vtabstruct_9vulchecker_9_features_OptionalNumericFeature *__
  * 
  */
 
-struct __pyx_vtabstruct_9vulchecker_9_features_CategoricalFeature {
-  struct __pyx_vtabstruct_9vulchecker_9_features_Feature __pyx_base;
+struct __pyx_vtabstruct_9hector_ml_9_features_CategoricalFeature {
+  struct __pyx_vtabstruct_9hector_ml_9_features_Feature __pyx_base;
 };
-static struct __pyx_vtabstruct_9vulchecker_9_features_CategoricalFeature *__pyx_vtabptr_9vulchecker_9_features_CategoricalFeature;
+static struct __pyx_vtabstruct_9hector_ml_9_features_CategoricalFeature *__pyx_vtabptr_9hector_ml_9_features_CategoricalFeature;
 
 
-/* "vulchecker/_features.pyx":78
+/* "hector_ml/_features.pyx":78
  * 
  * 
  * cdef class CategoricalSetFeature(Feature):             # <<<<<<<<<<<<<<
@@ -1218,10 +1218,10 @@ static struct __pyx_vtabstruct_9vulchecker_9_features_CategoricalFeature *__pyx_
  * 
  */
 
-struct __pyx_vtabstruct_9vulchecker_9_features_CategoricalSetFeature {
-  struct __pyx_vtabstruct_9vulchecker_9_features_Feature __pyx_base;
+struct __pyx_vtabstruct_9hector_ml_9_features_CategoricalSetFeature {
+  struct __pyx_vtabstruct_9hector_ml_9_features_Feature __pyx_base;
 };
-static struct __pyx_vtabstruct_9vulchecker_9_features_CategoricalSetFeature *__pyx_vtabptr_9vulchecker_9_features_CategoricalSetFeature;
+static struct __pyx_vtabstruct_9hector_ml_9_features_CategoricalSetFeature *__pyx_vtabptr_9hector_ml_9_features_CategoricalSetFeature;
 
 
 /* "View.MemoryView":105
@@ -1998,7 +1998,7 @@ __pyx_memoryview_copy_new_contig(const __Pyx_memviewslice *from_mvs,
                                  int dtype_is_object);
 
 /* CIntToPy.proto */
-static CYTHON_INLINE PyObject* __Pyx_PyInt_From_enum____pyx_t_9vulchecker_9_features_FeatureKind(enum __pyx_t_9vulchecker_9_features_FeatureKind value);
+static CYTHON_INLINE PyObject* __Pyx_PyInt_From_enum____pyx_t_9hector_ml_9_features_FeatureKind(enum __pyx_t_9hector_ml_9_features_FeatureKind value);
 
 /* CIntFromPy.proto */
 static CYTHON_INLINE int __Pyx_PyInt_As_int(PyObject *);
@@ -2021,12 +2021,12 @@ static int __Pyx_check_binary_version(void);
 /* InitStrings.proto */
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
-static int __pyx_f_9vulchecker_9_features_7Feature_feature_row(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_Feature *__pyx_v_self, CYTHON_UNUSED __Pyx_memviewslice __pyx_v_feature_mat, CYTHON_UNUSED PyObject *__pyx_v_data, CYTHON_UNUSED Py_ssize_t __pyx_v_row, CYTHON_UNUSED Py_ssize_t __pyx_v_col); /* proto*/
-static int __pyx_f_9vulchecker_9_features_14NumericFeature_feature_row(struct __pyx_obj_9vulchecker_9_features_NumericFeature *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row, Py_ssize_t __pyx_v_col); /* proto*/
-static int __pyx_f_9vulchecker_9_features_22OptionalNumericFeature_feature_row(struct __pyx_obj_9vulchecker_9_features_OptionalNumericFeature *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row, Py_ssize_t __pyx_v_col); /* proto*/
-static int __pyx_f_9vulchecker_9_features_18CategoricalFeature_feature_row(struct __pyx_obj_9vulchecker_9_features_CategoricalFeature *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row, Py_ssize_t __pyx_v_col); /* proto*/
-static int __pyx_f_9vulchecker_9_features_21CategoricalSetFeature_feature_row(struct __pyx_obj_9vulchecker_9_features_CategoricalSetFeature *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row, Py_ssize_t __pyx_v_col); /* proto*/
-static int __pyx_f_9vulchecker_9_features_10FeatureSet_feature_row(struct __pyx_obj_9vulchecker_9_features_FeatureSet *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row, int __pyx_skip_dispatch); /* proto*/
+static int __pyx_f_9hector_ml_9_features_7Feature_feature_row(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_Feature *__pyx_v_self, CYTHON_UNUSED __Pyx_memviewslice __pyx_v_feature_mat, CYTHON_UNUSED PyObject *__pyx_v_data, CYTHON_UNUSED Py_ssize_t __pyx_v_row, CYTHON_UNUSED Py_ssize_t __pyx_v_col); /* proto*/
+static int __pyx_f_9hector_ml_9_features_14NumericFeature_feature_row(struct __pyx_obj_9hector_ml_9_features_NumericFeature *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row, Py_ssize_t __pyx_v_col); /* proto*/
+static int __pyx_f_9hector_ml_9_features_22OptionalNumericFeature_feature_row(struct __pyx_obj_9hector_ml_9_features_OptionalNumericFeature *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row, Py_ssize_t __pyx_v_col); /* proto*/
+static int __pyx_f_9hector_ml_9_features_18CategoricalFeature_feature_row(struct __pyx_obj_9hector_ml_9_features_CategoricalFeature *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row, Py_ssize_t __pyx_v_col); /* proto*/
+static int __pyx_f_9hector_ml_9_features_21CategoricalSetFeature_feature_row(struct __pyx_obj_9hector_ml_9_features_CategoricalSetFeature *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row, Py_ssize_t __pyx_v_col); /* proto*/
+static int __pyx_f_9hector_ml_9_features_10FeatureSet_feature_row(struct __pyx_obj_9hector_ml_9_features_FeatureSet *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row, int __pyx_skip_dispatch); /* proto*/
 static PyObject *__pyx_array_get_memview(struct __pyx_array_obj *__pyx_v_self); /* proto*/
 static char *__pyx_memoryview_get_item_pointer(struct __pyx_memoryview_obj *__pyx_v_self, PyObject *__pyx_v_index); /* proto*/
 static PyObject *__pyx_memoryview_is_slice(struct __pyx_memoryview_obj *__pyx_v_self, PyObject *__pyx_v_obj); /* proto*/
@@ -2038,13 +2038,13 @@ static PyObject *__pyx_memoryview_assign_item_from_object(struct __pyx_memoryvie
 static PyObject *__pyx_memoryviewslice_convert_item_to_object(struct __pyx_memoryviewslice_obj *__pyx_v_self, char *__pyx_v_itemp); /* proto*/
 static PyObject *__pyx_memoryviewslice_assign_item_from_object(struct __pyx_memoryviewslice_obj *__pyx_v_self, char *__pyx_v_itemp, PyObject *__pyx_v_value); /* proto*/
 
-/* Module declarations from 'vulchecker._features' */
-static PyTypeObject *__pyx_ptype_9vulchecker_9_features_FeatureSet = 0;
-static PyTypeObject *__pyx_ptype_9vulchecker_9_features_Feature = 0;
-static PyTypeObject *__pyx_ptype_9vulchecker_9_features_NumericFeature = 0;
-static PyTypeObject *__pyx_ptype_9vulchecker_9_features_OptionalNumericFeature = 0;
-static PyTypeObject *__pyx_ptype_9vulchecker_9_features_CategoricalFeature = 0;
-static PyTypeObject *__pyx_ptype_9vulchecker_9_features_CategoricalSetFeature = 0;
+/* Module declarations from 'hector_ml._features' */
+static PyTypeObject *__pyx_ptype_9hector_ml_9_features_FeatureSet = 0;
+static PyTypeObject *__pyx_ptype_9hector_ml_9_features_Feature = 0;
+static PyTypeObject *__pyx_ptype_9hector_ml_9_features_NumericFeature = 0;
+static PyTypeObject *__pyx_ptype_9hector_ml_9_features_OptionalNumericFeature = 0;
+static PyTypeObject *__pyx_ptype_9hector_ml_9_features_CategoricalFeature = 0;
+static PyTypeObject *__pyx_ptype_9hector_ml_9_features_CategoricalSetFeature = 0;
 static PyTypeObject *__pyx_ptype___Pyx_EnumMeta = 0;
 static PyTypeObject *__pyx_array_type = 0;
 static PyTypeObject *__pyx_MemviewEnum_type = 0;
@@ -2095,11 +2095,11 @@ static void __pyx_memoryview_slice_assign_scalar(__Pyx_memviewslice *, int, size
 static void __pyx_memoryview__slice_assign_scalar(char *, Py_ssize_t *, Py_ssize_t *, int, size_t, void *); /*proto*/
 static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *, PyObject *); /*proto*/
 static __Pyx_TypeInfo __Pyx_TypeInfo_float = { "float", NULL, sizeof(float), { 0 }, 0, 'R', 0, 0 };
-#define __Pyx_MODULE_NAME "vulchecker._features"
-extern int __pyx_module_is_main_vulchecker___features;
-int __pyx_module_is_main_vulchecker___features = 0;
+#define __Pyx_MODULE_NAME "hector_ml._features"
+extern int __pyx_module_is_main_hector_ml___features;
+int __pyx_module_is_main_hector_ml___features = 0;
 
-/* Implementation of 'vulchecker._features' */
+/* Implementation of 'hector_ml._features' */
 static PyObject *__pyx_builtin_staticmethod;
 static PyObject *__pyx_builtin_NotImplementedError;
 static PyObject *__pyx_builtin_TypeError;
@@ -2231,7 +2231,7 @@ static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_strided_and_direct[] = "<strided and direct>";
 static const char __pyx_k_NotImplementedError[] = "NotImplementedError";
 static const char __pyx_k_Pyx_EnumBase___repr[] = "__Pyx_EnumBase.__repr__";
-static const char __pyx_k_vulchecker__features[] = "vulchecker._features";
+static const char __pyx_k_hector_ml__features[] = "hector_ml._features";
 static const char __pyx_k_Unknown_enum_value_s[] = "Unknown enum value: '%s'";
 static const char __pyx_k_strided_and_indirect[] = "<strided and indirect>";
 static const char __pyx_k_CategoricalSetFeature[] = "CategoricalSetFeature";
@@ -2245,7 +2245,7 @@ static const char __pyx_k_Invalid_shape_in_axis_d_d[] = "Invalid shape in axis %
 static const char __pyx_k_from_features_and_indexes[] = "from_features_and_indexes";
 static const char __pyx_k_itemsize_0_for_cython_array[] = "itemsize <= 0 for cython.array";
 static const char __pyx_k_pyx_unpickle___Pyx_EnumMeta[] = "__pyx_unpickle___Pyx_EnumMeta";
-static const char __pyx_k_src_vulchecker__features_pyx[] = "src/vulchecker/_features.pyx";
+static const char __pyx_k_src_hector_ml__features_pyx[] = "src/hector_ml/_features.pyx";
 static const char __pyx_k_unable_to_allocate_array_data[] = "unable to allocate array data.";
 static const char __pyx_k_strided_and_direct_or_indirect[] = "<strided and direct or indirect>";
 static const char __pyx_k_Buffer_view_does_not_expose_stri[] = "Buffer view does not expose strides";
@@ -2342,7 +2342,7 @@ static PyObject *__pyx_n_u_fortran;
 static PyObject *__pyx_n_s_from_features_and_indexes;
 static PyObject *__pyx_n_s_getstate;
 static PyObject *__pyx_kp_s_got_differing_extents_in_dimensi;
-static PyObject *__pyx_n_s_vulchecker__features;
+static PyObject *__pyx_n_s_hector_ml__features;
 static PyObject *__pyx_n_s_id;
 static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_indexes;
@@ -2395,7 +2395,7 @@ static PyObject *__pyx_n_s_setstate;
 static PyObject *__pyx_n_s_setstate_cython;
 static PyObject *__pyx_n_s_shape;
 static PyObject *__pyx_n_s_size;
-static PyObject *__pyx_kp_s_src_vulchecker__features_pyx;
+static PyObject *__pyx_kp_s_src_hector_ml__features_pyx;
 static PyObject *__pyx_n_s_start;
 static PyObject *__pyx_n_s_staticmethod;
 static PyObject *__pyx_n_s_step;
@@ -2416,26 +2416,26 @@ static PyObject *__pyx_n_s_v;
 static PyObject *__pyx_n_s_value;
 static PyObject *__pyx_n_s_values;
 static PyObject *__pyx_n_s_width;
-static int __pyx_pf_9vulchecker_9_features_7Feature___cinit__(struct __pyx_obj_9vulchecker_9_features_Feature *__pyx_v_self, PyObject *__pyx_v_name, Py_ssize_t __pyx_v_width); /* proto */
-static PyObject *__pyx_pf_9vulchecker_9_features_7Feature_4name___get__(struct __pyx_obj_9vulchecker_9_features_Feature *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9vulchecker_9_features_7Feature_5width___get__(struct __pyx_obj_9vulchecker_9_features_Feature *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9vulchecker_9_features_7Feature_2__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_Feature *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9vulchecker_9_features_7Feature_4__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_Feature *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_pf_9vulchecker_9_features_14NumericFeature___reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_NumericFeature *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9vulchecker_9_features_14NumericFeature_2__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_NumericFeature *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_pf_9vulchecker_9_features_22OptionalNumericFeature___reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_OptionalNumericFeature *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9vulchecker_9_features_22OptionalNumericFeature_2__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_OptionalNumericFeature *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_pf_9vulchecker_9_features_18CategoricalFeature___reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_CategoricalFeature *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9vulchecker_9_features_18CategoricalFeature_2__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_CategoricalFeature *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_pf_9vulchecker_9_features_21CategoricalSetFeature___reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_CategoricalSetFeature *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9vulchecker_9_features_21CategoricalSetFeature_2__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_CategoricalSetFeature *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
-static int __pyx_pf_9vulchecker_9_features_10FeatureSet___cinit__(struct __pyx_obj_9vulchecker_9_features_FeatureSet *__pyx_v_self, PyObject *__pyx_v_features, Py_ssize_t __pyx_v_total_width); /* proto */
-static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_2feature_row(struct __pyx_obj_9vulchecker_9_features_FeatureSet *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row); /* proto */
-static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and_indexes(PyObject *__pyx_v_raw_features, PyObject *__pyx_v_indexes); /* proto */
-static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_8features___get__(struct __pyx_obj_9vulchecker_9_features_FeatureSet *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_11total_width___get__(struct __pyx_obj_9vulchecker_9_features_FeatureSet *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_6__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_FeatureSet *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_8__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_FeatureSet *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
+static int __pyx_pf_9hector_ml_9_features_7Feature___cinit__(struct __pyx_obj_9hector_ml_9_features_Feature *__pyx_v_self, PyObject *__pyx_v_name, Py_ssize_t __pyx_v_width); /* proto */
+static PyObject *__pyx_pf_9hector_ml_9_features_7Feature_4name___get__(struct __pyx_obj_9hector_ml_9_features_Feature *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_9hector_ml_9_features_7Feature_5width___get__(struct __pyx_obj_9hector_ml_9_features_Feature *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_9hector_ml_9_features_7Feature_2__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_Feature *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_9hector_ml_9_features_7Feature_4__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_Feature *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_9hector_ml_9_features_14NumericFeature___reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_NumericFeature *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_9hector_ml_9_features_14NumericFeature_2__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_NumericFeature *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_9hector_ml_9_features_22OptionalNumericFeature___reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_OptionalNumericFeature *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_9hector_ml_9_features_22OptionalNumericFeature_2__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_OptionalNumericFeature *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_9hector_ml_9_features_18CategoricalFeature___reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_CategoricalFeature *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_9hector_ml_9_features_18CategoricalFeature_2__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_CategoricalFeature *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_9hector_ml_9_features_21CategoricalSetFeature___reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_CategoricalSetFeature *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_9hector_ml_9_features_21CategoricalSetFeature_2__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_CategoricalSetFeature *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
+static int __pyx_pf_9hector_ml_9_features_10FeatureSet___cinit__(struct __pyx_obj_9hector_ml_9_features_FeatureSet *__pyx_v_self, PyObject *__pyx_v_features, Py_ssize_t __pyx_v_total_width); /* proto */
+static PyObject *__pyx_pf_9hector_ml_9_features_10FeatureSet_2feature_row(struct __pyx_obj_9hector_ml_9_features_FeatureSet *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row); /* proto */
+static PyObject *__pyx_pf_9hector_ml_9_features_10FeatureSet_4from_features_and_indexes(PyObject *__pyx_v_raw_features, PyObject *__pyx_v_indexes); /* proto */
+static PyObject *__pyx_pf_9hector_ml_9_features_10FeatureSet_8features___get__(struct __pyx_obj_9hector_ml_9_features_FeatureSet *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_9hector_ml_9_features_10FeatureSet_11total_width___get__(struct __pyx_obj_9hector_ml_9_features_FeatureSet *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_9hector_ml_9_features_10FeatureSet_6__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_FeatureSet *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_9hector_ml_9_features_10FeatureSet_8__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_FeatureSet *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
 static int __pyx_pf_8EnumBase_14__Pyx_EnumMeta___init__(struct __pyx_obj___Pyx_EnumMeta *__pyx_v_cls, PyObject *__pyx_v_name, PyObject *__pyx_v_parents, PyObject *__pyx_v_dct); /* proto */
 static PyObject *__pyx_pf_8EnumBase_14__Pyx_EnumMeta_2__iter__(struct __pyx_obj___Pyx_EnumMeta *__pyx_v_cls); /* proto */
 static PyObject *__pyx_pf_8EnumBase_14__Pyx_EnumMeta_4__getitem__(struct __pyx_obj___Pyx_EnumMeta *__pyx_v_cls, PyObject *__pyx_v_name); /* proto */
@@ -2487,12 +2487,12 @@ static PyObject *__pyx_pf_15View_dot_MemoryView_16_memoryviewslice_4base___get__
 static PyObject *__pyx_pf___pyx_memoryviewslice___reduce_cython__(CYTHON_UNUSED struct __pyx_memoryviewslice_obj *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf___pyx_memoryviewslice_2__setstate_cython__(CYTHON_UNUSED struct __pyx_memoryviewslice_obj *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_pf_15View_dot_MemoryView___pyx_unpickle_Enum(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_tp_new_9vulchecker_9_features_FeatureSet(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_9vulchecker_9_features_Feature(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_9vulchecker_9_features_NumericFeature(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_9vulchecker_9_features_OptionalNumericFeature(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_9vulchecker_9_features_CategoricalFeature(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_9vulchecker_9_features_CategoricalSetFeature(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_9hector_ml_9_features_FeatureSet(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_9hector_ml_9_features_Feature(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_9hector_ml_9_features_NumericFeature(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_9hector_ml_9_features_OptionalNumericFeature(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_9hector_ml_9_features_CategoricalFeature(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_9hector_ml_9_features_CategoricalSetFeature(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new___Pyx_EnumMeta(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_array(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_Enum(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
@@ -2556,7 +2556,7 @@ static PyObject *__pyx_codeobj__43;
 static PyObject *__pyx_codeobj__50;
 /* Late includes */
 
-/* "vulchecker/_features.pyx":15
+/* "hector_ml/_features.pyx":15
  *     cdef readonly Py_ssize_t width
  * 
  *     def __cinit__(self, str name, Py_ssize_t width):             # <<<<<<<<<<<<<<
@@ -2565,8 +2565,8 @@ static PyObject *__pyx_codeobj__50;
  */
 
 /* Python wrapper */
-static int __pyx_pw_9vulchecker_9_features_7Feature_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_9vulchecker_9_features_7Feature_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_9hector_ml_9_features_7Feature_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_9hector_ml_9_features_7Feature_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_name = 0;
   Py_ssize_t __pyx_v_width;
   int __pyx_lineno = 0;
@@ -2617,12 +2617,12 @@ static int __pyx_pw_9vulchecker_9_features_7Feature_1__cinit__(PyObject *__pyx_v
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 15, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("vulchecker._features.Feature.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.Feature.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_name), (&PyUnicode_Type), 1, "name", 1))) __PYX_ERR(0, 15, __pyx_L1_error)
-  __pyx_r = __pyx_pf_9vulchecker_9_features_7Feature___cinit__(((struct __pyx_obj_9vulchecker_9_features_Feature *)__pyx_v_self), __pyx_v_name, __pyx_v_width);
+  __pyx_r = __pyx_pf_9hector_ml_9_features_7Feature___cinit__(((struct __pyx_obj_9hector_ml_9_features_Feature *)__pyx_v_self), __pyx_v_name, __pyx_v_width);
 
   /* function exit code */
   goto __pyx_L0;
@@ -2633,12 +2633,12 @@ static int __pyx_pw_9vulchecker_9_features_7Feature_1__cinit__(PyObject *__pyx_v
   return __pyx_r;
 }
 
-static int __pyx_pf_9vulchecker_9_features_7Feature___cinit__(struct __pyx_obj_9vulchecker_9_features_Feature *__pyx_v_self, PyObject *__pyx_v_name, Py_ssize_t __pyx_v_width) {
+static int __pyx_pf_9hector_ml_9_features_7Feature___cinit__(struct __pyx_obj_9hector_ml_9_features_Feature *__pyx_v_self, PyObject *__pyx_v_name, Py_ssize_t __pyx_v_width) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
-  /* "vulchecker/_features.pyx":16
+  /* "hector_ml/_features.pyx":16
  * 
  *     def __cinit__(self, str name, Py_ssize_t width):
  *         self.name = name             # <<<<<<<<<<<<<<
@@ -2651,7 +2651,7 @@ static int __pyx_pf_9vulchecker_9_features_7Feature___cinit__(struct __pyx_obj_9
   __Pyx_DECREF(__pyx_v_self->name);
   __pyx_v_self->name = __pyx_v_name;
 
-  /* "vulchecker/_features.pyx":17
+  /* "hector_ml/_features.pyx":17
  *     def __cinit__(self, str name, Py_ssize_t width):
  *         self.name = name
  *         self.width = width             # <<<<<<<<<<<<<<
@@ -2660,7 +2660,7 @@ static int __pyx_pf_9vulchecker_9_features_7Feature___cinit__(struct __pyx_obj_9
  */
   __pyx_v_self->width = __pyx_v_width;
 
-  /* "vulchecker/_features.pyx":15
+  /* "hector_ml/_features.pyx":15
  *     cdef readonly Py_ssize_t width
  * 
  *     def __cinit__(self, str name, Py_ssize_t width):             # <<<<<<<<<<<<<<
@@ -2674,7 +2674,7 @@ static int __pyx_pf_9vulchecker_9_features_7Feature___cinit__(struct __pyx_obj_9
   return __pyx_r;
 }
 
-/* "vulchecker/_features.pyx":19
+/* "hector_ml/_features.pyx":19
  *         self.width = width
  * 
  *     cdef int feature_row(             # <<<<<<<<<<<<<<
@@ -2682,7 +2682,7 @@ static int __pyx_pf_9vulchecker_9_features_7Feature___cinit__(struct __pyx_obj_9
  *         float[:, :] feature_mat,
  */
 
-static int __pyx_f_9vulchecker_9_features_7Feature_feature_row(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_Feature *__pyx_v_self, CYTHON_UNUSED __Pyx_memviewslice __pyx_v_feature_mat, CYTHON_UNUSED PyObject *__pyx_v_data, CYTHON_UNUSED Py_ssize_t __pyx_v_row, CYTHON_UNUSED Py_ssize_t __pyx_v_col) {
+static int __pyx_f_9hector_ml_9_features_7Feature_feature_row(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_Feature *__pyx_v_self, CYTHON_UNUSED __Pyx_memviewslice __pyx_v_feature_mat, CYTHON_UNUSED PyObject *__pyx_v_data, CYTHON_UNUSED Py_ssize_t __pyx_v_row, CYTHON_UNUSED Py_ssize_t __pyx_v_col) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2691,7 +2691,7 @@ static int __pyx_f_9vulchecker_9_features_7Feature_feature_row(CYTHON_UNUSED str
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("feature_row", 0);
 
-  /* "vulchecker/_features.pyx":26
+  /* "hector_ml/_features.pyx":26
  *         Py_ssize_t col,
  *     ) except -1:
  *         raise NotImplementedError("Don't call feature_row on the base class.")             # <<<<<<<<<<<<<<
@@ -2704,7 +2704,7 @@ static int __pyx_f_9vulchecker_9_features_7Feature_feature_row(CYTHON_UNUSED str
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __PYX_ERR(0, 26, __pyx_L1_error)
 
-  /* "vulchecker/_features.pyx":19
+  /* "hector_ml/_features.pyx":19
  *         self.width = width
  * 
  *     cdef int feature_row(             # <<<<<<<<<<<<<<
@@ -2715,13 +2715,13 @@ static int __pyx_f_9vulchecker_9_features_7Feature_feature_row(CYTHON_UNUSED str
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("vulchecker._features.Feature.feature_row", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.Feature.feature_row", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "vulchecker/_features.pyx":12
+/* "hector_ml/_features.pyx":12
  * 
  * cdef class Feature:
  *     cdef readonly object name             # <<<<<<<<<<<<<<
@@ -2730,19 +2730,19 @@ static int __pyx_f_9vulchecker_9_features_7Feature_feature_row(CYTHON_UNUSED str
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9vulchecker_9_features_7Feature_4name_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_9vulchecker_9_features_7Feature_4name_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_9hector_ml_9_features_7Feature_4name_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_9hector_ml_9_features_7Feature_4name_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9vulchecker_9_features_7Feature_4name___get__(((struct __pyx_obj_9vulchecker_9_features_Feature *)__pyx_v_self));
+  __pyx_r = __pyx_pf_9hector_ml_9_features_7Feature_4name___get__(((struct __pyx_obj_9hector_ml_9_features_Feature *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9vulchecker_9_features_7Feature_4name___get__(struct __pyx_obj_9vulchecker_9_features_Feature *__pyx_v_self) {
+static PyObject *__pyx_pf_9hector_ml_9_features_7Feature_4name___get__(struct __pyx_obj_9hector_ml_9_features_Feature *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__", 0);
@@ -2758,7 +2758,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_7Feature_4name___get__(struct _
   return __pyx_r;
 }
 
-/* "vulchecker/_features.pyx":13
+/* "hector_ml/_features.pyx":13
  * cdef class Feature:
  *     cdef readonly object name
  *     cdef readonly Py_ssize_t width             # <<<<<<<<<<<<<<
@@ -2767,19 +2767,19 @@ static PyObject *__pyx_pf_9vulchecker_9_features_7Feature_4name___get__(struct _
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9vulchecker_9_features_7Feature_5width_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_9vulchecker_9_features_7Feature_5width_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_9hector_ml_9_features_7Feature_5width_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_9hector_ml_9_features_7Feature_5width_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9vulchecker_9_features_7Feature_5width___get__(((struct __pyx_obj_9vulchecker_9_features_Feature *)__pyx_v_self));
+  __pyx_r = __pyx_pf_9hector_ml_9_features_7Feature_5width___get__(((struct __pyx_obj_9hector_ml_9_features_Feature *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9vulchecker_9_features_7Feature_5width___get__(struct __pyx_obj_9vulchecker_9_features_Feature *__pyx_v_self) {
+static PyObject *__pyx_pf_9hector_ml_9_features_7Feature_5width___get__(struct __pyx_obj_9hector_ml_9_features_Feature *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2797,7 +2797,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_7Feature_5width___get__(struct 
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("vulchecker._features.Feature.width.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.Feature.width.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2812,19 +2812,19 @@ static PyObject *__pyx_pf_9vulchecker_9_features_7Feature_5width___get__(struct 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9vulchecker_9_features_7Feature_3__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_9vulchecker_9_features_7Feature_3__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_9hector_ml_9_features_7Feature_3__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_9hector_ml_9_features_7Feature_3__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__reduce_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9vulchecker_9_features_7Feature_2__reduce_cython__(((struct __pyx_obj_9vulchecker_9_features_Feature *)__pyx_v_self));
+  __pyx_r = __pyx_pf_9hector_ml_9_features_7Feature_2__reduce_cython__(((struct __pyx_obj_9hector_ml_9_features_Feature *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9vulchecker_9_features_7Feature_2__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_Feature *__pyx_v_self) {
+static PyObject *__pyx_pf_9hector_ml_9_features_7Feature_2__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_Feature *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2854,7 +2854,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_7Feature_2__reduce_cython__(CYT
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("vulchecker._features.Feature.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.Feature.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
@@ -2869,19 +2869,19 @@ static PyObject *__pyx_pf_9vulchecker_9_features_7Feature_2__reduce_cython__(CYT
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9vulchecker_9_features_7Feature_5__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
-static PyObject *__pyx_pw_9vulchecker_9_features_7Feature_5__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pw_9hector_ml_9_features_7Feature_5__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
+static PyObject *__pyx_pw_9hector_ml_9_features_7Feature_5__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__setstate_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9vulchecker_9_features_7Feature_4__setstate_cython__(((struct __pyx_obj_9vulchecker_9_features_Feature *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
+  __pyx_r = __pyx_pf_9hector_ml_9_features_7Feature_4__setstate_cython__(((struct __pyx_obj_9hector_ml_9_features_Feature *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9vulchecker_9_features_7Feature_4__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_Feature *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_9hector_ml_9_features_7Feature_4__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_Feature *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2911,14 +2911,14 @@ static PyObject *__pyx_pf_9vulchecker_9_features_7Feature_4__setstate_cython__(C
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("vulchecker._features.Feature.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.Feature.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "vulchecker/_features.pyx":32
+/* "hector_ml/_features.pyx":32
  *     feature_kind = FeatureKind.numeric
  * 
  *     cdef int feature_row(             # <<<<<<<<<<<<<<
@@ -2926,7 +2926,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_7Feature_4__setstate_cython__(C
  *         float[:, :] feature_mat,
  */
 
-static int __pyx_f_9vulchecker_9_features_14NumericFeature_feature_row(struct __pyx_obj_9vulchecker_9_features_NumericFeature *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row, Py_ssize_t __pyx_v_col) {
+static int __pyx_f_9hector_ml_9_features_14NumericFeature_feature_row(struct __pyx_obj_9hector_ml_9_features_NumericFeature *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row, Py_ssize_t __pyx_v_col) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2939,7 +2939,7 @@ static int __pyx_f_9vulchecker_9_features_14NumericFeature_feature_row(struct __
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("feature_row", 0);
 
-  /* "vulchecker/_features.pyx":39
+  /* "hector_ml/_features.pyx":39
  *         Py_ssize_t col,
  *     ) except -1:
  *         feature_mat[row, col] = data[self.name]             # <<<<<<<<<<<<<<
@@ -2969,7 +2969,7 @@ static int __pyx_f_9vulchecker_9_features_14NumericFeature_feature_row(struct __
   }
   *((float *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_feature_mat.data + __pyx_t_3 * __pyx_v_feature_mat.strides[0]) ) + __pyx_t_4 * __pyx_v_feature_mat.strides[1]) )) = __pyx_t_2;
 
-  /* "vulchecker/_features.pyx":32
+  /* "hector_ml/_features.pyx":32
  *     feature_kind = FeatureKind.numeric
  * 
  *     cdef int feature_row(             # <<<<<<<<<<<<<<
@@ -2982,7 +2982,7 @@ static int __pyx_f_9vulchecker_9_features_14NumericFeature_feature_row(struct __
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("vulchecker._features.NumericFeature.feature_row", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.NumericFeature.feature_row", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -2996,19 +2996,19 @@ static int __pyx_f_9vulchecker_9_features_14NumericFeature_feature_row(struct __
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9vulchecker_9_features_14NumericFeature_1__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_9vulchecker_9_features_14NumericFeature_1__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_9hector_ml_9_features_14NumericFeature_1__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_9hector_ml_9_features_14NumericFeature_1__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__reduce_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9vulchecker_9_features_14NumericFeature___reduce_cython__(((struct __pyx_obj_9vulchecker_9_features_NumericFeature *)__pyx_v_self));
+  __pyx_r = __pyx_pf_9hector_ml_9_features_14NumericFeature___reduce_cython__(((struct __pyx_obj_9hector_ml_9_features_NumericFeature *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9vulchecker_9_features_14NumericFeature___reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_NumericFeature *__pyx_v_self) {
+static PyObject *__pyx_pf_9hector_ml_9_features_14NumericFeature___reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_NumericFeature *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3038,7 +3038,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_14NumericFeature___reduce_cytho
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("vulchecker._features.NumericFeature.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.NumericFeature.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
@@ -3053,19 +3053,19 @@ static PyObject *__pyx_pf_9vulchecker_9_features_14NumericFeature___reduce_cytho
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9vulchecker_9_features_14NumericFeature_3__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
-static PyObject *__pyx_pw_9vulchecker_9_features_14NumericFeature_3__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pw_9hector_ml_9_features_14NumericFeature_3__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
+static PyObject *__pyx_pw_9hector_ml_9_features_14NumericFeature_3__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__setstate_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9vulchecker_9_features_14NumericFeature_2__setstate_cython__(((struct __pyx_obj_9vulchecker_9_features_NumericFeature *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
+  __pyx_r = __pyx_pf_9hector_ml_9_features_14NumericFeature_2__setstate_cython__(((struct __pyx_obj_9hector_ml_9_features_NumericFeature *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9vulchecker_9_features_14NumericFeature_2__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_NumericFeature *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_9hector_ml_9_features_14NumericFeature_2__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_NumericFeature *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3095,14 +3095,14 @@ static PyObject *__pyx_pf_9vulchecker_9_features_14NumericFeature_2__setstate_cy
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("vulchecker._features.NumericFeature.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.NumericFeature.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "vulchecker/_features.pyx":45
+/* "hector_ml/_features.pyx":45
  *     feature_kind = FeatureKind.optional_numeric
  * 
  *     cdef int feature_row(             # <<<<<<<<<<<<<<
@@ -3110,7 +3110,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_14NumericFeature_2__setstate_cy
  *         float[:, :] feature_mat,
  */
 
-static int __pyx_f_9vulchecker_9_features_22OptionalNumericFeature_feature_row(struct __pyx_obj_9vulchecker_9_features_OptionalNumericFeature *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row, Py_ssize_t __pyx_v_col) {
+static int __pyx_f_9hector_ml_9_features_22OptionalNumericFeature_feature_row(struct __pyx_obj_9hector_ml_9_features_OptionalNumericFeature *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row, Py_ssize_t __pyx_v_col) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3128,7 +3128,7 @@ static int __pyx_f_9vulchecker_9_features_22OptionalNumericFeature_feature_row(s
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("feature_row", 0);
 
-  /* "vulchecker/_features.pyx":52
+  /* "hector_ml/_features.pyx":52
  *         Py_ssize_t col,
  *     ) except -1:
  *         try:             # <<<<<<<<<<<<<<
@@ -3144,7 +3144,7 @@ static int __pyx_f_9vulchecker_9_features_22OptionalNumericFeature_feature_row(s
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "vulchecker/_features.pyx":53
+      /* "hector_ml/_features.pyx":53
  *     ) except -1:
  *         try:
  *             feature_mat[row, col] = float(data[self.name])             # <<<<<<<<<<<<<<
@@ -3174,7 +3174,7 @@ static int __pyx_f_9vulchecker_9_features_22OptionalNumericFeature_feature_row(s
       }
       *((float *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_feature_mat.data + __pyx_t_6 * __pyx_v_feature_mat.strides[0]) ) + __pyx_t_7 * __pyx_v_feature_mat.strides[1]) )) = __pyx_t_5;
 
-      /* "vulchecker/_features.pyx":52
+      /* "hector_ml/_features.pyx":52
  *         Py_ssize_t col,
  *     ) except -1:
  *         try:             # <<<<<<<<<<<<<<
@@ -3189,7 +3189,7 @@ static int __pyx_f_9vulchecker_9_features_22OptionalNumericFeature_feature_row(s
     __pyx_L3_error:;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "vulchecker/_features.pyx":54
+    /* "hector_ml/_features.pyx":54
  *         try:
  *             feature_mat[row, col] = float(data[self.name])
  *         except (ValueError, TypeError, KeyError):             # <<<<<<<<<<<<<<
@@ -3198,13 +3198,13 @@ static int __pyx_f_9vulchecker_9_features_22OptionalNumericFeature_feature_row(s
  */
     __pyx_t_8 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_ValueError) || __Pyx_PyErr_ExceptionMatches(__pyx_builtin_TypeError) || __Pyx_PyErr_ExceptionMatches(__pyx_builtin_KeyError);
     if (__pyx_t_8) {
-      __Pyx_AddTraceback("vulchecker._features.OptionalNumericFeature.feature_row", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("hector_ml._features.OptionalNumericFeature.feature_row", __pyx_clineno, __pyx_lineno, __pyx_filename);
       if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_9, &__pyx_t_10) < 0) __PYX_ERR(0, 54, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_GOTREF(__pyx_t_10);
 
-      /* "vulchecker/_features.pyx":55
+      /* "hector_ml/_features.pyx":55
  *             feature_mat[row, col] = float(data[self.name])
  *         except (ValueError, TypeError, KeyError):
  *             feature_mat[row, col + 1] = 1.0             # <<<<<<<<<<<<<<
@@ -3233,7 +3233,7 @@ static int __pyx_f_9vulchecker_9_features_22OptionalNumericFeature_feature_row(s
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "vulchecker/_features.pyx":52
+    /* "hector_ml/_features.pyx":52
  *         Py_ssize_t col,
  *     ) except -1:
  *         try:             # <<<<<<<<<<<<<<
@@ -3253,7 +3253,7 @@ static int __pyx_f_9vulchecker_9_features_22OptionalNumericFeature_feature_row(s
     __pyx_L8_try_end:;
   }
 
-  /* "vulchecker/_features.pyx":45
+  /* "hector_ml/_features.pyx":45
  *     feature_kind = FeatureKind.optional_numeric
  * 
  *     cdef int feature_row(             # <<<<<<<<<<<<<<
@@ -3268,7 +3268,7 @@ static int __pyx_f_9vulchecker_9_features_22OptionalNumericFeature_feature_row(s
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_AddTraceback("vulchecker._features.OptionalNumericFeature.feature_row", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.OptionalNumericFeature.feature_row", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -3282,19 +3282,19 @@ static int __pyx_f_9vulchecker_9_features_22OptionalNumericFeature_feature_row(s
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9vulchecker_9_features_22OptionalNumericFeature_1__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_9vulchecker_9_features_22OptionalNumericFeature_1__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_9hector_ml_9_features_22OptionalNumericFeature_1__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_9hector_ml_9_features_22OptionalNumericFeature_1__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__reduce_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9vulchecker_9_features_22OptionalNumericFeature___reduce_cython__(((struct __pyx_obj_9vulchecker_9_features_OptionalNumericFeature *)__pyx_v_self));
+  __pyx_r = __pyx_pf_9hector_ml_9_features_22OptionalNumericFeature___reduce_cython__(((struct __pyx_obj_9hector_ml_9_features_OptionalNumericFeature *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9vulchecker_9_features_22OptionalNumericFeature___reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_OptionalNumericFeature *__pyx_v_self) {
+static PyObject *__pyx_pf_9hector_ml_9_features_22OptionalNumericFeature___reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_OptionalNumericFeature *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3324,7 +3324,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_22OptionalNumericFeature___redu
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("vulchecker._features.OptionalNumericFeature.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.OptionalNumericFeature.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
@@ -3339,19 +3339,19 @@ static PyObject *__pyx_pf_9vulchecker_9_features_22OptionalNumericFeature___redu
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9vulchecker_9_features_22OptionalNumericFeature_3__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
-static PyObject *__pyx_pw_9vulchecker_9_features_22OptionalNumericFeature_3__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pw_9hector_ml_9_features_22OptionalNumericFeature_3__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
+static PyObject *__pyx_pw_9hector_ml_9_features_22OptionalNumericFeature_3__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__setstate_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9vulchecker_9_features_22OptionalNumericFeature_2__setstate_cython__(((struct __pyx_obj_9vulchecker_9_features_OptionalNumericFeature *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
+  __pyx_r = __pyx_pf_9hector_ml_9_features_22OptionalNumericFeature_2__setstate_cython__(((struct __pyx_obj_9hector_ml_9_features_OptionalNumericFeature *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9vulchecker_9_features_22OptionalNumericFeature_2__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_OptionalNumericFeature *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_9hector_ml_9_features_22OptionalNumericFeature_2__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_OptionalNumericFeature *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3381,14 +3381,14 @@ static PyObject *__pyx_pf_9vulchecker_9_features_22OptionalNumericFeature_2__set
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("vulchecker._features.OptionalNumericFeature.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.OptionalNumericFeature.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "vulchecker/_features.pyx":61
+/* "hector_ml/_features.pyx":61
  *     feature_kind = FeatureKind.categorical
  * 
  *     cdef int feature_row(             # <<<<<<<<<<<<<<
@@ -3396,7 +3396,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_22OptionalNumericFeature_2__set
  *         float[:, :] feature_mat,
  */
 
-static int __pyx_f_9vulchecker_9_features_18CategoricalFeature_feature_row(struct __pyx_obj_9vulchecker_9_features_CategoricalFeature *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row, Py_ssize_t __pyx_v_col) {
+static int __pyx_f_9hector_ml_9_features_18CategoricalFeature_feature_row(struct __pyx_obj_9hector_ml_9_features_CategoricalFeature *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row, Py_ssize_t __pyx_v_col) {
   Py_ssize_t __pyx_v_value;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
@@ -3415,7 +3415,7 @@ static int __pyx_f_9vulchecker_9_features_18CategoricalFeature_feature_row(struc
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("feature_row", 0);
 
-  /* "vulchecker/_features.pyx":69
+  /* "hector_ml/_features.pyx":69
  *     ) except -1:
  *         cdef Py_ssize_t value
  *         try:             # <<<<<<<<<<<<<<
@@ -3431,7 +3431,7 @@ static int __pyx_f_9vulchecker_9_features_18CategoricalFeature_feature_row(struc
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "vulchecker/_features.pyx":70
+      /* "hector_ml/_features.pyx":70
  *         cdef Py_ssize_t value
  *         try:
  *             value = data[self.name]             # <<<<<<<<<<<<<<
@@ -3448,7 +3448,7 @@ static int __pyx_f_9vulchecker_9_features_18CategoricalFeature_feature_row(struc
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_v_value = __pyx_t_5;
 
-      /* "vulchecker/_features.pyx":69
+      /* "hector_ml/_features.pyx":69
  *     ) except -1:
  *         cdef Py_ssize_t value
  *         try:             # <<<<<<<<<<<<<<
@@ -3457,7 +3457,7 @@ static int __pyx_f_9vulchecker_9_features_18CategoricalFeature_feature_row(struc
  */
     }
 
-    /* "vulchecker/_features.pyx":74
+    /* "hector_ml/_features.pyx":74
  *             pass
  *         else:
  *             if 0 <= value < self.width:             # <<<<<<<<<<<<<<
@@ -3472,7 +3472,7 @@ static int __pyx_f_9vulchecker_9_features_18CategoricalFeature_feature_row(struc
       __pyx_t_7 = (__pyx_t_6 != 0);
       if (__pyx_t_7) {
 
-        /* "vulchecker/_features.pyx":75
+        /* "hector_ml/_features.pyx":75
  *         else:
  *             if 0 <= value < self.width:
  *                 feature_mat[row, col + value] = 1.0             # <<<<<<<<<<<<<<
@@ -3494,7 +3494,7 @@ static int __pyx_f_9vulchecker_9_features_18CategoricalFeature_feature_row(struc
         }
         *((float *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_feature_mat.data + __pyx_t_8 * __pyx_v_feature_mat.strides[0]) ) + __pyx_t_9 * __pyx_v_feature_mat.strides[1]) )) = 1.0;
 
-        /* "vulchecker/_features.pyx":74
+        /* "hector_ml/_features.pyx":74
  *             pass
  *         else:
  *             if 0 <= value < self.width:             # <<<<<<<<<<<<<<
@@ -3510,7 +3510,7 @@ static int __pyx_f_9vulchecker_9_features_18CategoricalFeature_feature_row(struc
     __pyx_L3_error:;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "vulchecker/_features.pyx":71
+    /* "hector_ml/_features.pyx":71
  *         try:
  *             value = data[self.name]
  *         except (TypeError, KeyError):             # <<<<<<<<<<<<<<
@@ -3525,7 +3525,7 @@ static int __pyx_f_9vulchecker_9_features_18CategoricalFeature_feature_row(struc
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "vulchecker/_features.pyx":69
+    /* "hector_ml/_features.pyx":69
  *     ) except -1:
  *         cdef Py_ssize_t value
  *         try:             # <<<<<<<<<<<<<<
@@ -3545,7 +3545,7 @@ static int __pyx_f_9vulchecker_9_features_18CategoricalFeature_feature_row(struc
     __pyx_L8_try_end:;
   }
 
-  /* "vulchecker/_features.pyx":61
+  /* "hector_ml/_features.pyx":61
  *     feature_kind = FeatureKind.categorical
  * 
  *     cdef int feature_row(             # <<<<<<<<<<<<<<
@@ -3558,7 +3558,7 @@ static int __pyx_f_9vulchecker_9_features_18CategoricalFeature_feature_row(struc
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("vulchecker._features.CategoricalFeature.feature_row", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.CategoricalFeature.feature_row", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -3572,19 +3572,19 @@ static int __pyx_f_9vulchecker_9_features_18CategoricalFeature_feature_row(struc
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9vulchecker_9_features_18CategoricalFeature_1__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_9vulchecker_9_features_18CategoricalFeature_1__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_9hector_ml_9_features_18CategoricalFeature_1__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_9hector_ml_9_features_18CategoricalFeature_1__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__reduce_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9vulchecker_9_features_18CategoricalFeature___reduce_cython__(((struct __pyx_obj_9vulchecker_9_features_CategoricalFeature *)__pyx_v_self));
+  __pyx_r = __pyx_pf_9hector_ml_9_features_18CategoricalFeature___reduce_cython__(((struct __pyx_obj_9hector_ml_9_features_CategoricalFeature *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9vulchecker_9_features_18CategoricalFeature___reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_CategoricalFeature *__pyx_v_self) {
+static PyObject *__pyx_pf_9hector_ml_9_features_18CategoricalFeature___reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_CategoricalFeature *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3614,7 +3614,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_18CategoricalFeature___reduce_c
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("vulchecker._features.CategoricalFeature.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.CategoricalFeature.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
@@ -3629,19 +3629,19 @@ static PyObject *__pyx_pf_9vulchecker_9_features_18CategoricalFeature___reduce_c
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9vulchecker_9_features_18CategoricalFeature_3__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
-static PyObject *__pyx_pw_9vulchecker_9_features_18CategoricalFeature_3__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pw_9hector_ml_9_features_18CategoricalFeature_3__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
+static PyObject *__pyx_pw_9hector_ml_9_features_18CategoricalFeature_3__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__setstate_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9vulchecker_9_features_18CategoricalFeature_2__setstate_cython__(((struct __pyx_obj_9vulchecker_9_features_CategoricalFeature *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
+  __pyx_r = __pyx_pf_9hector_ml_9_features_18CategoricalFeature_2__setstate_cython__(((struct __pyx_obj_9hector_ml_9_features_CategoricalFeature *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9vulchecker_9_features_18CategoricalFeature_2__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_CategoricalFeature *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_9hector_ml_9_features_18CategoricalFeature_2__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_CategoricalFeature *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3671,14 +3671,14 @@ static PyObject *__pyx_pf_9vulchecker_9_features_18CategoricalFeature_2__setstat
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("vulchecker._features.CategoricalFeature.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.CategoricalFeature.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "vulchecker/_features.pyx":81
+/* "hector_ml/_features.pyx":81
  *     feature_kind = FeatureKind.categorical_set
  * 
  *     cdef int feature_row(             # <<<<<<<<<<<<<<
@@ -3686,7 +3686,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_18CategoricalFeature_2__setstat
  *         float[:, :] feature_mat,
  */
 
-static int __pyx_f_9vulchecker_9_features_21CategoricalSetFeature_feature_row(struct __pyx_obj_9vulchecker_9_features_CategoricalSetFeature *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row, Py_ssize_t __pyx_v_col) {
+static int __pyx_f_9hector_ml_9_features_21CategoricalSetFeature_feature_row(struct __pyx_obj_9hector_ml_9_features_CategoricalSetFeature *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row, Py_ssize_t __pyx_v_col) {
   Py_ssize_t __pyx_v_value;
   PyObject *__pyx_v_values = NULL;
   int __pyx_r;
@@ -3708,7 +3708,7 @@ static int __pyx_f_9vulchecker_9_features_21CategoricalSetFeature_feature_row(st
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("feature_row", 0);
 
-  /* "vulchecker/_features.pyx":89
+  /* "hector_ml/_features.pyx":89
  *     ) except -1:
  *         cdef Py_ssize_t value
  *         try:             # <<<<<<<<<<<<<<
@@ -3724,7 +3724,7 @@ static int __pyx_f_9vulchecker_9_features_21CategoricalSetFeature_feature_row(st
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "vulchecker/_features.pyx":90
+      /* "hector_ml/_features.pyx":90
  *         cdef Py_ssize_t value
  *         try:
  *             values = list(data[self.name])             # <<<<<<<<<<<<<<
@@ -3743,7 +3743,7 @@ static int __pyx_f_9vulchecker_9_features_21CategoricalSetFeature_feature_row(st
       __pyx_v_values = ((PyObject*)__pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "vulchecker/_features.pyx":89
+      /* "hector_ml/_features.pyx":89
  *     ) except -1:
  *         cdef Py_ssize_t value
  *         try:             # <<<<<<<<<<<<<<
@@ -3752,7 +3752,7 @@ static int __pyx_f_9vulchecker_9_features_21CategoricalSetFeature_feature_row(st
  */
     }
 
-    /* "vulchecker/_features.pyx":94
+    /* "hector_ml/_features.pyx":94
  *             pass
  *         else:
  *             for value in values:             # <<<<<<<<<<<<<<
@@ -3773,7 +3773,7 @@ static int __pyx_f_9vulchecker_9_features_21CategoricalSetFeature_feature_row(st
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __pyx_v_value = __pyx_t_7;
 
-        /* "vulchecker/_features.pyx":95
+        /* "hector_ml/_features.pyx":95
  *         else:
  *             for value in values:
  *                 if 0 <= value < self.width:             # <<<<<<<<<<<<<<
@@ -3787,7 +3787,7 @@ static int __pyx_f_9vulchecker_9_features_21CategoricalSetFeature_feature_row(st
         __pyx_t_9 = (__pyx_t_8 != 0);
         if (__pyx_t_9) {
 
-          /* "vulchecker/_features.pyx":96
+          /* "hector_ml/_features.pyx":96
  *             for value in values:
  *                 if 0 <= value < self.width:
  *                     feature_mat[row, col + value] = 1.0             # <<<<<<<<<<<<<<
@@ -3809,7 +3809,7 @@ static int __pyx_f_9vulchecker_9_features_21CategoricalSetFeature_feature_row(st
           }
           *((float *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_feature_mat.data + __pyx_t_10 * __pyx_v_feature_mat.strides[0]) ) + __pyx_t_11 * __pyx_v_feature_mat.strides[1]) )) = 1.0;
 
-          /* "vulchecker/_features.pyx":95
+          /* "hector_ml/_features.pyx":95
  *         else:
  *             for value in values:
  *                 if 0 <= value < self.width:             # <<<<<<<<<<<<<<
@@ -3818,7 +3818,7 @@ static int __pyx_f_9vulchecker_9_features_21CategoricalSetFeature_feature_row(st
  */
         }
 
-        /* "vulchecker/_features.pyx":94
+        /* "hector_ml/_features.pyx":94
  *             pass
  *         else:
  *             for value in values:             # <<<<<<<<<<<<<<
@@ -3836,7 +3836,7 @@ static int __pyx_f_9vulchecker_9_features_21CategoricalSetFeature_feature_row(st
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "vulchecker/_features.pyx":91
+    /* "hector_ml/_features.pyx":91
  *         try:
  *             values = list(data[self.name])
  *         except (TypeError, KeyError):             # <<<<<<<<<<<<<<
@@ -3851,7 +3851,7 @@ static int __pyx_f_9vulchecker_9_features_21CategoricalSetFeature_feature_row(st
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "vulchecker/_features.pyx":89
+    /* "hector_ml/_features.pyx":89
  *     ) except -1:
  *         cdef Py_ssize_t value
  *         try:             # <<<<<<<<<<<<<<
@@ -3871,7 +3871,7 @@ static int __pyx_f_9vulchecker_9_features_21CategoricalSetFeature_feature_row(st
     __pyx_L8_try_end:;
   }
 
-  /* "vulchecker/_features.pyx":81
+  /* "hector_ml/_features.pyx":81
  *     feature_kind = FeatureKind.categorical_set
  * 
  *     cdef int feature_row(             # <<<<<<<<<<<<<<
@@ -3885,7 +3885,7 @@ static int __pyx_f_9vulchecker_9_features_21CategoricalSetFeature_feature_row(st
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("vulchecker._features.CategoricalSetFeature.feature_row", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.CategoricalSetFeature.feature_row", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_values);
@@ -3900,19 +3900,19 @@ static int __pyx_f_9vulchecker_9_features_21CategoricalSetFeature_feature_row(st
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9vulchecker_9_features_21CategoricalSetFeature_1__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_9vulchecker_9_features_21CategoricalSetFeature_1__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_9hector_ml_9_features_21CategoricalSetFeature_1__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_9hector_ml_9_features_21CategoricalSetFeature_1__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__reduce_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9vulchecker_9_features_21CategoricalSetFeature___reduce_cython__(((struct __pyx_obj_9vulchecker_9_features_CategoricalSetFeature *)__pyx_v_self));
+  __pyx_r = __pyx_pf_9hector_ml_9_features_21CategoricalSetFeature___reduce_cython__(((struct __pyx_obj_9hector_ml_9_features_CategoricalSetFeature *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9vulchecker_9_features_21CategoricalSetFeature___reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_CategoricalSetFeature *__pyx_v_self) {
+static PyObject *__pyx_pf_9hector_ml_9_features_21CategoricalSetFeature___reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_CategoricalSetFeature *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3942,7 +3942,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_21CategoricalSetFeature___reduc
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("vulchecker._features.CategoricalSetFeature.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.CategoricalSetFeature.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
@@ -3957,19 +3957,19 @@ static PyObject *__pyx_pf_9vulchecker_9_features_21CategoricalSetFeature___reduc
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9vulchecker_9_features_21CategoricalSetFeature_3__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
-static PyObject *__pyx_pw_9vulchecker_9_features_21CategoricalSetFeature_3__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pw_9hector_ml_9_features_21CategoricalSetFeature_3__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
+static PyObject *__pyx_pw_9hector_ml_9_features_21CategoricalSetFeature_3__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__setstate_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9vulchecker_9_features_21CategoricalSetFeature_2__setstate_cython__(((struct __pyx_obj_9vulchecker_9_features_CategoricalSetFeature *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
+  __pyx_r = __pyx_pf_9hector_ml_9_features_21CategoricalSetFeature_2__setstate_cython__(((struct __pyx_obj_9hector_ml_9_features_CategoricalSetFeature *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9vulchecker_9_features_21CategoricalSetFeature_2__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_CategoricalSetFeature *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_9hector_ml_9_features_21CategoricalSetFeature_2__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_CategoricalSetFeature *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3999,14 +3999,14 @@ static PyObject *__pyx_pf_9vulchecker_9_features_21CategoricalSetFeature_2__sets
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("vulchecker._features.CategoricalSetFeature.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.CategoricalSetFeature.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "vulchecker/_features.pyx":105
+/* "hector_ml/_features.pyx":105
  *     # cdef readonly Py_ssize_t total_width
  * 
  *     def __cinit__(self, tuple features, Py_ssize_t total_width):             # <<<<<<<<<<<<<<
@@ -4015,8 +4015,8 @@ static PyObject *__pyx_pf_9vulchecker_9_features_21CategoricalSetFeature_2__sets
  */
 
 /* Python wrapper */
-static int __pyx_pw_9vulchecker_9_features_10FeatureSet_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_9vulchecker_9_features_10FeatureSet_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_9hector_ml_9_features_10FeatureSet_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_9hector_ml_9_features_10FeatureSet_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_features = 0;
   Py_ssize_t __pyx_v_total_width;
   int __pyx_lineno = 0;
@@ -4067,12 +4067,12 @@ static int __pyx_pw_9vulchecker_9_features_10FeatureSet_1__cinit__(PyObject *__p
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 105, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("vulchecker._features.FeatureSet.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.FeatureSet.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_features), (&PyTuple_Type), 1, "features", 1))) __PYX_ERR(0, 105, __pyx_L1_error)
-  __pyx_r = __pyx_pf_9vulchecker_9_features_10FeatureSet___cinit__(((struct __pyx_obj_9vulchecker_9_features_FeatureSet *)__pyx_v_self), __pyx_v_features, __pyx_v_total_width);
+  __pyx_r = __pyx_pf_9hector_ml_9_features_10FeatureSet___cinit__(((struct __pyx_obj_9hector_ml_9_features_FeatureSet *)__pyx_v_self), __pyx_v_features, __pyx_v_total_width);
 
   /* function exit code */
   goto __pyx_L0;
@@ -4083,12 +4083,12 @@ static int __pyx_pw_9vulchecker_9_features_10FeatureSet_1__cinit__(PyObject *__p
   return __pyx_r;
 }
 
-static int __pyx_pf_9vulchecker_9_features_10FeatureSet___cinit__(struct __pyx_obj_9vulchecker_9_features_FeatureSet *__pyx_v_self, PyObject *__pyx_v_features, Py_ssize_t __pyx_v_total_width) {
+static int __pyx_pf_9hector_ml_9_features_10FeatureSet___cinit__(struct __pyx_obj_9hector_ml_9_features_FeatureSet *__pyx_v_self, PyObject *__pyx_v_features, Py_ssize_t __pyx_v_total_width) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
-  /* "vulchecker/_features.pyx":106
+  /* "hector_ml/_features.pyx":106
  * 
  *     def __cinit__(self, tuple features, Py_ssize_t total_width):
  *         self.features = features             # <<<<<<<<<<<<<<
@@ -4101,7 +4101,7 @@ static int __pyx_pf_9vulchecker_9_features_10FeatureSet___cinit__(struct __pyx_o
   __Pyx_DECREF(__pyx_v_self->features);
   __pyx_v_self->features = __pyx_v_features;
 
-  /* "vulchecker/_features.pyx":107
+  /* "hector_ml/_features.pyx":107
  *     def __cinit__(self, tuple features, Py_ssize_t total_width):
  *         self.features = features
  *         self.total_width = total_width             # <<<<<<<<<<<<<<
@@ -4110,7 +4110,7 @@ static int __pyx_pf_9vulchecker_9_features_10FeatureSet___cinit__(struct __pyx_o
  */
   __pyx_v_self->total_width = __pyx_v_total_width;
 
-  /* "vulchecker/_features.pyx":105
+  /* "hector_ml/_features.pyx":105
  *     # cdef readonly Py_ssize_t total_width
  * 
  *     def __cinit__(self, tuple features, Py_ssize_t total_width):             # <<<<<<<<<<<<<<
@@ -4124,7 +4124,7 @@ static int __pyx_pf_9vulchecker_9_features_10FeatureSet___cinit__(struct __pyx_o
   return __pyx_r;
 }
 
-/* "vulchecker/_features.pyx":109
+/* "hector_ml/_features.pyx":109
  *         self.total_width = total_width
  * 
  *     cpdef int feature_row(             # <<<<<<<<<<<<<<
@@ -4132,10 +4132,10 @@ static int __pyx_pf_9vulchecker_9_features_10FeatureSet___cinit__(struct __pyx_o
  *         float[:, :] feature_mat,
  */
 
-static PyObject *__pyx_pw_9vulchecker_9_features_10FeatureSet_3feature_row(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_f_9vulchecker_9_features_10FeatureSet_feature_row(struct __pyx_obj_9vulchecker_9_features_FeatureSet *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_9hector_ml_9_features_10FeatureSet_3feature_row(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_f_9hector_ml_9_features_10FeatureSet_feature_row(struct __pyx_obj_9hector_ml_9_features_FeatureSet *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row, int __pyx_skip_dispatch) {
   Py_ssize_t __pyx_v_col;
-  struct __pyx_obj_9vulchecker_9_features_Feature *__pyx_v_feature = 0;
+  struct __pyx_obj_9hector_ml_9_features_Feature *__pyx_v_feature = 0;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -4162,7 +4162,7 @@ static int __pyx_f_9vulchecker_9_features_10FeatureSet_feature_row(struct __pyx_
       #endif
       __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_feature_row); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 109, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_9vulchecker_9_features_10FeatureSet_3feature_row)) {
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_9hector_ml_9_features_10FeatureSet_3feature_row)) {
         if (unlikely(!__pyx_v_feature_mat.memview)) { __Pyx_RaiseUnboundLocalError("feature_mat"); __PYX_ERR(0, 109, __pyx_L1_error) }
         __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_v_feature_mat, 2, (PyObject *(*)(char *)) __pyx_memview_get_float, (int (*)(char *, PyObject *)) __pyx_memview_set_float, 0);; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 109, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
@@ -4240,7 +4240,7 @@ static int __pyx_f_9vulchecker_9_features_10FeatureSet_feature_row(struct __pyx_
     #endif
   }
 
-  /* "vulchecker/_features.pyx":115
+  /* "hector_ml/_features.pyx":115
  *         Py_ssize_t row,
  *     ) except -1:
  *         cdef Py_ssize_t col = 0             # <<<<<<<<<<<<<<
@@ -4249,7 +4249,7 @@ static int __pyx_f_9vulchecker_9_features_10FeatureSet_feature_row(struct __pyx_
  */
   __pyx_v_col = 0;
 
-  /* "vulchecker/_features.pyx":117
+  /* "hector_ml/_features.pyx":117
  *         cdef Py_ssize_t col = 0
  *         cdef Feature feature
  *         for feature in self.features:             # <<<<<<<<<<<<<<
@@ -4269,20 +4269,20 @@ static int __pyx_f_9vulchecker_9_features_10FeatureSet_feature_row(struct __pyx_
     __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 117, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     #endif
-    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_9vulchecker_9_features_Feature))))) __PYX_ERR(0, 117, __pyx_L1_error)
-    __Pyx_XDECREF_SET(__pyx_v_feature, ((struct __pyx_obj_9vulchecker_9_features_Feature *)__pyx_t_2));
+    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_9hector_ml_9_features_Feature))))) __PYX_ERR(0, 117, __pyx_L1_error)
+    __Pyx_XDECREF_SET(__pyx_v_feature, ((struct __pyx_obj_9hector_ml_9_features_Feature *)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "vulchecker/_features.pyx":118
+    /* "hector_ml/_features.pyx":118
  *         cdef Feature feature
  *         for feature in self.features:
  *             feature.feature_row(feature_mat, data, row, col)             # <<<<<<<<<<<<<<
  *             col += feature.width
  * 
  */
-    __pyx_t_7 = ((struct __pyx_vtabstruct_9vulchecker_9_features_Feature *)__pyx_v_feature->__pyx_vtab)->feature_row(__pyx_v_feature, __pyx_v_feature_mat, __pyx_v_data, __pyx_v_row, __pyx_v_col); if (unlikely(__pyx_t_7 == ((int)-1))) __PYX_ERR(0, 118, __pyx_L1_error)
+    __pyx_t_7 = ((struct __pyx_vtabstruct_9hector_ml_9_features_Feature *)__pyx_v_feature->__pyx_vtab)->feature_row(__pyx_v_feature, __pyx_v_feature_mat, __pyx_v_data, __pyx_v_row, __pyx_v_col); if (unlikely(__pyx_t_7 == ((int)-1))) __PYX_ERR(0, 118, __pyx_L1_error)
 
-    /* "vulchecker/_features.pyx":119
+    /* "hector_ml/_features.pyx":119
  *         for feature in self.features:
  *             feature.feature_row(feature_mat, data, row, col)
  *             col += feature.width             # <<<<<<<<<<<<<<
@@ -4291,7 +4291,7 @@ static int __pyx_f_9vulchecker_9_features_10FeatureSet_feature_row(struct __pyx_
  */
     __pyx_v_col = (__pyx_v_col + __pyx_v_feature->width);
 
-    /* "vulchecker/_features.pyx":117
+    /* "hector_ml/_features.pyx":117
  *         cdef Py_ssize_t col = 0
  *         cdef Feature feature
  *         for feature in self.features:             # <<<<<<<<<<<<<<
@@ -4301,7 +4301,7 @@ static int __pyx_f_9vulchecker_9_features_10FeatureSet_feature_row(struct __pyx_
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "vulchecker/_features.pyx":109
+  /* "hector_ml/_features.pyx":109
  *         self.total_width = total_width
  * 
  *     cpdef int feature_row(             # <<<<<<<<<<<<<<
@@ -4320,7 +4320,7 @@ static int __pyx_f_9vulchecker_9_features_10FeatureSet_feature_row(struct __pyx_
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("vulchecker._features.FeatureSet.feature_row", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.FeatureSet.feature_row", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_feature);
@@ -4329,8 +4329,8 @@ static int __pyx_f_9vulchecker_9_features_10FeatureSet_feature_row(struct __pyx_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9vulchecker_9_features_10FeatureSet_3feature_row(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_9vulchecker_9_features_10FeatureSet_3feature_row(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9hector_ml_9_features_10FeatureSet_3feature_row(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_9hector_ml_9_features_10FeatureSet_3feature_row(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_feature_mat = { 0, 0, { 0 }, { 0 }, { 0 } };
   PyObject *__pyx_v_data = 0;
   Py_ssize_t __pyx_v_row;
@@ -4392,12 +4392,12 @@ static PyObject *__pyx_pw_9vulchecker_9_features_10FeatureSet_3feature_row(PyObj
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("feature_row", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 109, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("vulchecker._features.FeatureSet.feature_row", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.FeatureSet.feature_row", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_data), (&PyDict_Type), 1, "data", 1))) __PYX_ERR(0, 112, __pyx_L1_error)
-  __pyx_r = __pyx_pf_9vulchecker_9_features_10FeatureSet_2feature_row(((struct __pyx_obj_9vulchecker_9_features_FeatureSet *)__pyx_v_self), __pyx_v_feature_mat, __pyx_v_data, __pyx_v_row);
+  __pyx_r = __pyx_pf_9hector_ml_9_features_10FeatureSet_2feature_row(((struct __pyx_obj_9hector_ml_9_features_FeatureSet *)__pyx_v_self), __pyx_v_feature_mat, __pyx_v_data, __pyx_v_row);
 
   /* function exit code */
   goto __pyx_L0;
@@ -4408,7 +4408,7 @@ static PyObject *__pyx_pw_9vulchecker_9_features_10FeatureSet_3feature_row(PyObj
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_2feature_row(struct __pyx_obj_9vulchecker_9_features_FeatureSet *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row) {
+static PyObject *__pyx_pf_9hector_ml_9_features_10FeatureSet_2feature_row(struct __pyx_obj_9hector_ml_9_features_FeatureSet *__pyx_v_self, __Pyx_memviewslice __pyx_v_feature_mat, PyObject *__pyx_v_data, Py_ssize_t __pyx_v_row) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
@@ -4419,7 +4419,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_2feature_row(struc
   __Pyx_RefNannySetupContext("feature_row", 0);
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(!__pyx_v_feature_mat.memview)) { __Pyx_RaiseUnboundLocalError("feature_mat"); __PYX_ERR(0, 109, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_f_9vulchecker_9_features_10FeatureSet_feature_row(__pyx_v_self, __pyx_v_feature_mat, __pyx_v_data, __pyx_v_row, 1); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(0, 109, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9hector_ml_9_features_10FeatureSet_feature_row(__pyx_v_self, __pyx_v_feature_mat, __pyx_v_data, __pyx_v_row, 1); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(0, 109, __pyx_L1_error)
   __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 109, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
@@ -4429,7 +4429,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_2feature_row(struc
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("vulchecker._features.FeatureSet.feature_row", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.FeatureSet.feature_row", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_feature_mat, 1);
@@ -4438,7 +4438,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_2feature_row(struc
   return __pyx_r;
 }
 
-/* "vulchecker/_features.pyx":122
+/* "hector_ml/_features.pyx":122
  * 
  *     @staticmethod
  *     def from_features_and_indexes(raw_features, indexes):             # <<<<<<<<<<<<<<
@@ -4447,9 +4447,9 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_2feature_row(struc
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9vulchecker_9_features_10FeatureSet_5from_features_and_indexes(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_9vulchecker_9_features_10FeatureSet_5from_features_and_indexes = {"from_features_and_indexes", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9vulchecker_9_features_10FeatureSet_5from_features_and_indexes, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_9vulchecker_9_features_10FeatureSet_5from_features_and_indexes(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9hector_ml_9_features_10FeatureSet_5from_features_and_indexes(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9hector_ml_9_features_10FeatureSet_5from_features_and_indexes = {"from_features_and_indexes", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9hector_ml_9_features_10FeatureSet_5from_features_and_indexes, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9hector_ml_9_features_10FeatureSet_5from_features_and_indexes(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_raw_features = 0;
   PyObject *__pyx_v_indexes = 0;
   int __pyx_lineno = 0;
@@ -4500,22 +4500,22 @@ static PyObject *__pyx_pw_9vulchecker_9_features_10FeatureSet_5from_features_and
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("from_features_and_indexes", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 122, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("vulchecker._features.FeatureSet.from_features_and_indexes", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.FeatureSet.from_features_and_indexes", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and_indexes(__pyx_v_raw_features, __pyx_v_indexes);
+  __pyx_r = __pyx_pf_9hector_ml_9_features_10FeatureSet_4from_features_and_indexes(__pyx_v_raw_features, __pyx_v_indexes);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and_indexes(PyObject *__pyx_v_raw_features, PyObject *__pyx_v_indexes) {
+static PyObject *__pyx_pf_9hector_ml_9_features_10FeatureSet_4from_features_and_indexes(PyObject *__pyx_v_raw_features, PyObject *__pyx_v_indexes) {
   PyObject *__pyx_v_total_width = NULL;
   PyObject *__pyx_v_features = NULL;
   PyObject *__pyx_v_raw_feature = NULL;
-  struct __pyx_obj_9vulchecker_9_features_Feature *__pyx_v_feature = NULL;
+  struct __pyx_obj_9hector_ml_9_features_Feature *__pyx_v_feature = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -4537,7 +4537,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("from_features_and_indexes", 0);
 
-  /* "vulchecker/_features.pyx":123
+  /* "hector_ml/_features.pyx":123
  *     @staticmethod
  *     def from_features_and_indexes(raw_features, indexes):
  *         total_width = 0             # <<<<<<<<<<<<<<
@@ -4547,7 +4547,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
   __Pyx_INCREF(__pyx_int_0);
   __pyx_v_total_width = __pyx_int_0;
 
-  /* "vulchecker/_features.pyx":124
+  /* "hector_ml/_features.pyx":124
  *     def from_features_and_indexes(raw_features, indexes):
  *         total_width = 0
  *         features = []             # <<<<<<<<<<<<<<
@@ -4559,7 +4559,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
   __pyx_v_features = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "vulchecker/_features.pyx":125
+  /* "hector_ml/_features.pyx":125
  *         total_width = 0
  *         features = []
  *         for raw_feature in raw_features:             # <<<<<<<<<<<<<<
@@ -4608,7 +4608,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
     __Pyx_XDECREF_SET(__pyx_v_raw_feature, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "vulchecker/_features.pyx":126
+    /* "hector_ml/_features.pyx":126
  *         features = []
  *         for raw_feature in raw_features:
  *             if raw_feature.kind == FeatureKind.numeric:             # <<<<<<<<<<<<<<
@@ -4617,7 +4617,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
  */
     __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_raw_feature, __pyx_n_s_kind); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 126, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_PyInt_From_enum____pyx_t_9vulchecker_9_features_FeatureKind(__pyx_e_9vulchecker_9_features_numeric); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 126, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyInt_From_enum____pyx_t_9hector_ml_9_features_FeatureKind(__pyx_e_9hector_ml_9_features_numeric); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 126, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_6 = PyObject_RichCompare(__pyx_t_4, __pyx_t_5, Py_EQ); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 126, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -4626,7 +4626,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     if (__pyx_t_7) {
 
-      /* "vulchecker/_features.pyx":127
+      /* "hector_ml/_features.pyx":127
  *         for raw_feature in raw_features:
  *             if raw_feature.kind == FeatureKind.numeric:
  *                 feature = NumericFeature(raw_feature.name, 1)             # <<<<<<<<<<<<<<
@@ -4643,13 +4643,13 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
       __Pyx_GIVEREF(__pyx_int_1);
       PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_int_1);
       __pyx_t_6 = 0;
-      __pyx_t_6 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9vulchecker_9_features_NumericFeature), __pyx_t_5, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 127, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9hector_ml_9_features_NumericFeature), __pyx_t_5, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 127, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __Pyx_XDECREF_SET(__pyx_v_feature, ((struct __pyx_obj_9vulchecker_9_features_Feature *)__pyx_t_6));
+      __Pyx_XDECREF_SET(__pyx_v_feature, ((struct __pyx_obj_9hector_ml_9_features_Feature *)__pyx_t_6));
       __pyx_t_6 = 0;
 
-      /* "vulchecker/_features.pyx":126
+      /* "hector_ml/_features.pyx":126
  *         features = []
  *         for raw_feature in raw_features:
  *             if raw_feature.kind == FeatureKind.numeric:             # <<<<<<<<<<<<<<
@@ -4659,7 +4659,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
       goto __pyx_L5;
     }
 
-    /* "vulchecker/_features.pyx":128
+    /* "hector_ml/_features.pyx":128
  *             if raw_feature.kind == FeatureKind.numeric:
  *                 feature = NumericFeature(raw_feature.name, 1)
  *             elif raw_feature.kind == FeatureKind.optional_numeric:             # <<<<<<<<<<<<<<
@@ -4668,7 +4668,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
  */
     __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_raw_feature, __pyx_n_s_kind); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 128, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_5 = __Pyx_PyInt_From_enum____pyx_t_9vulchecker_9_features_FeatureKind(__pyx_e_9vulchecker_9_features_optional_numeric); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 128, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyInt_From_enum____pyx_t_9hector_ml_9_features_FeatureKind(__pyx_e_9hector_ml_9_features_optional_numeric); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 128, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_4 = PyObject_RichCompare(__pyx_t_6, __pyx_t_5, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 128, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
@@ -4677,7 +4677,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     if (__pyx_t_7) {
 
-      /* "vulchecker/_features.pyx":129
+      /* "hector_ml/_features.pyx":129
  *                 feature = NumericFeature(raw_feature.name, 1)
  *             elif raw_feature.kind == FeatureKind.optional_numeric:
  *                 feature = OptionalNumericFeature(raw_feature.name, 2)             # <<<<<<<<<<<<<<
@@ -4694,13 +4694,13 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
       __Pyx_GIVEREF(__pyx_int_2);
       PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_int_2);
       __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9vulchecker_9_features_OptionalNumericFeature), __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 129, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9hector_ml_9_features_OptionalNumericFeature), __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 129, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __Pyx_XDECREF_SET(__pyx_v_feature, ((struct __pyx_obj_9vulchecker_9_features_Feature *)__pyx_t_4));
+      __Pyx_XDECREF_SET(__pyx_v_feature, ((struct __pyx_obj_9hector_ml_9_features_Feature *)__pyx_t_4));
       __pyx_t_4 = 0;
 
-      /* "vulchecker/_features.pyx":128
+      /* "hector_ml/_features.pyx":128
  *             if raw_feature.kind == FeatureKind.numeric:
  *                 feature = NumericFeature(raw_feature.name, 1)
  *             elif raw_feature.kind == FeatureKind.optional_numeric:             # <<<<<<<<<<<<<<
@@ -4710,7 +4710,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
       goto __pyx_L5;
     }
 
-    /* "vulchecker/_features.pyx":130
+    /* "hector_ml/_features.pyx":130
  *             elif raw_feature.kind == FeatureKind.optional_numeric:
  *                 feature = OptionalNumericFeature(raw_feature.name, 2)
  *             elif raw_feature.kind == FeatureKind.categorical:             # <<<<<<<<<<<<<<
@@ -4719,7 +4719,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
  */
     __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_raw_feature, __pyx_n_s_kind); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 130, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_PyInt_From_enum____pyx_t_9vulchecker_9_features_FeatureKind(__pyx_e_9vulchecker_9_features_categorical); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 130, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyInt_From_enum____pyx_t_9hector_ml_9_features_FeatureKind(__pyx_e_9hector_ml_9_features_categorical); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 130, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_6 = PyObject_RichCompare(__pyx_t_4, __pyx_t_5, Py_EQ); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 130, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -4728,7 +4728,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     if (__pyx_t_7) {
 
-      /* "vulchecker/_features.pyx":132
+      /* "hector_ml/_features.pyx":132
  *             elif raw_feature.kind == FeatureKind.categorical:
  *                 feature = CategoricalFeature(
  *                     raw_feature.name,             # <<<<<<<<<<<<<<
@@ -4738,7 +4738,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
       __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_raw_feature, __pyx_n_s_name); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 132, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
 
-      /* "vulchecker/_features.pyx":133
+      /* "hector_ml/_features.pyx":133
  *                 feature = CategoricalFeature(
  *                     raw_feature.name,
  *                     len(indexes.setdefault(raw_feature.dictionary, {})),             # <<<<<<<<<<<<<<
@@ -4805,7 +4805,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
       __pyx_t_5 = PyInt_FromSsize_t(__pyx_t_13); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 133, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
 
-      /* "vulchecker/_features.pyx":131
+      /* "hector_ml/_features.pyx":131
  *                 feature = OptionalNumericFeature(raw_feature.name, 2)
  *             elif raw_feature.kind == FeatureKind.categorical:
  *                 feature = CategoricalFeature(             # <<<<<<<<<<<<<<
@@ -4820,13 +4820,13 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
       PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_5);
       __pyx_t_6 = 0;
       __pyx_t_5 = 0;
-      __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9vulchecker_9_features_CategoricalFeature), __pyx_t_4, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 131, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9hector_ml_9_features_CategoricalFeature), __pyx_t_4, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 131, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_XDECREF_SET(__pyx_v_feature, ((struct __pyx_obj_9vulchecker_9_features_Feature *)__pyx_t_5));
+      __Pyx_XDECREF_SET(__pyx_v_feature, ((struct __pyx_obj_9hector_ml_9_features_Feature *)__pyx_t_5));
       __pyx_t_5 = 0;
 
-      /* "vulchecker/_features.pyx":130
+      /* "hector_ml/_features.pyx":130
  *             elif raw_feature.kind == FeatureKind.optional_numeric:
  *                 feature = OptionalNumericFeature(raw_feature.name, 2)
  *             elif raw_feature.kind == FeatureKind.categorical:             # <<<<<<<<<<<<<<
@@ -4836,7 +4836,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
       goto __pyx_L5;
     }
 
-    /* "vulchecker/_features.pyx":135
+    /* "hector_ml/_features.pyx":135
  *                     len(indexes.setdefault(raw_feature.dictionary, {})),
  *                 )
  *             elif raw_feature.kind == FeatureKind.categorical_set:             # <<<<<<<<<<<<<<
@@ -4845,7 +4845,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
  */
     __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_raw_feature, __pyx_n_s_kind); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 135, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_4 = __Pyx_PyInt_From_enum____pyx_t_9vulchecker_9_features_FeatureKind(__pyx_e_9vulchecker_9_features_categorical_set); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 135, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyInt_From_enum____pyx_t_9hector_ml_9_features_FeatureKind(__pyx_e_9hector_ml_9_features_categorical_set); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 135, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_6 = PyObject_RichCompare(__pyx_t_5, __pyx_t_4, Py_EQ); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 135, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -4854,7 +4854,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     if (likely(__pyx_t_7)) {
 
-      /* "vulchecker/_features.pyx":137
+      /* "hector_ml/_features.pyx":137
  *             elif raw_feature.kind == FeatureKind.categorical_set:
  *                 feature = CategoricalSetFeature(
  *                     raw_feature.name,             # <<<<<<<<<<<<<<
@@ -4864,7 +4864,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
       __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_raw_feature, __pyx_n_s_name); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 137, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
 
-      /* "vulchecker/_features.pyx":138
+      /* "hector_ml/_features.pyx":138
  *                 feature = CategoricalSetFeature(
  *                     raw_feature.name,
  *                     len(indexes.setdefault(raw_feature.dictionary, {})),             # <<<<<<<<<<<<<<
@@ -4931,7 +4931,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
       __pyx_t_4 = PyInt_FromSsize_t(__pyx_t_13); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 138, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
 
-      /* "vulchecker/_features.pyx":136
+      /* "hector_ml/_features.pyx":136
  *                 )
  *             elif raw_feature.kind == FeatureKind.categorical_set:
  *                 feature = CategoricalSetFeature(             # <<<<<<<<<<<<<<
@@ -4946,13 +4946,13 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
       PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_t_4);
       __pyx_t_6 = 0;
       __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9vulchecker_9_features_CategoricalSetFeature), __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 136, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9hector_ml_9_features_CategoricalSetFeature), __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 136, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __Pyx_XDECREF_SET(__pyx_v_feature, ((struct __pyx_obj_9vulchecker_9_features_Feature *)__pyx_t_4));
+      __Pyx_XDECREF_SET(__pyx_v_feature, ((struct __pyx_obj_9hector_ml_9_features_Feature *)__pyx_t_4));
       __pyx_t_4 = 0;
 
-      /* "vulchecker/_features.pyx":135
+      /* "hector_ml/_features.pyx":135
  *                     len(indexes.setdefault(raw_feature.dictionary, {})),
  *                 )
  *             elif raw_feature.kind == FeatureKind.categorical_set:             # <<<<<<<<<<<<<<
@@ -4962,7 +4962,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
       goto __pyx_L5;
     }
 
-    /* "vulchecker/_features.pyx":141
+    /* "hector_ml/_features.pyx":141
  *                 )
  *             else:
  *                 raise RuntimeError("Unreachable!")  # pragma: no cover             # <<<<<<<<<<<<<<
@@ -4978,7 +4978,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
     }
     __pyx_L5:;
 
-    /* "vulchecker/_features.pyx":142
+    /* "hector_ml/_features.pyx":142
  *             else:
  *                 raise RuntimeError("Unreachable!")  # pragma: no cover
  *             features.append(feature)             # <<<<<<<<<<<<<<
@@ -4987,7 +4987,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
  */
     __pyx_t_14 = __Pyx_PyList_Append(__pyx_v_features, ((PyObject *)__pyx_v_feature)); if (unlikely(__pyx_t_14 == ((int)-1))) __PYX_ERR(0, 142, __pyx_L1_error)
 
-    /* "vulchecker/_features.pyx":143
+    /* "hector_ml/_features.pyx":143
  *                 raise RuntimeError("Unreachable!")  # pragma: no cover
  *             features.append(feature)
  *             total_width += feature.width             # <<<<<<<<<<<<<<
@@ -5001,7 +5001,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
     __Pyx_DECREF_SET(__pyx_v_total_width, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "vulchecker/_features.pyx":125
+    /* "hector_ml/_features.pyx":125
  *         total_width = 0
  *         features = []
  *         for raw_feature in raw_features:             # <<<<<<<<<<<<<<
@@ -5011,7 +5011,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "vulchecker/_features.pyx":144
+  /* "hector_ml/_features.pyx":144
  *             features.append(feature)
  *             total_width += feature.width
  *         return FeatureSet.__new__(FeatureSet, tuple(features), total_width)             # <<<<<<<<<<<<<<
@@ -5027,14 +5027,14 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
   __Pyx_GIVEREF(__pyx_v_total_width);
   PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_v_total_width);
   __pyx_t_1 = 0;
-  __pyx_t_1 = ((PyObject *)__pyx_tp_new_9vulchecker_9_features_FeatureSet(((PyTypeObject *)__pyx_ptype_9vulchecker_9_features_FeatureSet), __pyx_t_5, NULL)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 144, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_tp_new_9hector_ml_9_features_FeatureSet(((PyTypeObject *)__pyx_ptype_9hector_ml_9_features_FeatureSet), __pyx_t_5, NULL)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 144, __pyx_L1_error)
   __Pyx_GOTREF(((PyObject *)__pyx_t_1));
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_r = ((PyObject *)__pyx_t_1);
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "vulchecker/_features.pyx":122
+  /* "hector_ml/_features.pyx":122
  * 
  *     @staticmethod
  *     def from_features_and_indexes(raw_features, indexes):             # <<<<<<<<<<<<<<
@@ -5052,7 +5052,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_10);
   __Pyx_XDECREF(__pyx_t_12);
-  __Pyx_AddTraceback("vulchecker._features.FeatureSet.from_features_and_indexes", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.FeatureSet.from_features_and_indexes", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_total_width);
@@ -5064,7 +5064,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
   return __pyx_r;
 }
 
-/* "vulchecker/_features.pxd":5
+/* "hector_ml/_features.pxd":5
  * 
  * cdef class FeatureSet:
  *     cdef readonly tuple features             # <<<<<<<<<<<<<<
@@ -5073,19 +5073,19 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_4from_features_and
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9vulchecker_9_features_10FeatureSet_8features_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_9vulchecker_9_features_10FeatureSet_8features_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_9hector_ml_9_features_10FeatureSet_8features_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_9hector_ml_9_features_10FeatureSet_8features_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9vulchecker_9_features_10FeatureSet_8features___get__(((struct __pyx_obj_9vulchecker_9_features_FeatureSet *)__pyx_v_self));
+  __pyx_r = __pyx_pf_9hector_ml_9_features_10FeatureSet_8features___get__(((struct __pyx_obj_9hector_ml_9_features_FeatureSet *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_8features___get__(struct __pyx_obj_9vulchecker_9_features_FeatureSet *__pyx_v_self) {
+static PyObject *__pyx_pf_9hector_ml_9_features_10FeatureSet_8features___get__(struct __pyx_obj_9hector_ml_9_features_FeatureSet *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__", 0);
@@ -5101,7 +5101,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_8features___get__(
   return __pyx_r;
 }
 
-/* "vulchecker/_features.pxd":6
+/* "hector_ml/_features.pxd":6
  * cdef class FeatureSet:
  *     cdef readonly tuple features
  *     cdef readonly Py_ssize_t total_width             # <<<<<<<<<<<<<<
@@ -5110,19 +5110,19 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_8features___get__(
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9vulchecker_9_features_10FeatureSet_11total_width_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_9vulchecker_9_features_10FeatureSet_11total_width_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_9hector_ml_9_features_10FeatureSet_11total_width_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_9hector_ml_9_features_10FeatureSet_11total_width_1__get__(PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9vulchecker_9_features_10FeatureSet_11total_width___get__(((struct __pyx_obj_9vulchecker_9_features_FeatureSet *)__pyx_v_self));
+  __pyx_r = __pyx_pf_9hector_ml_9_features_10FeatureSet_11total_width___get__(((struct __pyx_obj_9hector_ml_9_features_FeatureSet *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_11total_width___get__(struct __pyx_obj_9vulchecker_9_features_FeatureSet *__pyx_v_self) {
+static PyObject *__pyx_pf_9hector_ml_9_features_10FeatureSet_11total_width___get__(struct __pyx_obj_9hector_ml_9_features_FeatureSet *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -5140,7 +5140,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_11total_width___ge
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("vulchecker._features.FeatureSet.total_width.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.FeatureSet.total_width.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -5155,19 +5155,19 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_11total_width___ge
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9vulchecker_9_features_10FeatureSet_7__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_9vulchecker_9_features_10FeatureSet_7__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_9hector_ml_9_features_10FeatureSet_7__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_9hector_ml_9_features_10FeatureSet_7__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__reduce_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9vulchecker_9_features_10FeatureSet_6__reduce_cython__(((struct __pyx_obj_9vulchecker_9_features_FeatureSet *)__pyx_v_self));
+  __pyx_r = __pyx_pf_9hector_ml_9_features_10FeatureSet_6__reduce_cython__(((struct __pyx_obj_9hector_ml_9_features_FeatureSet *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_6__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_FeatureSet *__pyx_v_self) {
+static PyObject *__pyx_pf_9hector_ml_9_features_10FeatureSet_6__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_FeatureSet *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -5197,7 +5197,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_6__reduce_cython__
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("vulchecker._features.FeatureSet.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.FeatureSet.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
@@ -5212,19 +5212,19 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_6__reduce_cython__
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9vulchecker_9_features_10FeatureSet_9__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
-static PyObject *__pyx_pw_9vulchecker_9_features_10FeatureSet_9__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pw_9hector_ml_9_features_10FeatureSet_9__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
+static PyObject *__pyx_pw_9hector_ml_9_features_10FeatureSet_9__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__setstate_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_9vulchecker_9_features_10FeatureSet_8__setstate_cython__(((struct __pyx_obj_9vulchecker_9_features_FeatureSet *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
+  __pyx_r = __pyx_pf_9hector_ml_9_features_10FeatureSet_8__setstate_cython__(((struct __pyx_obj_9hector_ml_9_features_FeatureSet *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_8__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9vulchecker_9_features_FeatureSet *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_9hector_ml_9_features_10FeatureSet_8__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_9hector_ml_9_features_FeatureSet *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -5254,7 +5254,7 @@ static PyObject *__pyx_pf_9vulchecker_9_features_10FeatureSet_8__setstate_cython
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("vulchecker._features.FeatureSet.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._features.FeatureSet.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
@@ -19837,10 +19837,10 @@ static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *__
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
-static struct __pyx_vtabstruct_9vulchecker_9_features_FeatureSet __pyx_vtable_9vulchecker_9_features_FeatureSet;
+static struct __pyx_vtabstruct_9hector_ml_9_features_FeatureSet __pyx_vtable_9hector_ml_9_features_FeatureSet;
 
-static PyObject *__pyx_tp_new_9vulchecker_9_features_FeatureSet(PyTypeObject *t, PyObject *a, PyObject *k) {
-  struct __pyx_obj_9vulchecker_9_features_FeatureSet *p;
+static PyObject *__pyx_tp_new_9hector_ml_9_features_FeatureSet(PyTypeObject *t, PyObject *a, PyObject *k) {
+  struct __pyx_obj_9hector_ml_9_features_FeatureSet *p;
   PyObject *o;
   if (likely((t->tp_flags & Py_TPFLAGS_IS_ABSTRACT) == 0)) {
     o = (*t->tp_alloc)(t, 0);
@@ -19848,18 +19848,18 @@ static PyObject *__pyx_tp_new_9vulchecker_9_features_FeatureSet(PyTypeObject *t,
     o = (PyObject *) PyBaseObject_Type.tp_new(t, __pyx_empty_tuple, 0);
   }
   if (unlikely(!o)) return 0;
-  p = ((struct __pyx_obj_9vulchecker_9_features_FeatureSet *)o);
-  p->__pyx_vtab = __pyx_vtabptr_9vulchecker_9_features_FeatureSet;
+  p = ((struct __pyx_obj_9hector_ml_9_features_FeatureSet *)o);
+  p->__pyx_vtab = __pyx_vtabptr_9hector_ml_9_features_FeatureSet;
   p->features = ((PyObject*)Py_None); Py_INCREF(Py_None);
-  if (unlikely(__pyx_pw_9vulchecker_9_features_10FeatureSet_1__cinit__(o, a, k) < 0)) goto bad;
+  if (unlikely(__pyx_pw_9hector_ml_9_features_10FeatureSet_1__cinit__(o, a, k) < 0)) goto bad;
   return o;
   bad:
   Py_DECREF(o); o = 0;
   return NULL;
 }
 
-static void __pyx_tp_dealloc_9vulchecker_9_features_FeatureSet(PyObject *o) {
-  struct __pyx_obj_9vulchecker_9_features_FeatureSet *p = (struct __pyx_obj_9vulchecker_9_features_FeatureSet *)o;
+static void __pyx_tp_dealloc_9hector_ml_9_features_FeatureSet(PyObject *o) {
+  struct __pyx_obj_9hector_ml_9_features_FeatureSet *p = (struct __pyx_obj_9hector_ml_9_features_FeatureSet *)o;
   #if CYTHON_USE_TP_FINALIZE
   if (unlikely(PyType_HasFeature(Py_TYPE(o), Py_TPFLAGS_HAVE_FINALIZE) && Py_TYPE(o)->tp_finalize) && !_PyGC_FINALIZED(o)) {
     if (PyObject_CallFinalizerFromDealloc(o)) return;
@@ -19870,52 +19870,52 @@ static void __pyx_tp_dealloc_9vulchecker_9_features_FeatureSet(PyObject *o) {
   (*Py_TYPE(o)->tp_free)(o);
 }
 
-static int __pyx_tp_traverse_9vulchecker_9_features_FeatureSet(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_9hector_ml_9_features_FeatureSet(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_9vulchecker_9_features_FeatureSet *p = (struct __pyx_obj_9vulchecker_9_features_FeatureSet *)o;
+  struct __pyx_obj_9hector_ml_9_features_FeatureSet *p = (struct __pyx_obj_9hector_ml_9_features_FeatureSet *)o;
   if (p->features) {
     e = (*v)(p->features, a); if (e) return e;
   }
   return 0;
 }
 
-static int __pyx_tp_clear_9vulchecker_9_features_FeatureSet(PyObject *o) {
+static int __pyx_tp_clear_9hector_ml_9_features_FeatureSet(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_9vulchecker_9_features_FeatureSet *p = (struct __pyx_obj_9vulchecker_9_features_FeatureSet *)o;
+  struct __pyx_obj_9hector_ml_9_features_FeatureSet *p = (struct __pyx_obj_9hector_ml_9_features_FeatureSet *)o;
   tmp = ((PyObject*)p->features);
   p->features = ((PyObject*)Py_None); Py_INCREF(Py_None);
   Py_XDECREF(tmp);
   return 0;
 }
 
-static PyObject *__pyx_getprop_9vulchecker_9_features_10FeatureSet_features(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_9vulchecker_9_features_10FeatureSet_8features_1__get__(o);
+static PyObject *__pyx_getprop_9hector_ml_9_features_10FeatureSet_features(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_9hector_ml_9_features_10FeatureSet_8features_1__get__(o);
 }
 
-static PyObject *__pyx_getprop_9vulchecker_9_features_10FeatureSet_total_width(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_9vulchecker_9_features_10FeatureSet_11total_width_1__get__(o);
+static PyObject *__pyx_getprop_9hector_ml_9_features_10FeatureSet_total_width(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_9hector_ml_9_features_10FeatureSet_11total_width_1__get__(o);
 }
 
-static PyMethodDef __pyx_methods_9vulchecker_9_features_FeatureSet[] = {
-  {"feature_row", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9vulchecker_9_features_10FeatureSet_3feature_row, METH_VARARGS|METH_KEYWORDS, 0},
-  {"from_features_and_indexes", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9vulchecker_9_features_10FeatureSet_5from_features_and_indexes, METH_VARARGS|METH_KEYWORDS, 0},
-  {"__reduce_cython__", (PyCFunction)__pyx_pw_9vulchecker_9_features_10FeatureSet_7__reduce_cython__, METH_NOARGS, 0},
-  {"__setstate_cython__", (PyCFunction)__pyx_pw_9vulchecker_9_features_10FeatureSet_9__setstate_cython__, METH_O, 0},
+static PyMethodDef __pyx_methods_9hector_ml_9_features_FeatureSet[] = {
+  {"feature_row", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9hector_ml_9_features_10FeatureSet_3feature_row, METH_VARARGS|METH_KEYWORDS, 0},
+  {"from_features_and_indexes", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9hector_ml_9_features_10FeatureSet_5from_features_and_indexes, METH_VARARGS|METH_KEYWORDS, 0},
+  {"__reduce_cython__", (PyCFunction)__pyx_pw_9hector_ml_9_features_10FeatureSet_7__reduce_cython__, METH_NOARGS, 0},
+  {"__setstate_cython__", (PyCFunction)__pyx_pw_9hector_ml_9_features_10FeatureSet_9__setstate_cython__, METH_O, 0},
   {0, 0, 0, 0}
 };
 
-static struct PyGetSetDef __pyx_getsets_9vulchecker_9_features_FeatureSet[] = {
-  {(char *)"features", __pyx_getprop_9vulchecker_9_features_10FeatureSet_features, 0, (char *)0, 0},
-  {(char *)"total_width", __pyx_getprop_9vulchecker_9_features_10FeatureSet_total_width, 0, (char *)0, 0},
+static struct PyGetSetDef __pyx_getsets_9hector_ml_9_features_FeatureSet[] = {
+  {(char *)"features", __pyx_getprop_9hector_ml_9_features_10FeatureSet_features, 0, (char *)0, 0},
+  {(char *)"total_width", __pyx_getprop_9hector_ml_9_features_10FeatureSet_total_width, 0, (char *)0, 0},
   {0, 0, 0, 0, 0}
 };
 
-static PyTypeObject __pyx_type_9vulchecker_9_features_FeatureSet = {
+static PyTypeObject __pyx_type_9hector_ml_9_features_FeatureSet = {
   PyVarObject_HEAD_INIT(0, 0)
-  "vulchecker._features.FeatureSet", /*tp_name*/
-  sizeof(struct __pyx_obj_9vulchecker_9_features_FeatureSet), /*tp_basicsize*/
+  "hector_ml._features.FeatureSet", /*tp_name*/
+  sizeof(struct __pyx_obj_9hector_ml_9_features_FeatureSet), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_9vulchecker_9_features_FeatureSet, /*tp_dealloc*/
+  __pyx_tp_dealloc_9hector_ml_9_features_FeatureSet, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -19942,15 +19942,15 @@ static PyTypeObject __pyx_type_9vulchecker_9_features_FeatureSet = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_9vulchecker_9_features_FeatureSet, /*tp_traverse*/
-  __pyx_tp_clear_9vulchecker_9_features_FeatureSet, /*tp_clear*/
+  __pyx_tp_traverse_9hector_ml_9_features_FeatureSet, /*tp_traverse*/
+  __pyx_tp_clear_9hector_ml_9_features_FeatureSet, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_9vulchecker_9_features_FeatureSet, /*tp_methods*/
+  __pyx_methods_9hector_ml_9_features_FeatureSet, /*tp_methods*/
   0, /*tp_members*/
-  __pyx_getsets_9vulchecker_9_features_FeatureSet, /*tp_getset*/
+  __pyx_getsets_9hector_ml_9_features_FeatureSet, /*tp_getset*/
   0, /*tp_base*/
   0, /*tp_dict*/
   0, /*tp_descr_get*/
@@ -19958,7 +19958,7 @@ static PyTypeObject __pyx_type_9vulchecker_9_features_FeatureSet = {
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_9vulchecker_9_features_FeatureSet, /*tp_new*/
+  __pyx_tp_new_9hector_ml_9_features_FeatureSet, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -19978,10 +19978,10 @@ static PyTypeObject __pyx_type_9vulchecker_9_features_FeatureSet = {
   0, /*tp_print*/
   #endif
 };
-static struct __pyx_vtabstruct_9vulchecker_9_features_Feature __pyx_vtable_9vulchecker_9_features_Feature;
+static struct __pyx_vtabstruct_9hector_ml_9_features_Feature __pyx_vtable_9hector_ml_9_features_Feature;
 
-static PyObject *__pyx_tp_new_9vulchecker_9_features_Feature(PyTypeObject *t, PyObject *a, PyObject *k) {
-  struct __pyx_obj_9vulchecker_9_features_Feature *p;
+static PyObject *__pyx_tp_new_9hector_ml_9_features_Feature(PyTypeObject *t, PyObject *a, PyObject *k) {
+  struct __pyx_obj_9hector_ml_9_features_Feature *p;
   PyObject *o;
   if (likely((t->tp_flags & Py_TPFLAGS_IS_ABSTRACT) == 0)) {
     o = (*t->tp_alloc)(t, 0);
@@ -19989,18 +19989,18 @@ static PyObject *__pyx_tp_new_9vulchecker_9_features_Feature(PyTypeObject *t, Py
     o = (PyObject *) PyBaseObject_Type.tp_new(t, __pyx_empty_tuple, 0);
   }
   if (unlikely(!o)) return 0;
-  p = ((struct __pyx_obj_9vulchecker_9_features_Feature *)o);
-  p->__pyx_vtab = __pyx_vtabptr_9vulchecker_9_features_Feature;
+  p = ((struct __pyx_obj_9hector_ml_9_features_Feature *)o);
+  p->__pyx_vtab = __pyx_vtabptr_9hector_ml_9_features_Feature;
   p->name = Py_None; Py_INCREF(Py_None);
-  if (unlikely(__pyx_pw_9vulchecker_9_features_7Feature_1__cinit__(o, a, k) < 0)) goto bad;
+  if (unlikely(__pyx_pw_9hector_ml_9_features_7Feature_1__cinit__(o, a, k) < 0)) goto bad;
   return o;
   bad:
   Py_DECREF(o); o = 0;
   return NULL;
 }
 
-static void __pyx_tp_dealloc_9vulchecker_9_features_Feature(PyObject *o) {
-  struct __pyx_obj_9vulchecker_9_features_Feature *p = (struct __pyx_obj_9vulchecker_9_features_Feature *)o;
+static void __pyx_tp_dealloc_9hector_ml_9_features_Feature(PyObject *o) {
+  struct __pyx_obj_9hector_ml_9_features_Feature *p = (struct __pyx_obj_9hector_ml_9_features_Feature *)o;
   #if CYTHON_USE_TP_FINALIZE
   if (unlikely(PyType_HasFeature(Py_TYPE(o), Py_TPFLAGS_HAVE_FINALIZE) && Py_TYPE(o)->tp_finalize) && !_PyGC_FINALIZED(o)) {
     if (PyObject_CallFinalizerFromDealloc(o)) return;
@@ -20011,50 +20011,50 @@ static void __pyx_tp_dealloc_9vulchecker_9_features_Feature(PyObject *o) {
   (*Py_TYPE(o)->tp_free)(o);
 }
 
-static int __pyx_tp_traverse_9vulchecker_9_features_Feature(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_9hector_ml_9_features_Feature(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_9vulchecker_9_features_Feature *p = (struct __pyx_obj_9vulchecker_9_features_Feature *)o;
+  struct __pyx_obj_9hector_ml_9_features_Feature *p = (struct __pyx_obj_9hector_ml_9_features_Feature *)o;
   if (p->name) {
     e = (*v)(p->name, a); if (e) return e;
   }
   return 0;
 }
 
-static int __pyx_tp_clear_9vulchecker_9_features_Feature(PyObject *o) {
+static int __pyx_tp_clear_9hector_ml_9_features_Feature(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_9vulchecker_9_features_Feature *p = (struct __pyx_obj_9vulchecker_9_features_Feature *)o;
+  struct __pyx_obj_9hector_ml_9_features_Feature *p = (struct __pyx_obj_9hector_ml_9_features_Feature *)o;
   tmp = ((PyObject*)p->name);
   p->name = Py_None; Py_INCREF(Py_None);
   Py_XDECREF(tmp);
   return 0;
 }
 
-static PyObject *__pyx_getprop_9vulchecker_9_features_7Feature_name(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_9vulchecker_9_features_7Feature_4name_1__get__(o);
+static PyObject *__pyx_getprop_9hector_ml_9_features_7Feature_name(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_9hector_ml_9_features_7Feature_4name_1__get__(o);
 }
 
-static PyObject *__pyx_getprop_9vulchecker_9_features_7Feature_width(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_9vulchecker_9_features_7Feature_5width_1__get__(o);
+static PyObject *__pyx_getprop_9hector_ml_9_features_7Feature_width(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_9hector_ml_9_features_7Feature_5width_1__get__(o);
 }
 
-static PyMethodDef __pyx_methods_9vulchecker_9_features_Feature[] = {
-  {"__reduce_cython__", (PyCFunction)__pyx_pw_9vulchecker_9_features_7Feature_3__reduce_cython__, METH_NOARGS, 0},
-  {"__setstate_cython__", (PyCFunction)__pyx_pw_9vulchecker_9_features_7Feature_5__setstate_cython__, METH_O, 0},
+static PyMethodDef __pyx_methods_9hector_ml_9_features_Feature[] = {
+  {"__reduce_cython__", (PyCFunction)__pyx_pw_9hector_ml_9_features_7Feature_3__reduce_cython__, METH_NOARGS, 0},
+  {"__setstate_cython__", (PyCFunction)__pyx_pw_9hector_ml_9_features_7Feature_5__setstate_cython__, METH_O, 0},
   {0, 0, 0, 0}
 };
 
-static struct PyGetSetDef __pyx_getsets_9vulchecker_9_features_Feature[] = {
-  {(char *)"name", __pyx_getprop_9vulchecker_9_features_7Feature_name, 0, (char *)0, 0},
-  {(char *)"width", __pyx_getprop_9vulchecker_9_features_7Feature_width, 0, (char *)0, 0},
+static struct PyGetSetDef __pyx_getsets_9hector_ml_9_features_Feature[] = {
+  {(char *)"name", __pyx_getprop_9hector_ml_9_features_7Feature_name, 0, (char *)0, 0},
+  {(char *)"width", __pyx_getprop_9hector_ml_9_features_7Feature_width, 0, (char *)0, 0},
   {0, 0, 0, 0, 0}
 };
 
-static PyTypeObject __pyx_type_9vulchecker_9_features_Feature = {
+static PyTypeObject __pyx_type_9hector_ml_9_features_Feature = {
   PyVarObject_HEAD_INIT(0, 0)
-  "vulchecker._features.Feature", /*tp_name*/
-  sizeof(struct __pyx_obj_9vulchecker_9_features_Feature), /*tp_basicsize*/
+  "hector_ml._features.Feature", /*tp_name*/
+  sizeof(struct __pyx_obj_9hector_ml_9_features_Feature), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_9vulchecker_9_features_Feature, /*tp_dealloc*/
+  __pyx_tp_dealloc_9hector_ml_9_features_Feature, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -20081,15 +20081,15 @@ static PyTypeObject __pyx_type_9vulchecker_9_features_Feature = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_9vulchecker_9_features_Feature, /*tp_traverse*/
-  __pyx_tp_clear_9vulchecker_9_features_Feature, /*tp_clear*/
+  __pyx_tp_traverse_9hector_ml_9_features_Feature, /*tp_traverse*/
+  __pyx_tp_clear_9hector_ml_9_features_Feature, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_9vulchecker_9_features_Feature, /*tp_methods*/
+  __pyx_methods_9hector_ml_9_features_Feature, /*tp_methods*/
   0, /*tp_members*/
-  __pyx_getsets_9vulchecker_9_features_Feature, /*tp_getset*/
+  __pyx_getsets_9hector_ml_9_features_Feature, /*tp_getset*/
   0, /*tp_base*/
   0, /*tp_dict*/
   0, /*tp_descr_get*/
@@ -20097,7 +20097,7 @@ static PyTypeObject __pyx_type_9vulchecker_9_features_Feature = {
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_9vulchecker_9_features_Feature, /*tp_new*/
+  __pyx_tp_new_9hector_ml_9_features_Feature, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -20117,29 +20117,29 @@ static PyTypeObject __pyx_type_9vulchecker_9_features_Feature = {
   0, /*tp_print*/
   #endif
 };
-static struct __pyx_vtabstruct_9vulchecker_9_features_NumericFeature __pyx_vtable_9vulchecker_9_features_NumericFeature;
+static struct __pyx_vtabstruct_9hector_ml_9_features_NumericFeature __pyx_vtable_9hector_ml_9_features_NumericFeature;
 
-static PyObject *__pyx_tp_new_9vulchecker_9_features_NumericFeature(PyTypeObject *t, PyObject *a, PyObject *k) {
-  struct __pyx_obj_9vulchecker_9_features_NumericFeature *p;
-  PyObject *o = __pyx_tp_new_9vulchecker_9_features_Feature(t, a, k);
+static PyObject *__pyx_tp_new_9hector_ml_9_features_NumericFeature(PyTypeObject *t, PyObject *a, PyObject *k) {
+  struct __pyx_obj_9hector_ml_9_features_NumericFeature *p;
+  PyObject *o = __pyx_tp_new_9hector_ml_9_features_Feature(t, a, k);
   if (unlikely(!o)) return 0;
-  p = ((struct __pyx_obj_9vulchecker_9_features_NumericFeature *)o);
-  p->__pyx_base.__pyx_vtab = (struct __pyx_vtabstruct_9vulchecker_9_features_Feature*)__pyx_vtabptr_9vulchecker_9_features_NumericFeature;
+  p = ((struct __pyx_obj_9hector_ml_9_features_NumericFeature *)o);
+  p->__pyx_base.__pyx_vtab = (struct __pyx_vtabstruct_9hector_ml_9_features_Feature*)__pyx_vtabptr_9hector_ml_9_features_NumericFeature;
   return o;
 }
 
-static PyMethodDef __pyx_methods_9vulchecker_9_features_NumericFeature[] = {
-  {"__reduce_cython__", (PyCFunction)__pyx_pw_9vulchecker_9_features_14NumericFeature_1__reduce_cython__, METH_NOARGS, 0},
-  {"__setstate_cython__", (PyCFunction)__pyx_pw_9vulchecker_9_features_14NumericFeature_3__setstate_cython__, METH_O, 0},
+static PyMethodDef __pyx_methods_9hector_ml_9_features_NumericFeature[] = {
+  {"__reduce_cython__", (PyCFunction)__pyx_pw_9hector_ml_9_features_14NumericFeature_1__reduce_cython__, METH_NOARGS, 0},
+  {"__setstate_cython__", (PyCFunction)__pyx_pw_9hector_ml_9_features_14NumericFeature_3__setstate_cython__, METH_O, 0},
   {0, 0, 0, 0}
 };
 
-static PyTypeObject __pyx_type_9vulchecker_9_features_NumericFeature = {
+static PyTypeObject __pyx_type_9hector_ml_9_features_NumericFeature = {
   PyVarObject_HEAD_INIT(0, 0)
-  "vulchecker._features.NumericFeature", /*tp_name*/
-  sizeof(struct __pyx_obj_9vulchecker_9_features_NumericFeature), /*tp_basicsize*/
+  "hector_ml._features.NumericFeature", /*tp_name*/
+  sizeof(struct __pyx_obj_9hector_ml_9_features_NumericFeature), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_9vulchecker_9_features_Feature, /*tp_dealloc*/
+  __pyx_tp_dealloc_9hector_ml_9_features_Feature, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -20166,13 +20166,13 @@ static PyTypeObject __pyx_type_9vulchecker_9_features_NumericFeature = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_9vulchecker_9_features_Feature, /*tp_traverse*/
-  __pyx_tp_clear_9vulchecker_9_features_Feature, /*tp_clear*/
+  __pyx_tp_traverse_9hector_ml_9_features_Feature, /*tp_traverse*/
+  __pyx_tp_clear_9hector_ml_9_features_Feature, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_9vulchecker_9_features_NumericFeature, /*tp_methods*/
+  __pyx_methods_9hector_ml_9_features_NumericFeature, /*tp_methods*/
   0, /*tp_members*/
   0, /*tp_getset*/
   0, /*tp_base*/
@@ -20182,7 +20182,7 @@ static PyTypeObject __pyx_type_9vulchecker_9_features_NumericFeature = {
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_9vulchecker_9_features_NumericFeature, /*tp_new*/
+  __pyx_tp_new_9hector_ml_9_features_NumericFeature, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -20202,29 +20202,29 @@ static PyTypeObject __pyx_type_9vulchecker_9_features_NumericFeature = {
   0, /*tp_print*/
   #endif
 };
-static struct __pyx_vtabstruct_9vulchecker_9_features_OptionalNumericFeature __pyx_vtable_9vulchecker_9_features_OptionalNumericFeature;
+static struct __pyx_vtabstruct_9hector_ml_9_features_OptionalNumericFeature __pyx_vtable_9hector_ml_9_features_OptionalNumericFeature;
 
-static PyObject *__pyx_tp_new_9vulchecker_9_features_OptionalNumericFeature(PyTypeObject *t, PyObject *a, PyObject *k) {
-  struct __pyx_obj_9vulchecker_9_features_OptionalNumericFeature *p;
-  PyObject *o = __pyx_tp_new_9vulchecker_9_features_Feature(t, a, k);
+static PyObject *__pyx_tp_new_9hector_ml_9_features_OptionalNumericFeature(PyTypeObject *t, PyObject *a, PyObject *k) {
+  struct __pyx_obj_9hector_ml_9_features_OptionalNumericFeature *p;
+  PyObject *o = __pyx_tp_new_9hector_ml_9_features_Feature(t, a, k);
   if (unlikely(!o)) return 0;
-  p = ((struct __pyx_obj_9vulchecker_9_features_OptionalNumericFeature *)o);
-  p->__pyx_base.__pyx_vtab = (struct __pyx_vtabstruct_9vulchecker_9_features_Feature*)__pyx_vtabptr_9vulchecker_9_features_OptionalNumericFeature;
+  p = ((struct __pyx_obj_9hector_ml_9_features_OptionalNumericFeature *)o);
+  p->__pyx_base.__pyx_vtab = (struct __pyx_vtabstruct_9hector_ml_9_features_Feature*)__pyx_vtabptr_9hector_ml_9_features_OptionalNumericFeature;
   return o;
 }
 
-static PyMethodDef __pyx_methods_9vulchecker_9_features_OptionalNumericFeature[] = {
-  {"__reduce_cython__", (PyCFunction)__pyx_pw_9vulchecker_9_features_22OptionalNumericFeature_1__reduce_cython__, METH_NOARGS, 0},
-  {"__setstate_cython__", (PyCFunction)__pyx_pw_9vulchecker_9_features_22OptionalNumericFeature_3__setstate_cython__, METH_O, 0},
+static PyMethodDef __pyx_methods_9hector_ml_9_features_OptionalNumericFeature[] = {
+  {"__reduce_cython__", (PyCFunction)__pyx_pw_9hector_ml_9_features_22OptionalNumericFeature_1__reduce_cython__, METH_NOARGS, 0},
+  {"__setstate_cython__", (PyCFunction)__pyx_pw_9hector_ml_9_features_22OptionalNumericFeature_3__setstate_cython__, METH_O, 0},
   {0, 0, 0, 0}
 };
 
-static PyTypeObject __pyx_type_9vulchecker_9_features_OptionalNumericFeature = {
+static PyTypeObject __pyx_type_9hector_ml_9_features_OptionalNumericFeature = {
   PyVarObject_HEAD_INIT(0, 0)
-  "vulchecker._features.OptionalNumericFeature", /*tp_name*/
-  sizeof(struct __pyx_obj_9vulchecker_9_features_OptionalNumericFeature), /*tp_basicsize*/
+  "hector_ml._features.OptionalNumericFeature", /*tp_name*/
+  sizeof(struct __pyx_obj_9hector_ml_9_features_OptionalNumericFeature), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_9vulchecker_9_features_Feature, /*tp_dealloc*/
+  __pyx_tp_dealloc_9hector_ml_9_features_Feature, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -20251,13 +20251,13 @@ static PyTypeObject __pyx_type_9vulchecker_9_features_OptionalNumericFeature = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_9vulchecker_9_features_Feature, /*tp_traverse*/
-  __pyx_tp_clear_9vulchecker_9_features_Feature, /*tp_clear*/
+  __pyx_tp_traverse_9hector_ml_9_features_Feature, /*tp_traverse*/
+  __pyx_tp_clear_9hector_ml_9_features_Feature, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_9vulchecker_9_features_OptionalNumericFeature, /*tp_methods*/
+  __pyx_methods_9hector_ml_9_features_OptionalNumericFeature, /*tp_methods*/
   0, /*tp_members*/
   0, /*tp_getset*/
   0, /*tp_base*/
@@ -20267,7 +20267,7 @@ static PyTypeObject __pyx_type_9vulchecker_9_features_OptionalNumericFeature = {
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_9vulchecker_9_features_OptionalNumericFeature, /*tp_new*/
+  __pyx_tp_new_9hector_ml_9_features_OptionalNumericFeature, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -20287,29 +20287,29 @@ static PyTypeObject __pyx_type_9vulchecker_9_features_OptionalNumericFeature = {
   0, /*tp_print*/
   #endif
 };
-static struct __pyx_vtabstruct_9vulchecker_9_features_CategoricalFeature __pyx_vtable_9vulchecker_9_features_CategoricalFeature;
+static struct __pyx_vtabstruct_9hector_ml_9_features_CategoricalFeature __pyx_vtable_9hector_ml_9_features_CategoricalFeature;
 
-static PyObject *__pyx_tp_new_9vulchecker_9_features_CategoricalFeature(PyTypeObject *t, PyObject *a, PyObject *k) {
-  struct __pyx_obj_9vulchecker_9_features_CategoricalFeature *p;
-  PyObject *o = __pyx_tp_new_9vulchecker_9_features_Feature(t, a, k);
+static PyObject *__pyx_tp_new_9hector_ml_9_features_CategoricalFeature(PyTypeObject *t, PyObject *a, PyObject *k) {
+  struct __pyx_obj_9hector_ml_9_features_CategoricalFeature *p;
+  PyObject *o = __pyx_tp_new_9hector_ml_9_features_Feature(t, a, k);
   if (unlikely(!o)) return 0;
-  p = ((struct __pyx_obj_9vulchecker_9_features_CategoricalFeature *)o);
-  p->__pyx_base.__pyx_vtab = (struct __pyx_vtabstruct_9vulchecker_9_features_Feature*)__pyx_vtabptr_9vulchecker_9_features_CategoricalFeature;
+  p = ((struct __pyx_obj_9hector_ml_9_features_CategoricalFeature *)o);
+  p->__pyx_base.__pyx_vtab = (struct __pyx_vtabstruct_9hector_ml_9_features_Feature*)__pyx_vtabptr_9hector_ml_9_features_CategoricalFeature;
   return o;
 }
 
-static PyMethodDef __pyx_methods_9vulchecker_9_features_CategoricalFeature[] = {
-  {"__reduce_cython__", (PyCFunction)__pyx_pw_9vulchecker_9_features_18CategoricalFeature_1__reduce_cython__, METH_NOARGS, 0},
-  {"__setstate_cython__", (PyCFunction)__pyx_pw_9vulchecker_9_features_18CategoricalFeature_3__setstate_cython__, METH_O, 0},
+static PyMethodDef __pyx_methods_9hector_ml_9_features_CategoricalFeature[] = {
+  {"__reduce_cython__", (PyCFunction)__pyx_pw_9hector_ml_9_features_18CategoricalFeature_1__reduce_cython__, METH_NOARGS, 0},
+  {"__setstate_cython__", (PyCFunction)__pyx_pw_9hector_ml_9_features_18CategoricalFeature_3__setstate_cython__, METH_O, 0},
   {0, 0, 0, 0}
 };
 
-static PyTypeObject __pyx_type_9vulchecker_9_features_CategoricalFeature = {
+static PyTypeObject __pyx_type_9hector_ml_9_features_CategoricalFeature = {
   PyVarObject_HEAD_INIT(0, 0)
-  "vulchecker._features.CategoricalFeature", /*tp_name*/
-  sizeof(struct __pyx_obj_9vulchecker_9_features_CategoricalFeature), /*tp_basicsize*/
+  "hector_ml._features.CategoricalFeature", /*tp_name*/
+  sizeof(struct __pyx_obj_9hector_ml_9_features_CategoricalFeature), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_9vulchecker_9_features_Feature, /*tp_dealloc*/
+  __pyx_tp_dealloc_9hector_ml_9_features_Feature, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -20336,13 +20336,13 @@ static PyTypeObject __pyx_type_9vulchecker_9_features_CategoricalFeature = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_9vulchecker_9_features_Feature, /*tp_traverse*/
-  __pyx_tp_clear_9vulchecker_9_features_Feature, /*tp_clear*/
+  __pyx_tp_traverse_9hector_ml_9_features_Feature, /*tp_traverse*/
+  __pyx_tp_clear_9hector_ml_9_features_Feature, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_9vulchecker_9_features_CategoricalFeature, /*tp_methods*/
+  __pyx_methods_9hector_ml_9_features_CategoricalFeature, /*tp_methods*/
   0, /*tp_members*/
   0, /*tp_getset*/
   0, /*tp_base*/
@@ -20352,7 +20352,7 @@ static PyTypeObject __pyx_type_9vulchecker_9_features_CategoricalFeature = {
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_9vulchecker_9_features_CategoricalFeature, /*tp_new*/
+  __pyx_tp_new_9hector_ml_9_features_CategoricalFeature, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -20372,29 +20372,29 @@ static PyTypeObject __pyx_type_9vulchecker_9_features_CategoricalFeature = {
   0, /*tp_print*/
   #endif
 };
-static struct __pyx_vtabstruct_9vulchecker_9_features_CategoricalSetFeature __pyx_vtable_9vulchecker_9_features_CategoricalSetFeature;
+static struct __pyx_vtabstruct_9hector_ml_9_features_CategoricalSetFeature __pyx_vtable_9hector_ml_9_features_CategoricalSetFeature;
 
-static PyObject *__pyx_tp_new_9vulchecker_9_features_CategoricalSetFeature(PyTypeObject *t, PyObject *a, PyObject *k) {
-  struct __pyx_obj_9vulchecker_9_features_CategoricalSetFeature *p;
-  PyObject *o = __pyx_tp_new_9vulchecker_9_features_Feature(t, a, k);
+static PyObject *__pyx_tp_new_9hector_ml_9_features_CategoricalSetFeature(PyTypeObject *t, PyObject *a, PyObject *k) {
+  struct __pyx_obj_9hector_ml_9_features_CategoricalSetFeature *p;
+  PyObject *o = __pyx_tp_new_9hector_ml_9_features_Feature(t, a, k);
   if (unlikely(!o)) return 0;
-  p = ((struct __pyx_obj_9vulchecker_9_features_CategoricalSetFeature *)o);
-  p->__pyx_base.__pyx_vtab = (struct __pyx_vtabstruct_9vulchecker_9_features_Feature*)__pyx_vtabptr_9vulchecker_9_features_CategoricalSetFeature;
+  p = ((struct __pyx_obj_9hector_ml_9_features_CategoricalSetFeature *)o);
+  p->__pyx_base.__pyx_vtab = (struct __pyx_vtabstruct_9hector_ml_9_features_Feature*)__pyx_vtabptr_9hector_ml_9_features_CategoricalSetFeature;
   return o;
 }
 
-static PyMethodDef __pyx_methods_9vulchecker_9_features_CategoricalSetFeature[] = {
-  {"__reduce_cython__", (PyCFunction)__pyx_pw_9vulchecker_9_features_21CategoricalSetFeature_1__reduce_cython__, METH_NOARGS, 0},
-  {"__setstate_cython__", (PyCFunction)__pyx_pw_9vulchecker_9_features_21CategoricalSetFeature_3__setstate_cython__, METH_O, 0},
+static PyMethodDef __pyx_methods_9hector_ml_9_features_CategoricalSetFeature[] = {
+  {"__reduce_cython__", (PyCFunction)__pyx_pw_9hector_ml_9_features_21CategoricalSetFeature_1__reduce_cython__, METH_NOARGS, 0},
+  {"__setstate_cython__", (PyCFunction)__pyx_pw_9hector_ml_9_features_21CategoricalSetFeature_3__setstate_cython__, METH_O, 0},
   {0, 0, 0, 0}
 };
 
-static PyTypeObject __pyx_type_9vulchecker_9_features_CategoricalSetFeature = {
+static PyTypeObject __pyx_type_9hector_ml_9_features_CategoricalSetFeature = {
   PyVarObject_HEAD_INIT(0, 0)
-  "vulchecker._features.CategoricalSetFeature", /*tp_name*/
-  sizeof(struct __pyx_obj_9vulchecker_9_features_CategoricalSetFeature), /*tp_basicsize*/
+  "hector_ml._features.CategoricalSetFeature", /*tp_name*/
+  sizeof(struct __pyx_obj_9hector_ml_9_features_CategoricalSetFeature), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_9vulchecker_9_features_Feature, /*tp_dealloc*/
+  __pyx_tp_dealloc_9hector_ml_9_features_Feature, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -20421,13 +20421,13 @@ static PyTypeObject __pyx_type_9vulchecker_9_features_CategoricalSetFeature = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_9vulchecker_9_features_Feature, /*tp_traverse*/
-  __pyx_tp_clear_9vulchecker_9_features_Feature, /*tp_clear*/
+  __pyx_tp_traverse_9hector_ml_9_features_Feature, /*tp_traverse*/
+  __pyx_tp_clear_9hector_ml_9_features_Feature, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_9vulchecker_9_features_CategoricalSetFeature, /*tp_methods*/
+  __pyx_methods_9hector_ml_9_features_CategoricalSetFeature, /*tp_methods*/
   0, /*tp_members*/
   0, /*tp_getset*/
   0, /*tp_base*/
@@ -20437,7 +20437,7 @@ static PyTypeObject __pyx_type_9vulchecker_9_features_CategoricalSetFeature = {
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_9vulchecker_9_features_CategoricalSetFeature, /*tp_new*/
+  __pyx_tp_new_9hector_ml_9_features_CategoricalSetFeature, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -20520,7 +20520,7 @@ static PyMappingMethods __pyx_tp_as_mapping___Pyx_EnumMeta = {
 
 static PyTypeObject __Pyx_EnumMeta = {
   PyVarObject_HEAD_INIT(0, 0)
-  "vulchecker._features.__Pyx_EnumMeta", /*tp_name*/
+  "hector_ml._features.__Pyx_EnumMeta", /*tp_name*/
   sizeof(struct __pyx_obj___Pyx_EnumMeta), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc___Pyx_EnumMeta, /*tp_dealloc*/
@@ -20709,7 +20709,7 @@ static PyBufferProcs __pyx_tp_as_buffer_array = {
 
 static PyTypeObject __pyx_type___pyx_array = {
   PyVarObject_HEAD_INIT(0, 0)
-  "vulchecker._features.array", /*tp_name*/
+  "hector_ml._features.array", /*tp_name*/
   sizeof(struct __pyx_array_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_array, /*tp_dealloc*/
@@ -20828,7 +20828,7 @@ static PyMethodDef __pyx_methods_Enum[] = {
 
 static PyTypeObject __pyx_type___pyx_MemviewEnum = {
   PyVarObject_HEAD_INIT(0, 0)
-  "vulchecker._features.Enum", /*tp_name*/
+  "hector_ml._features.Enum", /*tp_name*/
   sizeof(struct __pyx_MemviewEnum_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_Enum, /*tp_dealloc*/
@@ -21089,7 +21089,7 @@ static PyBufferProcs __pyx_tp_as_buffer_memoryview = {
 
 static PyTypeObject __pyx_type___pyx_memoryview = {
   PyVarObject_HEAD_INIT(0, 0)
-  "vulchecker._features.memoryview", /*tp_name*/
+  "hector_ml._features.memoryview", /*tp_name*/
   sizeof(struct __pyx_memoryview_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_memoryview, /*tp_dealloc*/
@@ -21227,7 +21227,7 @@ static struct PyGetSetDef __pyx_getsets__memoryviewslice[] = {
 
 static PyTypeObject __pyx_type___pyx_memoryviewslice = {
   PyVarObject_HEAD_INIT(0, 0)
-  "vulchecker._features._memoryviewslice", /*tp_name*/
+  "hector_ml._features._memoryviewslice", /*tp_name*/
   sizeof(struct __pyx_memoryviewslice_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc__memoryviewslice, /*tp_dealloc*/
@@ -21427,7 +21427,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_from_features_and_indexes, __pyx_k_from_features_and_indexes, sizeof(__pyx_k_from_features_and_indexes), 0, 0, 1, 1},
   {&__pyx_n_s_getstate, __pyx_k_getstate, sizeof(__pyx_k_getstate), 0, 0, 1, 1},
   {&__pyx_kp_s_got_differing_extents_in_dimensi, __pyx_k_got_differing_extents_in_dimensi, sizeof(__pyx_k_got_differing_extents_in_dimensi), 0, 0, 1, 0},
-  {&__pyx_n_s_vulchecker__features, __pyx_k_vulchecker__features, sizeof(__pyx_k_vulchecker__features), 0, 0, 1, 1},
+  {&__pyx_n_s_hector_ml__features, __pyx_k_hector_ml__features, sizeof(__pyx_k_hector_ml__features), 0, 0, 1, 1},
   {&__pyx_n_s_id, __pyx_k_id, sizeof(__pyx_k_id), 0, 0, 1, 1},
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
   {&__pyx_n_s_indexes, __pyx_k_indexes, sizeof(__pyx_k_indexes), 0, 0, 1, 1},
@@ -21480,7 +21480,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_setstate_cython, __pyx_k_setstate_cython, sizeof(__pyx_k_setstate_cython), 0, 0, 1, 1},
   {&__pyx_n_s_shape, __pyx_k_shape, sizeof(__pyx_k_shape), 0, 0, 1, 1},
   {&__pyx_n_s_size, __pyx_k_size, sizeof(__pyx_k_size), 0, 0, 1, 1},
-  {&__pyx_kp_s_src_vulchecker__features_pyx, __pyx_k_src_vulchecker__features_pyx, sizeof(__pyx_k_src_vulchecker__features_pyx), 0, 0, 1, 0},
+  {&__pyx_kp_s_src_hector_ml__features_pyx, __pyx_k_src_hector_ml__features_pyx, sizeof(__pyx_k_src_hector_ml__features_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_start, __pyx_k_start, sizeof(__pyx_k_start), 0, 0, 1, 1},
   {&__pyx_n_s_staticmethod, __pyx_k_staticmethod, sizeof(__pyx_k_staticmethod), 0, 0, 1, 1},
   {&__pyx_n_s_step, __pyx_k_step, sizeof(__pyx_k_step), 0, 0, 1, 1},
@@ -21525,7 +21525,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "vulchecker/_features.pyx":26
+  /* "hector_ml/_features.pyx":26
  *         Py_ssize_t col,
  *     ) except -1:
  *         raise NotImplementedError("Don't call feature_row on the base class.")             # <<<<<<<<<<<<<<
@@ -21631,7 +21631,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
 
-  /* "vulchecker/_features.pyx":141
+  /* "hector_ml/_features.pyx":141
  *                 )
  *             else:
  *                 raise RuntimeError("Unreachable!")  # pragma: no cover             # <<<<<<<<<<<<<<
@@ -21853,7 +21853,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__32);
   __Pyx_GIVEREF(__pyx_tuple__32);
 
-  /* "vulchecker/_features.pyx":122
+  /* "hector_ml/_features.pyx":122
  * 
  *     @staticmethod
  *     def from_features_and_indexes(raw_features, indexes):             # <<<<<<<<<<<<<<
@@ -21863,7 +21863,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__33 = PyTuple_Pack(6, __pyx_n_s_raw_features, __pyx_n_s_indexes, __pyx_n_s_total_width, __pyx_n_s_features, __pyx_n_s_raw_feature, __pyx_n_s_feature); if (unlikely(!__pyx_tuple__33)) __PYX_ERR(0, 122, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__33);
   __Pyx_GIVEREF(__pyx_tuple__33);
-  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_vulchecker__features_pyx, __pyx_n_s_from_features_and_indexes, 122, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 122, __pyx_L1_error)
+  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_hector_ml__features_pyx, __pyx_n_s_from_features_and_indexes, 122, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 122, __pyx_L1_error)
 
   /* "EnumBase":28
  * class __Pyx_EnumBase(int):
@@ -22045,92 +22045,92 @@ static int __Pyx_modinit_type_init_code(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_init_code", 0);
   /*--- Type init code ---*/
-  __pyx_vtabptr_9vulchecker_9_features_FeatureSet = &__pyx_vtable_9vulchecker_9_features_FeatureSet;
-  __pyx_vtable_9vulchecker_9_features_FeatureSet.feature_row = (int (*)(struct __pyx_obj_9vulchecker_9_features_FeatureSet *, __Pyx_memviewslice, PyObject *, Py_ssize_t, int __pyx_skip_dispatch))__pyx_f_9vulchecker_9_features_10FeatureSet_feature_row;
-  if (PyType_Ready(&__pyx_type_9vulchecker_9_features_FeatureSet) < 0) __PYX_ERR(0, 99, __pyx_L1_error)
+  __pyx_vtabptr_9hector_ml_9_features_FeatureSet = &__pyx_vtable_9hector_ml_9_features_FeatureSet;
+  __pyx_vtable_9hector_ml_9_features_FeatureSet.feature_row = (int (*)(struct __pyx_obj_9hector_ml_9_features_FeatureSet *, __Pyx_memviewslice, PyObject *, Py_ssize_t, int __pyx_skip_dispatch))__pyx_f_9hector_ml_9_features_10FeatureSet_feature_row;
+  if (PyType_Ready(&__pyx_type_9hector_ml_9_features_FeatureSet) < 0) __PYX_ERR(0, 99, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
-  __pyx_type_9vulchecker_9_features_FeatureSet.tp_print = 0;
+  __pyx_type_9hector_ml_9_features_FeatureSet.tp_print = 0;
   #endif
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_9vulchecker_9_features_FeatureSet.tp_dictoffset && __pyx_type_9vulchecker_9_features_FeatureSet.tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_type_9vulchecker_9_features_FeatureSet.tp_getattro = __Pyx_PyObject_GenericGetAttr;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_9hector_ml_9_features_FeatureSet.tp_dictoffset && __pyx_type_9hector_ml_9_features_FeatureSet.tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_type_9hector_ml_9_features_FeatureSet.tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
-  if (__Pyx_SetVtable(__pyx_type_9vulchecker_9_features_FeatureSet.tp_dict, __pyx_vtabptr_9vulchecker_9_features_FeatureSet) < 0) __PYX_ERR(0, 99, __pyx_L1_error)
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_FeatureSet, (PyObject *)&__pyx_type_9vulchecker_9_features_FeatureSet) < 0) __PYX_ERR(0, 99, __pyx_L1_error)
-  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_9vulchecker_9_features_FeatureSet) < 0) __PYX_ERR(0, 99, __pyx_L1_error)
-  __pyx_ptype_9vulchecker_9_features_FeatureSet = &__pyx_type_9vulchecker_9_features_FeatureSet;
-  __pyx_vtabptr_9vulchecker_9_features_Feature = &__pyx_vtable_9vulchecker_9_features_Feature;
-  __pyx_vtable_9vulchecker_9_features_Feature.feature_row = (int (*)(struct __pyx_obj_9vulchecker_9_features_Feature *, __Pyx_memviewslice, PyObject *, Py_ssize_t, Py_ssize_t))__pyx_f_9vulchecker_9_features_7Feature_feature_row;
-  if (PyType_Ready(&__pyx_type_9vulchecker_9_features_Feature) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_9hector_ml_9_features_FeatureSet.tp_dict, __pyx_vtabptr_9hector_ml_9_features_FeatureSet) < 0) __PYX_ERR(0, 99, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_FeatureSet, (PyObject *)&__pyx_type_9hector_ml_9_features_FeatureSet) < 0) __PYX_ERR(0, 99, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_9hector_ml_9_features_FeatureSet) < 0) __PYX_ERR(0, 99, __pyx_L1_error)
+  __pyx_ptype_9hector_ml_9_features_FeatureSet = &__pyx_type_9hector_ml_9_features_FeatureSet;
+  __pyx_vtabptr_9hector_ml_9_features_Feature = &__pyx_vtable_9hector_ml_9_features_Feature;
+  __pyx_vtable_9hector_ml_9_features_Feature.feature_row = (int (*)(struct __pyx_obj_9hector_ml_9_features_Feature *, __Pyx_memviewslice, PyObject *, Py_ssize_t, Py_ssize_t))__pyx_f_9hector_ml_9_features_7Feature_feature_row;
+  if (PyType_Ready(&__pyx_type_9hector_ml_9_features_Feature) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
-  __pyx_type_9vulchecker_9_features_Feature.tp_print = 0;
+  __pyx_type_9hector_ml_9_features_Feature.tp_print = 0;
   #endif
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_9vulchecker_9_features_Feature.tp_dictoffset && __pyx_type_9vulchecker_9_features_Feature.tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_type_9vulchecker_9_features_Feature.tp_getattro = __Pyx_PyObject_GenericGetAttr;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_9hector_ml_9_features_Feature.tp_dictoffset && __pyx_type_9hector_ml_9_features_Feature.tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_type_9hector_ml_9_features_Feature.tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
-  if (__Pyx_SetVtable(__pyx_type_9vulchecker_9_features_Feature.tp_dict, __pyx_vtabptr_9vulchecker_9_features_Feature) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_Feature, (PyObject *)&__pyx_type_9vulchecker_9_features_Feature) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
-  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_9vulchecker_9_features_Feature) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
-  __pyx_ptype_9vulchecker_9_features_Feature = &__pyx_type_9vulchecker_9_features_Feature;
-  __pyx_vtabptr_9vulchecker_9_features_NumericFeature = &__pyx_vtable_9vulchecker_9_features_NumericFeature;
-  __pyx_vtable_9vulchecker_9_features_NumericFeature.__pyx_base = *__pyx_vtabptr_9vulchecker_9_features_Feature;
-  __pyx_vtable_9vulchecker_9_features_NumericFeature.__pyx_base.feature_row = (int (*)(struct __pyx_obj_9vulchecker_9_features_Feature *, __Pyx_memviewslice, PyObject *, Py_ssize_t, Py_ssize_t))__pyx_f_9vulchecker_9_features_14NumericFeature_feature_row;
-  __pyx_type_9vulchecker_9_features_NumericFeature.tp_base = __pyx_ptype_9vulchecker_9_features_Feature;
-  if (PyType_Ready(&__pyx_type_9vulchecker_9_features_NumericFeature) < 0) __PYX_ERR(0, 29, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_9hector_ml_9_features_Feature.tp_dict, __pyx_vtabptr_9hector_ml_9_features_Feature) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_Feature, (PyObject *)&__pyx_type_9hector_ml_9_features_Feature) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_9hector_ml_9_features_Feature) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_ptype_9hector_ml_9_features_Feature = &__pyx_type_9hector_ml_9_features_Feature;
+  __pyx_vtabptr_9hector_ml_9_features_NumericFeature = &__pyx_vtable_9hector_ml_9_features_NumericFeature;
+  __pyx_vtable_9hector_ml_9_features_NumericFeature.__pyx_base = *__pyx_vtabptr_9hector_ml_9_features_Feature;
+  __pyx_vtable_9hector_ml_9_features_NumericFeature.__pyx_base.feature_row = (int (*)(struct __pyx_obj_9hector_ml_9_features_Feature *, __Pyx_memviewslice, PyObject *, Py_ssize_t, Py_ssize_t))__pyx_f_9hector_ml_9_features_14NumericFeature_feature_row;
+  __pyx_type_9hector_ml_9_features_NumericFeature.tp_base = __pyx_ptype_9hector_ml_9_features_Feature;
+  if (PyType_Ready(&__pyx_type_9hector_ml_9_features_NumericFeature) < 0) __PYX_ERR(0, 29, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
-  __pyx_type_9vulchecker_9_features_NumericFeature.tp_print = 0;
+  __pyx_type_9hector_ml_9_features_NumericFeature.tp_print = 0;
   #endif
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_9vulchecker_9_features_NumericFeature.tp_dictoffset && __pyx_type_9vulchecker_9_features_NumericFeature.tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_type_9vulchecker_9_features_NumericFeature.tp_getattro = __Pyx_PyObject_GenericGetAttr;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_9hector_ml_9_features_NumericFeature.tp_dictoffset && __pyx_type_9hector_ml_9_features_NumericFeature.tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_type_9hector_ml_9_features_NumericFeature.tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
-  if (__Pyx_SetVtable(__pyx_type_9vulchecker_9_features_NumericFeature.tp_dict, __pyx_vtabptr_9vulchecker_9_features_NumericFeature) < 0) __PYX_ERR(0, 29, __pyx_L1_error)
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_NumericFeature, (PyObject *)&__pyx_type_9vulchecker_9_features_NumericFeature) < 0) __PYX_ERR(0, 29, __pyx_L1_error)
-  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_9vulchecker_9_features_NumericFeature) < 0) __PYX_ERR(0, 29, __pyx_L1_error)
-  __pyx_ptype_9vulchecker_9_features_NumericFeature = &__pyx_type_9vulchecker_9_features_NumericFeature;
-  __pyx_vtabptr_9vulchecker_9_features_OptionalNumericFeature = &__pyx_vtable_9vulchecker_9_features_OptionalNumericFeature;
-  __pyx_vtable_9vulchecker_9_features_OptionalNumericFeature.__pyx_base = *__pyx_vtabptr_9vulchecker_9_features_Feature;
-  __pyx_vtable_9vulchecker_9_features_OptionalNumericFeature.__pyx_base.feature_row = (int (*)(struct __pyx_obj_9vulchecker_9_features_Feature *, __Pyx_memviewslice, PyObject *, Py_ssize_t, Py_ssize_t))__pyx_f_9vulchecker_9_features_22OptionalNumericFeature_feature_row;
-  __pyx_type_9vulchecker_9_features_OptionalNumericFeature.tp_base = __pyx_ptype_9vulchecker_9_features_Feature;
-  if (PyType_Ready(&__pyx_type_9vulchecker_9_features_OptionalNumericFeature) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_9hector_ml_9_features_NumericFeature.tp_dict, __pyx_vtabptr_9hector_ml_9_features_NumericFeature) < 0) __PYX_ERR(0, 29, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_NumericFeature, (PyObject *)&__pyx_type_9hector_ml_9_features_NumericFeature) < 0) __PYX_ERR(0, 29, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_9hector_ml_9_features_NumericFeature) < 0) __PYX_ERR(0, 29, __pyx_L1_error)
+  __pyx_ptype_9hector_ml_9_features_NumericFeature = &__pyx_type_9hector_ml_9_features_NumericFeature;
+  __pyx_vtabptr_9hector_ml_9_features_OptionalNumericFeature = &__pyx_vtable_9hector_ml_9_features_OptionalNumericFeature;
+  __pyx_vtable_9hector_ml_9_features_OptionalNumericFeature.__pyx_base = *__pyx_vtabptr_9hector_ml_9_features_Feature;
+  __pyx_vtable_9hector_ml_9_features_OptionalNumericFeature.__pyx_base.feature_row = (int (*)(struct __pyx_obj_9hector_ml_9_features_Feature *, __Pyx_memviewslice, PyObject *, Py_ssize_t, Py_ssize_t))__pyx_f_9hector_ml_9_features_22OptionalNumericFeature_feature_row;
+  __pyx_type_9hector_ml_9_features_OptionalNumericFeature.tp_base = __pyx_ptype_9hector_ml_9_features_Feature;
+  if (PyType_Ready(&__pyx_type_9hector_ml_9_features_OptionalNumericFeature) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
-  __pyx_type_9vulchecker_9_features_OptionalNumericFeature.tp_print = 0;
+  __pyx_type_9hector_ml_9_features_OptionalNumericFeature.tp_print = 0;
   #endif
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_9vulchecker_9_features_OptionalNumericFeature.tp_dictoffset && __pyx_type_9vulchecker_9_features_OptionalNumericFeature.tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_type_9vulchecker_9_features_OptionalNumericFeature.tp_getattro = __Pyx_PyObject_GenericGetAttr;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_9hector_ml_9_features_OptionalNumericFeature.tp_dictoffset && __pyx_type_9hector_ml_9_features_OptionalNumericFeature.tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_type_9hector_ml_9_features_OptionalNumericFeature.tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
-  if (__Pyx_SetVtable(__pyx_type_9vulchecker_9_features_OptionalNumericFeature.tp_dict, __pyx_vtabptr_9vulchecker_9_features_OptionalNumericFeature) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_OptionalNumericFeature, (PyObject *)&__pyx_type_9vulchecker_9_features_OptionalNumericFeature) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
-  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_9vulchecker_9_features_OptionalNumericFeature) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
-  __pyx_ptype_9vulchecker_9_features_OptionalNumericFeature = &__pyx_type_9vulchecker_9_features_OptionalNumericFeature;
-  __pyx_vtabptr_9vulchecker_9_features_CategoricalFeature = &__pyx_vtable_9vulchecker_9_features_CategoricalFeature;
-  __pyx_vtable_9vulchecker_9_features_CategoricalFeature.__pyx_base = *__pyx_vtabptr_9vulchecker_9_features_Feature;
-  __pyx_vtable_9vulchecker_9_features_CategoricalFeature.__pyx_base.feature_row = (int (*)(struct __pyx_obj_9vulchecker_9_features_Feature *, __Pyx_memviewslice, PyObject *, Py_ssize_t, Py_ssize_t))__pyx_f_9vulchecker_9_features_18CategoricalFeature_feature_row;
-  __pyx_type_9vulchecker_9_features_CategoricalFeature.tp_base = __pyx_ptype_9vulchecker_9_features_Feature;
-  if (PyType_Ready(&__pyx_type_9vulchecker_9_features_CategoricalFeature) < 0) __PYX_ERR(0, 58, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_9hector_ml_9_features_OptionalNumericFeature.tp_dict, __pyx_vtabptr_9hector_ml_9_features_OptionalNumericFeature) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_OptionalNumericFeature, (PyObject *)&__pyx_type_9hector_ml_9_features_OptionalNumericFeature) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_9hector_ml_9_features_OptionalNumericFeature) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_ptype_9hector_ml_9_features_OptionalNumericFeature = &__pyx_type_9hector_ml_9_features_OptionalNumericFeature;
+  __pyx_vtabptr_9hector_ml_9_features_CategoricalFeature = &__pyx_vtable_9hector_ml_9_features_CategoricalFeature;
+  __pyx_vtable_9hector_ml_9_features_CategoricalFeature.__pyx_base = *__pyx_vtabptr_9hector_ml_9_features_Feature;
+  __pyx_vtable_9hector_ml_9_features_CategoricalFeature.__pyx_base.feature_row = (int (*)(struct __pyx_obj_9hector_ml_9_features_Feature *, __Pyx_memviewslice, PyObject *, Py_ssize_t, Py_ssize_t))__pyx_f_9hector_ml_9_features_18CategoricalFeature_feature_row;
+  __pyx_type_9hector_ml_9_features_CategoricalFeature.tp_base = __pyx_ptype_9hector_ml_9_features_Feature;
+  if (PyType_Ready(&__pyx_type_9hector_ml_9_features_CategoricalFeature) < 0) __PYX_ERR(0, 58, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
-  __pyx_type_9vulchecker_9_features_CategoricalFeature.tp_print = 0;
+  __pyx_type_9hector_ml_9_features_CategoricalFeature.tp_print = 0;
   #endif
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_9vulchecker_9_features_CategoricalFeature.tp_dictoffset && __pyx_type_9vulchecker_9_features_CategoricalFeature.tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_type_9vulchecker_9_features_CategoricalFeature.tp_getattro = __Pyx_PyObject_GenericGetAttr;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_9hector_ml_9_features_CategoricalFeature.tp_dictoffset && __pyx_type_9hector_ml_9_features_CategoricalFeature.tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_type_9hector_ml_9_features_CategoricalFeature.tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
-  if (__Pyx_SetVtable(__pyx_type_9vulchecker_9_features_CategoricalFeature.tp_dict, __pyx_vtabptr_9vulchecker_9_features_CategoricalFeature) < 0) __PYX_ERR(0, 58, __pyx_L1_error)
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_CategoricalFeature, (PyObject *)&__pyx_type_9vulchecker_9_features_CategoricalFeature) < 0) __PYX_ERR(0, 58, __pyx_L1_error)
-  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_9vulchecker_9_features_CategoricalFeature) < 0) __PYX_ERR(0, 58, __pyx_L1_error)
-  __pyx_ptype_9vulchecker_9_features_CategoricalFeature = &__pyx_type_9vulchecker_9_features_CategoricalFeature;
-  __pyx_vtabptr_9vulchecker_9_features_CategoricalSetFeature = &__pyx_vtable_9vulchecker_9_features_CategoricalSetFeature;
-  __pyx_vtable_9vulchecker_9_features_CategoricalSetFeature.__pyx_base = *__pyx_vtabptr_9vulchecker_9_features_Feature;
-  __pyx_vtable_9vulchecker_9_features_CategoricalSetFeature.__pyx_base.feature_row = (int (*)(struct __pyx_obj_9vulchecker_9_features_Feature *, __Pyx_memviewslice, PyObject *, Py_ssize_t, Py_ssize_t))__pyx_f_9vulchecker_9_features_21CategoricalSetFeature_feature_row;
-  __pyx_type_9vulchecker_9_features_CategoricalSetFeature.tp_base = __pyx_ptype_9vulchecker_9_features_Feature;
-  if (PyType_Ready(&__pyx_type_9vulchecker_9_features_CategoricalSetFeature) < 0) __PYX_ERR(0, 78, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_9hector_ml_9_features_CategoricalFeature.tp_dict, __pyx_vtabptr_9hector_ml_9_features_CategoricalFeature) < 0) __PYX_ERR(0, 58, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_CategoricalFeature, (PyObject *)&__pyx_type_9hector_ml_9_features_CategoricalFeature) < 0) __PYX_ERR(0, 58, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_9hector_ml_9_features_CategoricalFeature) < 0) __PYX_ERR(0, 58, __pyx_L1_error)
+  __pyx_ptype_9hector_ml_9_features_CategoricalFeature = &__pyx_type_9hector_ml_9_features_CategoricalFeature;
+  __pyx_vtabptr_9hector_ml_9_features_CategoricalSetFeature = &__pyx_vtable_9hector_ml_9_features_CategoricalSetFeature;
+  __pyx_vtable_9hector_ml_9_features_CategoricalSetFeature.__pyx_base = *__pyx_vtabptr_9hector_ml_9_features_Feature;
+  __pyx_vtable_9hector_ml_9_features_CategoricalSetFeature.__pyx_base.feature_row = (int (*)(struct __pyx_obj_9hector_ml_9_features_Feature *, __Pyx_memviewslice, PyObject *, Py_ssize_t, Py_ssize_t))__pyx_f_9hector_ml_9_features_21CategoricalSetFeature_feature_row;
+  __pyx_type_9hector_ml_9_features_CategoricalSetFeature.tp_base = __pyx_ptype_9hector_ml_9_features_Feature;
+  if (PyType_Ready(&__pyx_type_9hector_ml_9_features_CategoricalSetFeature) < 0) __PYX_ERR(0, 78, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
-  __pyx_type_9vulchecker_9_features_CategoricalSetFeature.tp_print = 0;
+  __pyx_type_9hector_ml_9_features_CategoricalSetFeature.tp_print = 0;
   #endif
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_9vulchecker_9_features_CategoricalSetFeature.tp_dictoffset && __pyx_type_9vulchecker_9_features_CategoricalSetFeature.tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_type_9vulchecker_9_features_CategoricalSetFeature.tp_getattro = __Pyx_PyObject_GenericGetAttr;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_9hector_ml_9_features_CategoricalSetFeature.tp_dictoffset && __pyx_type_9hector_ml_9_features_CategoricalSetFeature.tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_type_9hector_ml_9_features_CategoricalSetFeature.tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
-  if (__Pyx_SetVtable(__pyx_type_9vulchecker_9_features_CategoricalSetFeature.tp_dict, __pyx_vtabptr_9vulchecker_9_features_CategoricalSetFeature) < 0) __PYX_ERR(0, 78, __pyx_L1_error)
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_CategoricalSetFeature, (PyObject *)&__pyx_type_9vulchecker_9_features_CategoricalSetFeature) < 0) __PYX_ERR(0, 78, __pyx_L1_error)
-  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_9vulchecker_9_features_CategoricalSetFeature) < 0) __PYX_ERR(0, 78, __pyx_L1_error)
-  __pyx_ptype_9vulchecker_9_features_CategoricalSetFeature = &__pyx_type_9vulchecker_9_features_CategoricalSetFeature;
+  if (__Pyx_SetVtable(__pyx_type_9hector_ml_9_features_CategoricalSetFeature.tp_dict, __pyx_vtabptr_9hector_ml_9_features_CategoricalSetFeature) < 0) __PYX_ERR(0, 78, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_CategoricalSetFeature, (PyObject *)&__pyx_type_9hector_ml_9_features_CategoricalSetFeature) < 0) __PYX_ERR(0, 78, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_9hector_ml_9_features_CategoricalSetFeature) < 0) __PYX_ERR(0, 78, __pyx_L1_error)
+  __pyx_ptype_9hector_ml_9_features_CategoricalSetFeature = &__pyx_type_9hector_ml_9_features_CategoricalSetFeature;
   __Pyx_EnumMeta.tp_base = (&PyType_Type);
   if (PyType_Ready(&__Pyx_EnumMeta) < 0) __PYX_ERR(1, 15, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
@@ -22403,14 +22403,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_vulchecker___features) {
+  if (__pyx_module_is_main_hector_ml___features) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name_2, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "vulchecker._features")) {
-      if (unlikely(PyDict_SetItemString(modules, "vulchecker._features", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "hector_ml._features")) {
+      if (unlikely(PyDict_SetItemString(modules, "hector_ml._features", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -22431,88 +22431,88 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "vulchecker/_features.pyx":30
+  /* "hector_ml/_features.pyx":30
  * 
  * cdef class NumericFeature(Feature):
  *     feature_kind = FeatureKind.numeric             # <<<<<<<<<<<<<<
  * 
  *     cdef int feature_row(
  */
-  __pyx_t_1 = __Pyx_PyInt_From_enum____pyx_t_9vulchecker_9_features_FeatureKind(__pyx_e_9vulchecker_9_features_numeric); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 30, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_enum____pyx_t_9hector_ml_9_features_FeatureKind(__pyx_e_9hector_ml_9_features_numeric); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 30, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_9vulchecker_9_features_NumericFeature->tp_dict, __pyx_n_s_feature_kind, __pyx_t_1) < 0) __PYX_ERR(0, 30, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_9hector_ml_9_features_NumericFeature->tp_dict, __pyx_n_s_feature_kind, __pyx_t_1) < 0) __PYX_ERR(0, 30, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  PyType_Modified(__pyx_ptype_9vulchecker_9_features_NumericFeature);
+  PyType_Modified(__pyx_ptype_9hector_ml_9_features_NumericFeature);
 
-  /* "vulchecker/_features.pyx":43
+  /* "hector_ml/_features.pyx":43
  * 
  * cdef class OptionalNumericFeature(Feature):
  *     feature_kind = FeatureKind.optional_numeric             # <<<<<<<<<<<<<<
  * 
  *     cdef int feature_row(
  */
-  __pyx_t_1 = __Pyx_PyInt_From_enum____pyx_t_9vulchecker_9_features_FeatureKind(__pyx_e_9vulchecker_9_features_optional_numeric); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 43, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_enum____pyx_t_9hector_ml_9_features_FeatureKind(__pyx_e_9hector_ml_9_features_optional_numeric); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_9vulchecker_9_features_OptionalNumericFeature->tp_dict, __pyx_n_s_feature_kind, __pyx_t_1) < 0) __PYX_ERR(0, 43, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_9hector_ml_9_features_OptionalNumericFeature->tp_dict, __pyx_n_s_feature_kind, __pyx_t_1) < 0) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  PyType_Modified(__pyx_ptype_9vulchecker_9_features_OptionalNumericFeature);
+  PyType_Modified(__pyx_ptype_9hector_ml_9_features_OptionalNumericFeature);
 
-  /* "vulchecker/_features.pyx":59
+  /* "hector_ml/_features.pyx":59
  * 
  * cdef class CategoricalFeature(Feature):
  *     feature_kind = FeatureKind.categorical             # <<<<<<<<<<<<<<
  * 
  *     cdef int feature_row(
  */
-  __pyx_t_1 = __Pyx_PyInt_From_enum____pyx_t_9vulchecker_9_features_FeatureKind(__pyx_e_9vulchecker_9_features_categorical); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 59, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_enum____pyx_t_9hector_ml_9_features_FeatureKind(__pyx_e_9hector_ml_9_features_categorical); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 59, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_9vulchecker_9_features_CategoricalFeature->tp_dict, __pyx_n_s_feature_kind, __pyx_t_1) < 0) __PYX_ERR(0, 59, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_9hector_ml_9_features_CategoricalFeature->tp_dict, __pyx_n_s_feature_kind, __pyx_t_1) < 0) __PYX_ERR(0, 59, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  PyType_Modified(__pyx_ptype_9vulchecker_9_features_CategoricalFeature);
+  PyType_Modified(__pyx_ptype_9hector_ml_9_features_CategoricalFeature);
 
-  /* "vulchecker/_features.pyx":79
+  /* "hector_ml/_features.pyx":79
  * 
  * cdef class CategoricalSetFeature(Feature):
  *     feature_kind = FeatureKind.categorical_set             # <<<<<<<<<<<<<<
  * 
  *     cdef int feature_row(
  */
-  __pyx_t_1 = __Pyx_PyInt_From_enum____pyx_t_9vulchecker_9_features_FeatureKind(__pyx_e_9vulchecker_9_features_categorical_set); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 79, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_enum____pyx_t_9hector_ml_9_features_FeatureKind(__pyx_e_9hector_ml_9_features_categorical_set); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_9vulchecker_9_features_CategoricalSetFeature->tp_dict, __pyx_n_s_feature_kind, __pyx_t_1) < 0) __PYX_ERR(0, 79, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_9hector_ml_9_features_CategoricalSetFeature->tp_dict, __pyx_n_s_feature_kind, __pyx_t_1) < 0) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  PyType_Modified(__pyx_ptype_9vulchecker_9_features_CategoricalSetFeature);
+  PyType_Modified(__pyx_ptype_9hector_ml_9_features_CategoricalSetFeature);
 
-  /* "vulchecker/_features.pyx":122
+  /* "hector_ml/_features.pyx":122
  * 
  *     @staticmethod
  *     def from_features_and_indexes(raw_features, indexes):             # <<<<<<<<<<<<<<
  *         total_width = 0
  *         features = []
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_9vulchecker_9_features_10FeatureSet_5from_features_and_indexes, NULL, __pyx_n_s_vulchecker__features); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 122, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_9hector_ml_9_features_10FeatureSet_5from_features_and_indexes, NULL, __pyx_n_s_hector_ml__features); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 122, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_9vulchecker_9_features_FeatureSet->tp_dict, __pyx_n_s_from_features_and_indexes, __pyx_t_1) < 0) __PYX_ERR(0, 122, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_9hector_ml_9_features_FeatureSet->tp_dict, __pyx_n_s_from_features_and_indexes, __pyx_t_1) < 0) __PYX_ERR(0, 122, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  PyType_Modified(__pyx_ptype_9vulchecker_9_features_FeatureSet);
+  PyType_Modified(__pyx_ptype_9hector_ml_9_features_FeatureSet);
 
-  /* "vulchecker/_features.pyx":121
+  /* "hector_ml/_features.pyx":121
  *             col += feature.width
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def from_features_and_indexes(raw_features, indexes):
  *         total_width = 0
  */
-  __Pyx_GetNameInClass(__pyx_t_1, (PyObject *)__pyx_ptype_9vulchecker_9_features_FeatureSet, __pyx_n_s_from_features_and_indexes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 122, __pyx_L1_error)
+  __Pyx_GetNameInClass(__pyx_t_1, (PyObject *)__pyx_ptype_9hector_ml_9_features_FeatureSet, __pyx_n_s_from_features_and_indexes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 122, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 121, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_9vulchecker_9_features_FeatureSet->tp_dict, __pyx_n_s_from_features_and_indexes, __pyx_t_2) < 0) __PYX_ERR(0, 122, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_9hector_ml_9_features_FeatureSet->tp_dict, __pyx_n_s_from_features_and_indexes, __pyx_t_2) < 0) __PYX_ERR(0, 122, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_9vulchecker_9_features_FeatureSet);
+  PyType_Modified(__pyx_ptype_9hector_ml_9_features_FeatureSet);
 
-  /* "vulchecker/_features.pyx":1
+  /* "hector_ml/_features.pyx":1
  * # cython: language_level=3, wraparound=False             # <<<<<<<<<<<<<<
  * 
  * 
@@ -22890,7 +22890,7 @@ if (!__Pyx_RefNanny) {
  *         ('optional_numeric', optional_numeric),
  *         ('categorical', categorical),
  */
-    __pyx_t_2 = __Pyx_PyInt_From_enum____pyx_t_9vulchecker_9_features_FeatureKind(__pyx_e_9vulchecker_9_features_numeric); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 54, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_enum____pyx_t_9hector_ml_9_features_FeatureKind(__pyx_e_9hector_ml_9_features_numeric); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 54, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 54, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
@@ -22908,7 +22908,7 @@ if (!__Pyx_RefNanny) {
  *         ('categorical', categorical),
  *         ('categorical_set', categorical_set),
  */
-    __pyx_t_2 = __Pyx_PyInt_From_enum____pyx_t_9vulchecker_9_features_FeatureKind(__pyx_e_9vulchecker_9_features_optional_numeric); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 55, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_enum____pyx_t_9hector_ml_9_features_FeatureKind(__pyx_e_9hector_ml_9_features_optional_numeric); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 55, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(1, 55, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
@@ -22926,7 +22926,7 @@ if (!__Pyx_RefNanny) {
  *         ('categorical_set', categorical_set),
  *     ]))
  */
-    __pyx_t_2 = __Pyx_PyInt_From_enum____pyx_t_9vulchecker_9_features_FeatureKind(__pyx_e_9vulchecker_9_features_categorical); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 56, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_enum____pyx_t_9hector_ml_9_features_FeatureKind(__pyx_e_9hector_ml_9_features_categorical); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 56, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 56, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
@@ -22944,7 +22944,7 @@ if (!__Pyx_RefNanny) {
  *     ]))
  *     __Pyx_globals['numeric'] = FeatureKind.numeric
  */
-    __pyx_t_2 = __Pyx_PyInt_From_enum____pyx_t_9vulchecker_9_features_FeatureKind(__pyx_e_9vulchecker_9_features_categorical_set); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 57, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_enum____pyx_t_9hector_ml_9_features_FeatureKind(__pyx_e_9hector_ml_9_features_categorical_set); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 57, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_7 = PyTuple_New(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 57, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
@@ -23113,7 +23113,7 @@ if (!__Pyx_RefNanny) {
  */
     __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_FeatureKind); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 66, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_2 = __Pyx_PyInt_From_enum____pyx_t_9vulchecker_9_features_FeatureKind(__pyx_e_9vulchecker_9_features_numeric); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 66, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_enum____pyx_t_9hector_ml_9_features_FeatureKind(__pyx_e_9hector_ml_9_features_numeric); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 66, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 66, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
@@ -23143,7 +23143,7 @@ if (!__Pyx_RefNanny) {
  */
     __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_FeatureKind); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 67, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_5 = __Pyx_PyInt_From_enum____pyx_t_9vulchecker_9_features_FeatureKind(__pyx_e_9vulchecker_9_features_optional_numeric); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 67, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyInt_From_enum____pyx_t_9hector_ml_9_features_FeatureKind(__pyx_e_9hector_ml_9_features_optional_numeric); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 67, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_7 = PyTuple_New(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 67, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
@@ -23173,7 +23173,7 @@ if (!__Pyx_RefNanny) {
  */
     __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_FeatureKind); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 68, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_7 = __Pyx_PyInt_From_enum____pyx_t_9vulchecker_9_features_FeatureKind(__pyx_e_9vulchecker_9_features_categorical); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 68, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyInt_From_enum____pyx_t_9hector_ml_9_features_FeatureKind(__pyx_e_9hector_ml_9_features_categorical); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 68, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 68, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
@@ -23202,7 +23202,7 @@ if (!__Pyx_RefNanny) {
  */
     __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_FeatureKind); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 69, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_2 = __Pyx_PyInt_From_enum____pyx_t_9vulchecker_9_features_FeatureKind(__pyx_e_9vulchecker_9_features_categorical_set); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 69, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_enum____pyx_t_9hector_ml_9_features_FeatureKind(__pyx_e_9hector_ml_9_features_categorical_set); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 69, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(1, 69, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
@@ -23236,11 +23236,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_7);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init vulchecker._features", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init hector_ml._features", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init vulchecker._features");
+    PyErr_SetString(PyExc_ImportError, "init hector_ml._features");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -27245,31 +27245,31 @@ no_fail:
 }
 
 /* CIntToPy */
-  static CYTHON_INLINE PyObject* __Pyx_PyInt_From_enum____pyx_t_9vulchecker_9_features_FeatureKind(enum __pyx_t_9vulchecker_9_features_FeatureKind value) {
+  static CYTHON_INLINE PyObject* __Pyx_PyInt_From_enum____pyx_t_9hector_ml_9_features_FeatureKind(enum __pyx_t_9hector_ml_9_features_FeatureKind value) {
 #ifdef __Pyx_HAS_GCC_DIAGNOSTIC
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wconversion"
 #endif
-    const enum __pyx_t_9vulchecker_9_features_FeatureKind neg_one = (enum __pyx_t_9vulchecker_9_features_FeatureKind) -1, const_zero = (enum __pyx_t_9vulchecker_9_features_FeatureKind) 0;
+    const enum __pyx_t_9hector_ml_9_features_FeatureKind neg_one = (enum __pyx_t_9hector_ml_9_features_FeatureKind) -1, const_zero = (enum __pyx_t_9hector_ml_9_features_FeatureKind) 0;
 #ifdef __Pyx_HAS_GCC_DIAGNOSTIC
 #pragma GCC diagnostic pop
 #endif
     const int is_unsigned = neg_one > const_zero;
     if (is_unsigned) {
-        if (sizeof(enum __pyx_t_9vulchecker_9_features_FeatureKind) < sizeof(long)) {
+        if (sizeof(enum __pyx_t_9hector_ml_9_features_FeatureKind) < sizeof(long)) {
             return PyInt_FromLong((long) value);
-        } else if (sizeof(enum __pyx_t_9vulchecker_9_features_FeatureKind) <= sizeof(unsigned long)) {
+        } else if (sizeof(enum __pyx_t_9hector_ml_9_features_FeatureKind) <= sizeof(unsigned long)) {
             return PyLong_FromUnsignedLong((unsigned long) value);
 #ifdef HAVE_LONG_LONG
-        } else if (sizeof(enum __pyx_t_9vulchecker_9_features_FeatureKind) <= sizeof(unsigned PY_LONG_LONG)) {
+        } else if (sizeof(enum __pyx_t_9hector_ml_9_features_FeatureKind) <= sizeof(unsigned PY_LONG_LONG)) {
             return PyLong_FromUnsignedLongLong((unsigned PY_LONG_LONG) value);
 #endif
         }
     } else {
-        if (sizeof(enum __pyx_t_9vulchecker_9_features_FeatureKind) <= sizeof(long)) {
+        if (sizeof(enum __pyx_t_9hector_ml_9_features_FeatureKind) <= sizeof(long)) {
             return PyInt_FromLong((long) value);
 #ifdef HAVE_LONG_LONG
-        } else if (sizeof(enum __pyx_t_9vulchecker_9_features_FeatureKind) <= sizeof(PY_LONG_LONG)) {
+        } else if (sizeof(enum __pyx_t_9hector_ml_9_features_FeatureKind) <= sizeof(PY_LONG_LONG)) {
             return PyLong_FromLongLong((PY_LONG_LONG) value);
 #endif
         }
@@ -27277,7 +27277,7 @@ no_fail:
     {
         int one = 1; int little = (int)*(unsigned char *)&one;
         unsigned char *bytes = (unsigned char *)&value;
-        return _PyLong_FromByteArray(bytes, sizeof(enum __pyx_t_9vulchecker_9_features_FeatureKind),
+        return _PyLong_FromByteArray(bytes, sizeof(enum __pyx_t_9hector_ml_9_features_FeatureKind),
                                      little, !is_unsigned);
     }
 }

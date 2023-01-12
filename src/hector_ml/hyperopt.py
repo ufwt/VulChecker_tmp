@@ -15,9 +15,9 @@ from skopt.callbacks import CheckpointSaver, DeltaYStopper
 from skopt.space import Categorical, Integer, Real
 from structure2vec.graph_collate import REDUCTIONS
 
-from vulchecker.features import EDGE_FEATURES, feature_set, node_features
-from vulchecker.model import Predictor
-from vulchecker.train import TrainingData, training_loop
+from hector_ml.features import EDGE_FEATURES, feature_set, node_features
+from hector_ml.model import Predictor
+from hector_ml.train import TrainingData, training_loop
 
 
 def point_to_options(dimensions, point):

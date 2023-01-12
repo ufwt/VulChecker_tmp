@@ -5,8 +5,8 @@ import numpy as np
 import pytest
 from more_itertools import one
 
-from vulchecker import predict
-from vulchecker.model import Predictor
+from hector_ml import predict
+from hector_ml.model import Predictor
 from tests.test_graphs import SmallGraph, assert_same_graph
 
 

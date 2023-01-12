@@ -3,7 +3,7 @@ from inspect import isclass
 import numpy as np
 import pytest
 
-from vulchecker.features import Feature, FeatureKind, feature_set
+from hector_ml.features import Feature, FeatureKind, feature_set
 
 
 def is_exception(thing):

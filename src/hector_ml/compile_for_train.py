@@ -7,7 +7,7 @@ from typing import Generator, Iterable, List
 
 import click
 
-from vulchecker.configure import vulcheckerConfig, detect_build_system, get_build_system
+from hector_ml.configure import HectorConfig, detect_build_system, get_build_system
 
 ALL_CWES = [
     121,
@@ -21,7 +21,7 @@ ALL_CWES = [
 logger = logging.getLogger(__name__)
 
 
-LABELS_NAME = "vulchecker_labels.json"
+LABELS_NAME = "hector_labels.json"
 
 
 def find_labels(base_dir: Path) -> Path:
@@ -39,7 +39,7 @@ def find_labels(base_dir: Path) -> Path:
 
 def gather_builds(
     examples_root: Path, llap_lib_dir: Path
-) -> Generator[vulcheckerConfig, None, None]:
+) -> Generator[HectorConfig, None, None]:
     for example_dir in examples_root.iterdir():
         if not example_dir.is_dir():
             continue
@@ -52,10 +52,10 @@ def gather_builds(
         source_dir = labels_file.parent
         build_system = detect_build_system(source_dir)
         build_system_module = get_build_system(build_system)
-        yield vulcheckerConfig(
+        yield HectorConfig(
             source_dir=source_dir,
             build_dir=source_dir,
-            vulchecker_dir=source_dir,
+            hector_dir=source_dir,
             llap_lib_dir=llap_lib_dir,
             build_system=build_system,
             target=build_system_module.infer_target(source_dir, source_dir),
@@ -64,7 +64,7 @@ def gather_builds(
         )
 
 
-def do_builds(builds: Iterable[vulcheckerConfig]) -> List[vulcheckerConfig]:
+def do_builds(builds: Iterable[HectorConfig]) -> List[HectorConfig]:
     """Build and extract graphs from all sources.
 
     This is better than
@@ -83,7 +83,7 @@ def do_builds(builds: Iterable[vulcheckerConfig]) -> List[vulcheckerConfig]:
         processes.append(
             (
                 build,
-                subprocess.Popen(["ninja", "-f", "vulchecker.ninja"], cwd=build.vulchecker_dir),
+                subprocess.Popen(["ninja", "-f", "hector.ninja"], cwd=build.hector_dir),
             )
         )
     successes = []
@@ -130,6 +130,6 @@ def main(llap_lib_dir: str, examples_root: str, output_dir: str):
         for cwe in ALL_CWES:
             (output_dir / f"CWE{cwe}").mkdir(parents=True, exist_ok=True)
             copy_if_newer(
-                build.vulchecker_dir / f"vulchecker-{cwe}.json",
+                build.hector_dir / f"hector-{cwe}.json",
                 output_dir / f"CWE{cwe}" / f"{build.source_dir.name}.json",
             )

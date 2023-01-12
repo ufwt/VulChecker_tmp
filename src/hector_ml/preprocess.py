@@ -11,10 +11,10 @@ import networkit as nk
 import networkx as nx
 from more_itertools import one
 
-from vulchecker.click_helpers import read_all, smart_open
-from vulchecker.features import BASE_NODE_FEATURES, EDGE_FEATURES, FeatureKind
-from vulchecker.paths import common_ancestor
-from vulchecker.types import Indexes
+from hector_ml.click_helpers import read_all, smart_open
+from hector_ml.features import BASE_NODE_FEATURES, EDGE_FEATURES, FeatureKind
+from hector_ml.paths import common_ancestor
+from hector_ml.types import Indexes
 
 NODE_CATEGORICAL = [
     f

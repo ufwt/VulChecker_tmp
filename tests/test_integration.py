@@ -7,8 +7,8 @@ import numpy as np
 import pytest
 from click.testing import CliRunner
 
-from vulchecker.cli import main
-from vulchecker.features import feature_set, node_features
+from hector_ml.cli import main
+from hector_ml.features import feature_set, node_features
 
 from .test_graphs import SmallGraph
 
@@ -28,7 +28,7 @@ def test_preprocess_train_stats_predict(eager_dataset):
         with open("raw_graphs.nljson", "w") as f:
             json.dump(nx.node_link_data(SmallGraph.raw()), f)
         with mock.patch.dict(
-            "vulchecker.preprocess.POSITIVE_LABELS", {0: SmallGraph.POSITIVE_LABEL}
+            "hector_ml.preprocess.POSITIVE_LABELS", {0: SmallGraph.POSITIVE_LABEL}
         ):
             result = runner.invoke(
                 main,
@@ -99,7 +99,7 @@ def test_preprocess_hyperopt():
         with open("raw_graphs.nljson", "w") as f:
             json.dump(nx.node_link_data(SmallGraph.raw()), f)
         with mock.patch.dict(
-            "vulchecker.preprocess.POSITIVE_LABELS", {0: SmallGraph.POSITIVE_LABEL}
+            "hector_ml.preprocess.POSITIVE_LABELS", {0: SmallGraph.POSITIVE_LABEL}
         ):
             result = runner.invoke(
                 main,

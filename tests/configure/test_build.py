@@ -2,8 +2,8 @@ import io
 from pathlib import Path
 from unittest import mock
 
-from vulchecker.configure import vulcheckerConfig
-from vulchecker.configure.base import SourceFile
+from hector_ml.configure import HectorConfig
+from hector_ml.configure.base import SourceFile
 
 
 def test_build_ninja_file(tmp_path):
@@ -19,12 +19,12 @@ def test_build_ninja_file(tmp_path):
             ),
             get_reconfigure_inputs=mock.Mock(return_value=[]),
         ),
-    ), mock.patch("vulchecker.configure.Writer", autospec=True) as writer_cls_mock:
-        (tmp_path / "vulchecker").mkdir()
-        vulcheckerConfig(
+    ), mock.patch("hector_ml.configure.Writer", autospec=True) as writer_cls_mock:
+        (tmp_path / "hector").mkdir()
+        HectorConfig(
             tmp_path,
             tmp_path,
-            tmp_path / "vulchecker",
+            tmp_path / "hector",
             Path("/usr/lib"),
             "dummy",
             "foo",
@@ -61,28 +61,28 @@ def test_build_ninja_file(tmp_path):
                 ["foo-opt_globaldce.ll"], "opt_globaldce", ["foo-opt_indirectbr.ll"]
             ),
             mock.call(
-                ["vulchecker-0.json"],
+                ["hector-0.json"],
                 "opt_llap",
                 ["foo-opt_globaldce.ll"],
-                implicit=["$llap_path/LLVM_vulchecker_0.so"],
+                implicit=["$llap_path/LLVM_HECTOR_0.so"],
                 variables={"llap_plugin": 0},
             ),
-            mock.call(["vulchecker.ninja"], "reconfigure_vulchecker", []),
+            mock.call(["hector.ninja"], "reconfigure_hector", []),
         ]
 
 
-def test_vulchecker_config_round_trip():
-    vulchecker_config = vulcheckerConfig(
+def test_hector_config_round_trip():
+    hector_config = HectorConfig(
         source_dir="/foo",
         build_dir="/bar",
-        vulchecker_dir="/baz",
+        hector_dir="/baz",
         llap_lib_dir="/qux",
         build_system="dummy",
         target="default",
         cwes=[0],
     )
     f = io.StringIO()
-    vulchecker_config._to_ninja_file(f)
+    hector_config._to_ninja_file(f)
     f.seek(0)
-    new_config = vulcheckerConfig._from_ninja_file(f)
-    assert new_config == vulchecker_config
+    new_config = HectorConfig._from_ninja_file(f)
+    assert new_config == hector_config

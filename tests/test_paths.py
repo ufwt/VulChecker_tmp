@@ -4,7 +4,7 @@ import pytest
 from hypothesis import given, note
 from hypothesis import strategies as S
 
-from vulchecker.paths import common_ancestor
+from hector_ml.paths import common_ancestor
 
 
 def paths(

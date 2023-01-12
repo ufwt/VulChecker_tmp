@@ -29,7 +29,7 @@ class CLI(click.MultiCommand):
     def get_command(self, ctx, name):
         if name not in self.COMMANDS:
             raise KeyError(name)
-        return importlib.import_module(f"vulchecker.{name}").main
+        return importlib.import_module(f"hector_ml.{name}").main
 
 
 @click.command(cls=CLI)

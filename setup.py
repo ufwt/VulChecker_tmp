@@ -6,8 +6,8 @@ from setuptools import Extension, setup
 setup(
     ext_modules=cythonize(
         [
-            Extension("vulchecker._features", ["src/vulchecker/_features.pyx"]),
-            Extension("vulchecker._graphs", ["src/vulchecker/_graphs.pyx"]),
+            Extension("hector_ml._features", ["src/hector_ml/_features.pyx"]),
+            Extension("hector_ml._graphs", ["src/hector_ml/_graphs.pyx"]),
         ]
     )
 )

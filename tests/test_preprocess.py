@@ -6,8 +6,8 @@ from pathlib import PurePath
 import networkx as nx
 import pytest
 
-from vulchecker.features import Feature, FeatureKind
-from vulchecker.preprocess import (
+from hector_ml.features import Feature, FeatureKind
+from hector_ml.preprocess import (
     add_invariant_graph_features,
     component_information,
     merge_edges,

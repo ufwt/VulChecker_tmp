@@ -17,10 +17,10 @@ from ignite.metrics.metric import reinit__is_reduced, sync_all_reduce
 from sklearn import metrics
 from structure2vec.graph_collate import REDUCTIONS
 
-from vulchecker.click_helpers import smart_open
-from vulchecker.features import EDGE_FEATURES, FeatureSet, feature_set, node_features
-from vulchecker.graphs import GraphDataset, JSONGraphs
-from vulchecker.model import Predictor
+from hector_ml.click_helpers import smart_open
+from hector_ml.features import EDGE_FEATURES, FeatureSet, feature_set, node_features
+from hector_ml.graphs import GraphDataset, JSONGraphs
+from hector_ml.model import Predictor
 
 
 class AUC(Metric):

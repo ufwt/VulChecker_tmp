@@ -3,30 +3,30 @@ from unittest import mock
 import networkx as nx
 import pytest
 
-from vulchecker.configure import cmake, ninja
-from vulchecker.configure.base import SourceFile
+from hector_ml.configure import cmake, ninja
+from hector_ml.configure.base import SourceFile
 from tests.configure.test_ninja import SIMPLE_DEP_GRAPH
 from tests.test_graphs import assert_same_graph
 
 
 def test_get_sources_missing_cmakelists(tmp_path):
     with pytest.raises(FileNotFoundError):
-        cmake.get_sources(tmp_path / "build", tmp_path / "vulchecker", "foo")
+        cmake.get_sources(tmp_path / "build", tmp_path / "hector", "foo")
 
 
 def test_get_sources(tmp_path):
     (tmp_path / "build").mkdir()
-    (tmp_path / "vulchecker").mkdir()
+    (tmp_path / "hector").mkdir()
     (tmp_path / "build/CMakeLists.txt").touch()
 
     with mock.patch("subprocess.run", autospec=True), mock.patch(
-        "vulchecker.configure.ninja.get_sources",
+        "hector_ml.configure.ninja.get_sources",
         autospec=True,
         return_value=[SourceFile(tmp_path / "build/foo.c", ("-I/lib",))],
     ) as ninja_sources:
-        result = cmake.get_sources(tmp_path / "build", tmp_path / "vulchecker", "foo")
+        result = cmake.get_sources(tmp_path / "build", tmp_path / "hector", "foo")
         assert ninja_sources.mock_calls == [
-            mock.call(tmp_path / "vulchecker", tmp_path / "vulchecker", "foo")
+            mock.call(tmp_path / "hector", tmp_path / "hector", "foo")
         ]
     assert result == [SourceFile(tmp_path / "build/foo.c", ("-I/lib",))]
 
@@ -59,7 +59,7 @@ def test_extend_dependency_graph():
     expected.add_edge("bar.h", "build-3")
 
     with mock.patch("subprocess.run", autospec=True), mock.patch(
-        "vulchecker.configure.ninja.ninja", autospec=True, return_value=DEPS_OUTPUT
+        "hector_ml.configure.ninja.ninja", autospec=True, return_value=DEPS_OUTPUT
     ):
         cmake._extend_dependency_graph_with_headers(depgraph)
 

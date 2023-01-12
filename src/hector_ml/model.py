@@ -12,9 +12,9 @@ import torch
 from structure2vec.discriminative_embedding import MeanFieldInference
 from structure2vec.graph_collate import graph_collate
 
-from vulchecker.compat import cached_property
-from vulchecker.features import EDGE_FEATURES, feature_set, node_features
-from vulchecker.graphs import mean_field_from_graph
+from hector_ml.compat import cached_property
+from hector_ml.features import EDGE_FEATURES, feature_set, node_features
+from hector_ml.graphs import mean_field_from_graph
 
 
 def dnn(in_features, out_features, *, layers=2, activation=torch.nn.ReLU):

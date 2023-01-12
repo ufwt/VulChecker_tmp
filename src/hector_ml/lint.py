@@ -10,10 +10,10 @@ import click
 import networkx as nx
 import torch
 
-from vulchecker.configure import vulcheckerConfig, detect_build_system
-from vulchecker.model import Predictor
-from vulchecker.predict import Prediction, find_vulns
-from vulchecker.preprocess import (
+from hector_ml.configure import HectorConfig, detect_build_system
+from hector_ml.model import Predictor
+from hector_ml.predict import Prediction, find_vulns
+from hector_ml.preprocess import (
     CALL_OPERATION,
     MANIFESTATION_POINT_TAG,
     ROOT_CAUSE_TAG,
@@ -82,7 +82,7 @@ OUTPUT_HANDLERS = {
     type=click.Path(file_okay=False, exists=True),
     default="/usr/local/lib",
     show_default=True,
-    help="Directory containing vulchecker opt passes.",
+    help="Directory containing HECTOR opt passes.",
 )
 @click.option(
     "--threshold",
@@ -137,7 +137,7 @@ def main(
     target: str,
     model_dirs: Tuple[Union[bytes, str], ...],
 ):
-    """Lint-check a codebase using vulchecker."""
+    """Lint-check a codebase using HECTOR."""
     llap_lib_dir = Path(llap_lib_dir).resolve()
     source_dir = Path(source_dir).resolve()
 
@@ -154,22 +154,22 @@ def main(
     build_system = detect_build_system(source_dir)
     if build_system is None:
         ctx.fail("No build system detected.")
-    vulchecker_dir = source_dir / "vulchecker_build"
-    vulchecker_dir.mkdir(exist_ok=True)
-    vulchecker_config = vulcheckerConfig(
+    hector_dir = source_dir / "hector_build"
+    hector_dir.mkdir(exist_ok=True)
+    hector_config = HectorConfig(
         source_dir,
         source_dir,
-        vulchecker_dir,
+        hector_dir,
         llap_lib_dir,
         build_system,
         target,
         pipelines,
     )
-    vulchecker_config.make()
+    hector_config.make()
 
     output_handler = OUTPUT_HANDLERS[output_format](output)
     for pipeline, predictors in pipelines.items():
-        with open(vulchecker_config.vulchecker_dir / f"vulchecker-{pipeline}.json", "r") as f:
+        with open(hector_config.hector_dir / f"hector-{pipeline}.json", "r") as f:
             raw_pdg = nx.node_link_graph(json.load(f), directed=True)
 
         # N.B. Using components of preprocess_graph here to avoid redundant work.

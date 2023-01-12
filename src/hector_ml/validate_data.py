@@ -7,7 +7,7 @@ from contextlib import ExitStack
 
 import click
 
-from vulchecker.click_helpers import smart_open
+from hector_ml.click_helpers import smart_open
 
 
 def check_dict_finite(data, context):

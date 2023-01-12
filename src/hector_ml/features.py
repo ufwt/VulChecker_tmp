@@ -2,8 +2,8 @@ from typing import Iterable
 
 import attr
 
-from vulchecker._features import FeatureKind, FeatureSet
-from vulchecker.types import Indexes
+from hector_ml._features import FeatureKind, FeatureSet
+from hector_ml.types import Indexes
 
 
 @attr.s(frozen=True, slots=True, auto_attribs=True)
@@ -28,7 +28,7 @@ def feature_set(features: Iterable[Feature], indexes: Indexes) -> FeatureSet:
     return FeatureSet.from_features_and_indexes(features, indexes)
 
 
-# Features for vulchecker ##################################################
+# Features for HECTOR ##################################################
 
 BASE_NODE_FEATURES = [
     Feature("static_value", FeatureKind.optional_numeric),

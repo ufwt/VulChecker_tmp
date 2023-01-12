@@ -22,12 +22,12 @@ except ImportError:
 
 # -- Project information -----------------------------------------------------
 
-project = "vulchecker Machine Learning Component"
+project = "HECTOR Machine Learning Component"
 copyright = "2019, GTRI/CIPHER/TIA"
 author = "GTRI/CIPHER/TIA"
 
 # The full version, including alpha/beta/rc tags
-release = pkg_version("vulchecker")
+release = pkg_version("hector_ml")
 
 
 # -- General configuration ---------------------------------------------------

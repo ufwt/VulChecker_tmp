@@ -3,12 +3,12 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {
-        "name": "vulchecker._graphs",
+        "name": "hector_ml._graphs",
         "sources": [
-            "src/vulchecker/_graphs.pyx"
+            "src/hector_ml/_graphs.pyx"
         ]
     },
-    "module_name": "vulchecker._graphs"
+    "module_name": "hector_ml._graphs"
 }
 END: Cython Metadata */
 
@@ -616,8 +616,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__vulchecker___graphs
-#define __PYX_HAVE_API__vulchecker___graphs
+#define __PYX_HAVE__hector_ml___graphs
+#define __PYX_HAVE_API__hector_ml___graphs
 /* Early includes */
 #include "pythread.h"
 #include <string.h>
@@ -832,9 +832,9 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "src/vulchecker/_graphs.pyx",
+  "src/hector_ml/_graphs.pyx",
   "stringsource",
-  "src/vulchecker/_features.pxd",
+  "src/hector_ml/_features.pxd",
 };
 /* MemviewSliceStruct.proto */
 struct __pyx_memoryview_obj;
@@ -946,22 +946,22 @@ typedef struct {
 
 
 /*--- Type declarations ---*/
-struct __pyx_obj_9vulchecker_9_features_FeatureSet;
+struct __pyx_obj_9hector_ml_9_features_FeatureSet;
 struct __pyx_array_obj;
 struct __pyx_MemviewEnum_obj;
 struct __pyx_memoryview_obj;
 struct __pyx_memoryviewslice_obj;
 
-/* "vulchecker/_features.pxd":4
+/* "hector_ml/_features.pxd":4
  * 
  * 
  * cdef class FeatureSet:             # <<<<<<<<<<<<<<
  *     cdef readonly tuple features
  *     cdef readonly Py_ssize_t total_width
  */
-struct __pyx_obj_9vulchecker_9_features_FeatureSet {
+struct __pyx_obj_9hector_ml_9_features_FeatureSet {
   PyObject_HEAD
-  struct __pyx_vtabstruct_9vulchecker_9_features_FeatureSet *__pyx_vtab;
+  struct __pyx_vtabstruct_9hector_ml_9_features_FeatureSet *__pyx_vtab;
   PyObject *features;
   Py_ssize_t total_width;
 };
@@ -1045,7 +1045,7 @@ struct __pyx_memoryviewslice_obj {
 
 
 
-/* "vulchecker/_features.pxd":4
+/* "hector_ml/_features.pxd":4
  * 
  * 
  * cdef class FeatureSet:             # <<<<<<<<<<<<<<
@@ -1053,10 +1053,10 @@ struct __pyx_memoryviewslice_obj {
  *     cdef readonly Py_ssize_t total_width
  */
 
-struct __pyx_vtabstruct_9vulchecker_9_features_FeatureSet {
-  int (*feature_row)(struct __pyx_obj_9vulchecker_9_features_FeatureSet *, __Pyx_memviewslice, PyObject *, Py_ssize_t, int __pyx_skip_dispatch);
+struct __pyx_vtabstruct_9hector_ml_9_features_FeatureSet {
+  int (*feature_row)(struct __pyx_obj_9hector_ml_9_features_FeatureSet *, __Pyx_memviewslice, PyObject *, Py_ssize_t, int __pyx_skip_dispatch);
 };
-static struct __pyx_vtabstruct_9vulchecker_9_features_FeatureSet *__pyx_vtabptr_9vulchecker_9_features_FeatureSet;
+static struct __pyx_vtabstruct_9hector_ml_9_features_FeatureSet *__pyx_vtabptr_9hector_ml_9_features_FeatureSet;
 
 
 /* "View.MemoryView":105
@@ -1758,10 +1758,10 @@ static PyObject *__pyx_memoryview_assign_item_from_object(struct __pyx_memoryvie
 static PyObject *__pyx_memoryviewslice_convert_item_to_object(struct __pyx_memoryviewslice_obj *__pyx_v_self, char *__pyx_v_itemp); /* proto*/
 static PyObject *__pyx_memoryviewslice_assign_item_from_object(struct __pyx_memoryviewslice_obj *__pyx_v_self, char *__pyx_v_itemp, PyObject *__pyx_v_value); /* proto*/
 
-/* Module declarations from 'vulchecker._features' */
-static PyTypeObject *__pyx_ptype_9vulchecker_9_features_FeatureSet = 0;
+/* Module declarations from 'hector_ml._features' */
+static PyTypeObject *__pyx_ptype_9hector_ml_9_features_FeatureSet = 0;
 
-/* Module declarations from 'vulchecker._graphs' */
+/* Module declarations from 'hector_ml._graphs' */
 static PyTypeObject *__pyx_array_type = 0;
 static PyTypeObject *__pyx_MemviewEnum_type = 0;
 static PyTypeObject *__pyx_memoryview_type = 0;
@@ -1808,11 +1808,11 @@ static void __pyx_memoryview__slice_assign_scalar(char *, Py_ssize_t *, Py_ssize
 static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *, PyObject *); /*proto*/
 static __Pyx_TypeInfo __Pyx_TypeInfo_float = { "float", NULL, sizeof(float), { 0 }, 0, 'R', 0, 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_int = { "int", NULL, sizeof(int), { 0 }, 0, IS_UNSIGNED(int) ? 'U' : 'I', IS_UNSIGNED(int), 0 };
-#define __Pyx_MODULE_NAME "vulchecker._graphs"
-extern int __pyx_module_is_main_vulchecker___graphs;
-int __pyx_module_is_main_vulchecker___graphs = 0;
+#define __Pyx_MODULE_NAME "hector_ml._graphs"
+extern int __pyx_module_is_main_hector_ml___graphs;
+int __pyx_module_is_main_hector_ml___graphs = 0;
 
-/* Implementation of 'vulchecker._graphs' */
+/* Implementation of 'hector_ml._graphs' */
 static PyObject *__pyx_builtin_enumerate;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_MemoryError;
@@ -1914,7 +1914,7 @@ static const char __pyx_k_pyx_PickleError[] = "__pyx_PickleError";
 static const char __pyx_k_setstate_cython[] = "__setstate_cython__";
 static const char __pyx_k_edge_feature_mat[] = "edge_feature_mat";
 static const char __pyx_k_node_feature_mat[] = "node_feature_mat";
-static const char __pyx_k_vulchecker__graphs[] = "vulchecker._graphs";
+static const char __pyx_k_hector_ml__graphs[] = "hector_ml._graphs";
 static const char __pyx_k_pyx_unpickle_Enum[] = "__pyx_unpickle_Enum";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_edge_feature_array[] = "edge_feature_array";
@@ -1931,7 +1931,7 @@ static const char __pyx_k_MemoryView_of_r_at_0x_x[] = "<MemoryView of %r at 0x%x
 static const char __pyx_k_contiguous_and_indirect[] = "<contiguous and indirect>";
 static const char __pyx_k_Cannot_index_with_type_s[] = "Cannot index with type '%s'";
 static const char __pyx_k_Invalid_shape_in_axis_d_d[] = "Invalid shape in axis %d: %d.";
-static const char __pyx_k_src_vulchecker__graphs_pyx[] = "src/vulchecker/_graphs.pyx";
+static const char __pyx_k_src_hector_ml__graphs_pyx[] = "src/hector_ml/_graphs.pyx";
 static const char __pyx_k_itemsize_0_for_cython_array[] = "itemsize <= 0 for cython.array";
 static const char __pyx_k_structure2vec_graph_collate[] = "structure2vec.graph_collate";
 static const char __pyx_k_unable_to_allocate_array_data[] = "unable to allocate array data.";
@@ -2008,7 +2008,7 @@ static PyObject *__pyx_n_s_fortran;
 static PyObject *__pyx_n_u_fortran;
 static PyObject *__pyx_n_s_getstate;
 static PyObject *__pyx_kp_s_got_differing_extents_in_dimensi;
-static PyObject *__pyx_n_s_vulchecker__graphs;
+static PyObject *__pyx_n_s_hector_ml__graphs;
 static PyObject *__pyx_n_s_i;
 static PyObject *__pyx_n_s_id;
 static PyObject *__pyx_n_u_id;
@@ -2067,7 +2067,7 @@ static PyObject *__pyx_n_s_size;
 static PyObject *__pyx_n_s_source;
 static PyObject *__pyx_n_u_source;
 static PyObject *__pyx_n_s_sp;
-static PyObject *__pyx_kp_s_src_vulchecker__graphs_pyx;
+static PyObject *__pyx_kp_s_src_hector_ml__graphs_pyx;
 static PyObject *__pyx_n_s_start;
 static PyObject *__pyx_n_s_step;
 static PyObject *__pyx_n_s_stop;
@@ -2086,7 +2086,7 @@ static PyObject *__pyx_kp_s_unable_to_allocate_shape_and_str;
 static PyObject *__pyx_n_s_unpack;
 static PyObject *__pyx_n_s_update;
 static PyObject *__pyx_n_s_zeros;
-static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_nldata, struct __pyx_obj_9vulchecker_9_features_FeatureSet *__pyx_v_node_features, struct __pyx_obj_9vulchecker_9_features_FeatureSet *__pyx_v_edge_features); /* proto */
+static PyObject *__pyx_pf_9hector_ml_7_graphs_mean_field_from_node_link_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_nldata, struct __pyx_obj_9hector_ml_9_features_FeatureSet *__pyx_v_node_features, struct __pyx_obj_9hector_ml_9_features_FeatureSet *__pyx_v_edge_features); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array_2__getbuffer__(struct __pyx_array_obj *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_array___pyx_pf_15View_dot_MemoryView_5array_4__dealloc__(struct __pyx_array_obj *__pyx_v_self); /* proto */
@@ -2166,7 +2166,7 @@ static PyObject *__pyx_codeobj__21;
 static PyObject *__pyx_codeobj__28;
 /* Late includes */
 
-/* "vulchecker/_graphs.pyx":10
+/* "hector_ml/_graphs.pyx":10
  * 
  * 
  * def mean_field_from_node_link_data(             # <<<<<<<<<<<<<<
@@ -2175,12 +2175,12 @@ static PyObject *__pyx_codeobj__28;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9vulchecker_7_graphs_1mean_field_from_node_link_data(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_9vulchecker_7_graphs_1mean_field_from_node_link_data = {"mean_field_from_node_link_data", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9vulchecker_7_graphs_1mean_field_from_node_link_data, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_9vulchecker_7_graphs_1mean_field_from_node_link_data(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9hector_ml_7_graphs_1mean_field_from_node_link_data(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_9hector_ml_7_graphs_1mean_field_from_node_link_data = {"mean_field_from_node_link_data", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9hector_ml_7_graphs_1mean_field_from_node_link_data, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9hector_ml_7_graphs_1mean_field_from_node_link_data(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_nldata = 0;
-  struct __pyx_obj_9vulchecker_9_features_FeatureSet *__pyx_v_node_features = 0;
-  struct __pyx_obj_9vulchecker_9_features_FeatureSet *__pyx_v_edge_features = 0;
+  struct __pyx_obj_9hector_ml_9_features_FeatureSet *__pyx_v_node_features = 0;
+  struct __pyx_obj_9hector_ml_9_features_FeatureSet *__pyx_v_edge_features = 0;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -2232,21 +2232,21 @@ static PyObject *__pyx_pw_9vulchecker_7_graphs_1mean_field_from_node_link_data(P
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
     __pyx_v_nldata = ((PyObject*)values[0]);
-    __pyx_v_node_features = ((struct __pyx_obj_9vulchecker_9_features_FeatureSet *)values[1]);
-    __pyx_v_edge_features = ((struct __pyx_obj_9vulchecker_9_features_FeatureSet *)values[2]);
+    __pyx_v_node_features = ((struct __pyx_obj_9hector_ml_9_features_FeatureSet *)values[1]);
+    __pyx_v_edge_features = ((struct __pyx_obj_9hector_ml_9_features_FeatureSet *)values[2]);
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("mean_field_from_node_link_data", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 10, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("vulchecker._graphs.mean_field_from_node_link_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._graphs.mean_field_from_node_link_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_nldata), (&PyDict_Type), 1, "nldata", 1))) __PYX_ERR(0, 11, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_node_features), __pyx_ptype_9vulchecker_9_features_FeatureSet, 1, "node_features", 0))) __PYX_ERR(0, 11, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_edge_features), __pyx_ptype_9vulchecker_9_features_FeatureSet, 1, "edge_features", 0))) __PYX_ERR(0, 11, __pyx_L1_error)
-  __pyx_r = __pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(__pyx_self, __pyx_v_nldata, __pyx_v_node_features, __pyx_v_edge_features);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_node_features), __pyx_ptype_9hector_ml_9_features_FeatureSet, 1, "node_features", 0))) __PYX_ERR(0, 11, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_edge_features), __pyx_ptype_9hector_ml_9_features_FeatureSet, 1, "edge_features", 0))) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_r = __pyx_pf_9hector_ml_7_graphs_mean_field_from_node_link_data(__pyx_self, __pyx_v_nldata, __pyx_v_node_features, __pyx_v_edge_features);
 
   /* function exit code */
   goto __pyx_L0;
@@ -2257,7 +2257,7 @@ static PyObject *__pyx_pw_9vulchecker_7_graphs_1mean_field_from_node_link_data(P
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_nldata, struct __pyx_obj_9vulchecker_9_features_FeatureSet *__pyx_v_node_features, struct __pyx_obj_9vulchecker_9_features_FeatureSet *__pyx_v_edge_features) {
+static PyObject *__pyx_pf_9hector_ml_7_graphs_mean_field_from_node_link_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_nldata, struct __pyx_obj_9hector_ml_9_features_FeatureSet *__pyx_v_node_features, struct __pyx_obj_9hector_ml_9_features_FeatureSet *__pyx_v_edge_features) {
   PyObject *__pyx_v_nodes = 0;
   Py_ssize_t __pyx_v_n_nodes;
   PyObject *__pyx_v_links = 0;
@@ -2304,7 +2304,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("mean_field_from_node_link_data", 0);
 
-  /* "vulchecker/_graphs.pyx":13
+  /* "hector_ml/_graphs.pyx":13
  *     dict nldata, FeatureSet node_features, FeatureSet edge_features
  * ):
  *     cdef list nodes = nldata["nodes"]             # <<<<<<<<<<<<<<
@@ -2321,7 +2321,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __pyx_v_nodes = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "vulchecker/_graphs.pyx":14
+  /* "hector_ml/_graphs.pyx":14
  * ):
  *     cdef list nodes = nldata["nodes"]
  *     cdef Py_ssize_t n_nodes = len(nodes)             # <<<<<<<<<<<<<<
@@ -2335,7 +2335,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __pyx_t_2 = PyList_GET_SIZE(__pyx_v_nodes); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 14, __pyx_L1_error)
   __pyx_v_n_nodes = __pyx_t_2;
 
-  /* "vulchecker/_graphs.pyx":15
+  /* "hector_ml/_graphs.pyx":15
  *     cdef list nodes = nldata["nodes"]
  *     cdef Py_ssize_t n_nodes = len(nodes)
  *     cdef list links = nldata["links"]             # <<<<<<<<<<<<<<
@@ -2352,7 +2352,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __pyx_v_links = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "vulchecker/_graphs.pyx":16
+  /* "hector_ml/_graphs.pyx":16
  *     cdef Py_ssize_t n_nodes = len(nodes)
  *     cdef list links = nldata["links"]
  *     cdef Py_ssize_t n_edges = len(links)             # <<<<<<<<<<<<<<
@@ -2366,7 +2366,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __pyx_t_2 = PyList_GET_SIZE(__pyx_v_links); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(0, 16, __pyx_L1_error)
   __pyx_v_n_edges = __pyx_t_2;
 
-  /* "vulchecker/_graphs.pyx":18
+  /* "hector_ml/_graphs.pyx":18
  *     cdef Py_ssize_t n_edges = len(links)
  * 
  *     node_feature_mat = np.zeros((n_nodes, node_features.total_width), dtype=np.float32)             # <<<<<<<<<<<<<<
@@ -2412,7 +2412,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __pyx_v_node_feature_mat = __pyx_t_6;
   __pyx_t_6 = 0;
 
-  /* "vulchecker/_graphs.pyx":19
+  /* "hector_ml/_graphs.pyx":19
  * 
  *     node_feature_mat = np.zeros((n_nodes, node_features.total_width), dtype=np.float32)
  *     edge_feature_mat = np.zeros((n_edges, edge_features.total_width), dtype=np.float32)             # <<<<<<<<<<<<<<
@@ -2458,7 +2458,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __pyx_v_edge_feature_mat = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "vulchecker/_graphs.pyx":20
+  /* "hector_ml/_graphs.pyx":20
  *     node_feature_mat = np.zeros((n_nodes, node_features.total_width), dtype=np.float32)
  *     edge_feature_mat = np.zeros((n_edges, edge_features.total_width), dtype=np.float32)
  *     adj_row_indexes = np.empty(n_edges * 2, dtype=np.int32)             # <<<<<<<<<<<<<<
@@ -2494,7 +2494,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __pyx_v_adj_row_indexes = __pyx_t_6;
   __pyx_t_6 = 0;
 
-  /* "vulchecker/_graphs.pyx":21
+  /* "hector_ml/_graphs.pyx":21
  *     edge_feature_mat = np.zeros((n_edges, edge_features.total_width), dtype=np.float32)
  *     adj_row_indexes = np.empty(n_edges * 2, dtype=np.int32)
  *     adj_col_indexes = np.empty(n_edges * 2, dtype=np.int32)             # <<<<<<<<<<<<<<
@@ -2530,7 +2530,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __pyx_v_adj_col_indexes = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "vulchecker/_graphs.pyx":22
+  /* "hector_ml/_graphs.pyx":22
  *     adj_row_indexes = np.empty(n_edges * 2, dtype=np.int32)
  *     adj_col_indexes = np.empty(n_edges * 2, dtype=np.int32)
  *     adj_data = np.ones(n_edges * 2, dtype=np.float32)             # <<<<<<<<<<<<<<
@@ -2566,7 +2566,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __pyx_v_adj_data = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "vulchecker/_graphs.pyx":23
+  /* "hector_ml/_graphs.pyx":23
  *     adj_col_indexes = np.empty(n_edges * 2, dtype=np.int32)
  *     adj_data = np.ones(n_edges * 2, dtype=np.float32)
  *     inc_row_indexes = np.empty(n_edges * 2, dtype=np.int32)             # <<<<<<<<<<<<<<
@@ -2602,7 +2602,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __pyx_v_inc_row_indexes = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "vulchecker/_graphs.pyx":24
+  /* "hector_ml/_graphs.pyx":24
  *     adj_data = np.ones(n_edges * 2, dtype=np.float32)
  *     inc_row_indexes = np.empty(n_edges * 2, dtype=np.int32)
  *     inc_col_indexes = np.empty(n_edges * 2, dtype=np.int32)             # <<<<<<<<<<<<<<
@@ -2638,7 +2638,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __pyx_v_inc_col_indexes = __pyx_t_6;
   __pyx_t_6 = 0;
 
-  /* "vulchecker/_graphs.pyx":25
+  /* "hector_ml/_graphs.pyx":25
  *     inc_row_indexes = np.empty(n_edges * 2, dtype=np.int32)
  *     inc_col_indexes = np.empty(n_edges * 2, dtype=np.int32)
  *     inc_data = np.ones(n_edges * 2, dtype=np.float32)             # <<<<<<<<<<<<<<
@@ -2674,7 +2674,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __pyx_v_inc_data = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "vulchecker/_graphs.pyx":27
+  /* "hector_ml/_graphs.pyx":27
  *     inc_data = np.ones(n_edges * 2, dtype=np.float32)
  * 
  *     cdef float[:, ::1] node_feature_array = node_feature_mat             # <<<<<<<<<<<<<<
@@ -2686,7 +2686,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __pyx_t_7.memview = NULL;
   __pyx_t_7.data = NULL;
 
-  /* "vulchecker/_graphs.pyx":28
+  /* "hector_ml/_graphs.pyx":28
  * 
  *     cdef float[:, ::1] node_feature_array = node_feature_mat
  *     cdef float[:, ::1] edge_feature_array = edge_feature_mat             # <<<<<<<<<<<<<<
@@ -2698,7 +2698,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __pyx_t_7.memview = NULL;
   __pyx_t_7.data = NULL;
 
-  /* "vulchecker/_graphs.pyx":29
+  /* "hector_ml/_graphs.pyx":29
  *     cdef float[:, ::1] node_feature_array = node_feature_mat
  *     cdef float[:, ::1] edge_feature_array = edge_feature_mat
  *     cdef int[::1] adj_row_index_array = adj_row_indexes             # <<<<<<<<<<<<<<
@@ -2710,7 +2710,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __pyx_t_8.memview = NULL;
   __pyx_t_8.data = NULL;
 
-  /* "vulchecker/_graphs.pyx":30
+  /* "hector_ml/_graphs.pyx":30
  *     cdef float[:, ::1] edge_feature_array = edge_feature_mat
  *     cdef int[::1] adj_row_index_array = adj_row_indexes
  *     cdef int[::1] adj_col_index_array = adj_col_indexes             # <<<<<<<<<<<<<<
@@ -2722,7 +2722,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __pyx_t_8.memview = NULL;
   __pyx_t_8.data = NULL;
 
-  /* "vulchecker/_graphs.pyx":31
+  /* "hector_ml/_graphs.pyx":31
  *     cdef int[::1] adj_row_index_array = adj_row_indexes
  *     cdef int[::1] adj_col_index_array = adj_col_indexes
  *     cdef int[::1] inc_row_index_array = inc_row_indexes             # <<<<<<<<<<<<<<
@@ -2734,7 +2734,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __pyx_t_8.memview = NULL;
   __pyx_t_8.data = NULL;
 
-  /* "vulchecker/_graphs.pyx":32
+  /* "hector_ml/_graphs.pyx":32
  *     cdef int[::1] adj_col_index_array = adj_col_indexes
  *     cdef int[::1] inc_row_index_array = inc_row_indexes
  *     cdef int[::1] inc_col_index_array = inc_col_indexes             # <<<<<<<<<<<<<<
@@ -2746,7 +2746,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __pyx_t_8.memview = NULL;
   __pyx_t_8.data = NULL;
 
-  /* "vulchecker/_graphs.pyx":34
+  /* "hector_ml/_graphs.pyx":34
  *     cdef int[::1] inc_col_index_array = inc_col_indexes
  * 
  *     cdef dict node_indexes = {}             # <<<<<<<<<<<<<<
@@ -2758,7 +2758,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __pyx_v_node_indexes = ((PyObject*)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "vulchecker/_graphs.pyx":38
+  /* "hector_ml/_graphs.pyx":38
  *     cdef Py_ssize_t i
  *     cdef dict data
  *     for i, data in enumerate(nodes):             # <<<<<<<<<<<<<<
@@ -2781,7 +2781,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
     __pyx_v_i = __pyx_t_2;
     __pyx_t_2 = (__pyx_t_2 + 1);
 
-    /* "vulchecker/_graphs.pyx":39
+    /* "hector_ml/_graphs.pyx":39
  *     cdef dict data
  *     for i, data in enumerate(nodes):
  *         node_indexes[data["id"]] = i             # <<<<<<<<<<<<<<
@@ -2800,16 +2800,16 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "vulchecker/_graphs.pyx":40
+    /* "hector_ml/_graphs.pyx":40
  *     for i, data in enumerate(nodes):
  *         node_indexes[data["id"]] = i
  *         node_features.feature_row(node_feature_array, data, i)             # <<<<<<<<<<<<<<
  * 
  *     cdef Py_ssize_t source, target
  */
-    __pyx_t_10 = ((struct __pyx_vtabstruct_9vulchecker_9_features_FeatureSet *)__pyx_v_node_features->__pyx_vtab)->feature_row(__pyx_v_node_features, __pyx_v_node_feature_array, __pyx_v_data, __pyx_v_i, 0); if (unlikely(__pyx_t_10 == ((int)-1))) __PYX_ERR(0, 40, __pyx_L1_error)
+    __pyx_t_10 = ((struct __pyx_vtabstruct_9hector_ml_9_features_FeatureSet *)__pyx_v_node_features->__pyx_vtab)->feature_row(__pyx_v_node_features, __pyx_v_node_feature_array, __pyx_v_data, __pyx_v_i, 0); if (unlikely(__pyx_t_10 == ((int)-1))) __PYX_ERR(0, 40, __pyx_L1_error)
 
-    /* "vulchecker/_graphs.pyx":38
+    /* "hector_ml/_graphs.pyx":38
  *     cdef Py_ssize_t i
  *     cdef dict data
  *     for i, data in enumerate(nodes):             # <<<<<<<<<<<<<<
@@ -2819,7 +2819,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   }
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "vulchecker/_graphs.pyx":43
+  /* "hector_ml/_graphs.pyx":43
  * 
  *     cdef Py_ssize_t source, target
  *     for i, data in enumerate(links):             # <<<<<<<<<<<<<<
@@ -2842,7 +2842,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
     __pyx_v_i = __pyx_t_2;
     __pyx_t_2 = (__pyx_t_2 + 1);
 
-    /* "vulchecker/_graphs.pyx":44
+    /* "hector_ml/_graphs.pyx":44
  *     cdef Py_ssize_t source, target
  *     for i, data in enumerate(links):
  *         source = node_indexes[data["source"]]             # <<<<<<<<<<<<<<
@@ -2862,7 +2862,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_v_source = __pyx_t_11;
 
-    /* "vulchecker/_graphs.pyx":45
+    /* "hector_ml/_graphs.pyx":45
  *     for i, data in enumerate(links):
  *         source = node_indexes[data["source"]]
  *         target = node_indexes[data["target"]]             # <<<<<<<<<<<<<<
@@ -2882,7 +2882,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_v_target = __pyx_t_11;
 
-    /* "vulchecker/_graphs.pyx":46
+    /* "hector_ml/_graphs.pyx":46
  *         source = node_indexes[data["source"]]
  *         target = node_indexes[data["target"]]
  *         adj_row_index_array[2 * i] = source             # <<<<<<<<<<<<<<
@@ -2900,7 +2900,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
     }
     *((int *) ( /* dim=0 */ ((char *) (((int *) __pyx_v_adj_row_index_array.data) + __pyx_t_12)) )) = __pyx_v_source;
 
-    /* "vulchecker/_graphs.pyx":47
+    /* "hector_ml/_graphs.pyx":47
  *         target = node_indexes[data["target"]]
  *         adj_row_index_array[2 * i] = source
  *         adj_col_index_array[2 * i] = target             # <<<<<<<<<<<<<<
@@ -2918,7 +2918,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
     }
     *((int *) ( /* dim=0 */ ((char *) (((int *) __pyx_v_adj_col_index_array.data) + __pyx_t_12)) )) = __pyx_v_target;
 
-    /* "vulchecker/_graphs.pyx":48
+    /* "hector_ml/_graphs.pyx":48
  *         adj_row_index_array[2 * i] = source
  *         adj_col_index_array[2 * i] = target
  *         adj_row_index_array[2 * i + 1] = target             # <<<<<<<<<<<<<<
@@ -2936,7 +2936,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
     }
     *((int *) ( /* dim=0 */ ((char *) (((int *) __pyx_v_adj_row_index_array.data) + __pyx_t_12)) )) = __pyx_v_target;
 
-    /* "vulchecker/_graphs.pyx":49
+    /* "hector_ml/_graphs.pyx":49
  *         adj_col_index_array[2 * i] = target
  *         adj_row_index_array[2 * i + 1] = target
  *         adj_col_index_array[2 * i + 1] = source             # <<<<<<<<<<<<<<
@@ -2954,7 +2954,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
     }
     *((int *) ( /* dim=0 */ ((char *) (((int *) __pyx_v_adj_col_index_array.data) + __pyx_t_12)) )) = __pyx_v_source;
 
-    /* "vulchecker/_graphs.pyx":50
+    /* "hector_ml/_graphs.pyx":50
  *         adj_row_index_array[2 * i + 1] = target
  *         adj_col_index_array[2 * i + 1] = source
  *         inc_row_index_array[2 * i] = source             # <<<<<<<<<<<<<<
@@ -2972,7 +2972,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
     }
     *((int *) ( /* dim=0 */ ((char *) (((int *) __pyx_v_inc_row_index_array.data) + __pyx_t_12)) )) = __pyx_v_source;
 
-    /* "vulchecker/_graphs.pyx":51
+    /* "hector_ml/_graphs.pyx":51
  *         adj_col_index_array[2 * i + 1] = source
  *         inc_row_index_array[2 * i] = source
  *         inc_col_index_array[2 * i] = i             # <<<<<<<<<<<<<<
@@ -2990,7 +2990,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
     }
     *((int *) ( /* dim=0 */ ((char *) (((int *) __pyx_v_inc_col_index_array.data) + __pyx_t_12)) )) = __pyx_v_i;
 
-    /* "vulchecker/_graphs.pyx":52
+    /* "hector_ml/_graphs.pyx":52
  *         inc_row_index_array[2 * i] = source
  *         inc_col_index_array[2 * i] = i
  *         inc_row_index_array[2 * i + 1] = target             # <<<<<<<<<<<<<<
@@ -3008,7 +3008,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
     }
     *((int *) ( /* dim=0 */ ((char *) (((int *) __pyx_v_inc_row_index_array.data) + __pyx_t_12)) )) = __pyx_v_target;
 
-    /* "vulchecker/_graphs.pyx":53
+    /* "hector_ml/_graphs.pyx":53
  *         inc_col_index_array[2 * i] = i
  *         inc_row_index_array[2 * i + 1] = target
  *         inc_col_index_array[2 * i + 1] = i             # <<<<<<<<<<<<<<
@@ -3026,16 +3026,16 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
     }
     *((int *) ( /* dim=0 */ ((char *) (((int *) __pyx_v_inc_col_index_array.data) + __pyx_t_12)) )) = __pyx_v_i;
 
-    /* "vulchecker/_graphs.pyx":54
+    /* "hector_ml/_graphs.pyx":54
  *         inc_row_index_array[2 * i + 1] = target
  *         inc_col_index_array[2 * i + 1] = i
  *         edge_features.feature_row(edge_feature_array, data, i)             # <<<<<<<<<<<<<<
  * 
  *     return Graph(
  */
-    __pyx_t_10 = ((struct __pyx_vtabstruct_9vulchecker_9_features_FeatureSet *)__pyx_v_edge_features->__pyx_vtab)->feature_row(__pyx_v_edge_features, __pyx_v_edge_feature_array, __pyx_v_data, __pyx_v_i, 0); if (unlikely(__pyx_t_10 == ((int)-1))) __PYX_ERR(0, 54, __pyx_L1_error)
+    __pyx_t_10 = ((struct __pyx_vtabstruct_9hector_ml_9_features_FeatureSet *)__pyx_v_edge_features->__pyx_vtab)->feature_row(__pyx_v_edge_features, __pyx_v_edge_feature_array, __pyx_v_data, __pyx_v_i, 0); if (unlikely(__pyx_t_10 == ((int)-1))) __PYX_ERR(0, 54, __pyx_L1_error)
 
-    /* "vulchecker/_graphs.pyx":43
+    /* "hector_ml/_graphs.pyx":43
  * 
  *     cdef Py_ssize_t source, target
  *     for i, data in enumerate(links):             # <<<<<<<<<<<<<<
@@ -3045,7 +3045,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   }
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "vulchecker/_graphs.pyx":56
+  /* "hector_ml/_graphs.pyx":56
  *         edge_features.feature_row(edge_feature_array, data, i)
  * 
  *     return Graph(             # <<<<<<<<<<<<<<
@@ -3056,7 +3056,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_Graph); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 56, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "vulchecker/_graphs.pyx":57
+  /* "hector_ml/_graphs.pyx":57
  * 
  *     return Graph(
  *         structure=(             # <<<<<<<<<<<<<<
@@ -3066,7 +3066,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __pyx_t_6 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 57, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
 
-  /* "vulchecker/_graphs.pyx":58
+  /* "hector_ml/_graphs.pyx":58
  *     return Graph(
  *         structure=(
  *             sp.coo_matrix(             # <<<<<<<<<<<<<<
@@ -3079,7 +3079,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "vulchecker/_graphs.pyx":59
+  /* "hector_ml/_graphs.pyx":59
  *         structure=(
  *             sp.coo_matrix(
  *                 (adj_data, (adj_row_indexes, adj_col_indexes)), (n_nodes, n_nodes)             # <<<<<<<<<<<<<<
@@ -3164,7 +3164,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "vulchecker/_graphs.pyx":61
+  /* "hector_ml/_graphs.pyx":61
  *                 (adj_data, (adj_row_indexes, adj_col_indexes)), (n_nodes, n_nodes)
  *             ),
  *             sp.coo_matrix(             # <<<<<<<<<<<<<<
@@ -3177,7 +3177,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __Pyx_GOTREF(__pyx_t_15);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "vulchecker/_graphs.pyx":62
+  /* "hector_ml/_graphs.pyx":62
  *             ),
  *             sp.coo_matrix(
  *                 (inc_data, (inc_row_indexes, inc_col_indexes)), (n_nodes, n_edges)             # <<<<<<<<<<<<<<
@@ -3262,7 +3262,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   }
   __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
 
-  /* "vulchecker/_graphs.pyx":58
+  /* "hector_ml/_graphs.pyx":58
  *     return Graph(
  *         structure=(
  *             sp.coo_matrix(             # <<<<<<<<<<<<<<
@@ -3280,7 +3280,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_structure, __pyx_t_15) < 0) __PYX_ERR(0, 57, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
 
-  /* "vulchecker/_graphs.pyx":65
+  /* "hector_ml/_graphs.pyx":65
  *             ),
  *         ),
  *         features=(node_feature_mat, edge_feature_mat),             # <<<<<<<<<<<<<<
@@ -3297,7 +3297,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_features, __pyx_t_15) < 0) __PYX_ERR(0, 57, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
 
-  /* "vulchecker/_graphs.pyx":56
+  /* "hector_ml/_graphs.pyx":56
  *         edge_features.feature_row(edge_feature_array, data, i)
  * 
  *     return Graph(             # <<<<<<<<<<<<<<
@@ -3312,7 +3312,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __pyx_t_15 = 0;
   goto __pyx_L0;
 
-  /* "vulchecker/_graphs.pyx":10
+  /* "hector_ml/_graphs.pyx":10
  * 
  * 
  * def mean_field_from_node_link_data(             # <<<<<<<<<<<<<<
@@ -3333,7 +3333,7 @@ static PyObject *__pyx_pf_9vulchecker_7_graphs_mean_field_from_node_link_data(CY
   __Pyx_XDECREF(__pyx_t_14);
   __Pyx_XDECREF(__pyx_t_15);
   __Pyx_XDECREF(__pyx_t_16);
-  __Pyx_AddTraceback("vulchecker._graphs.mean_field_from_node_link_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("hector_ml._graphs.mean_field_from_node_link_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_nodes);
@@ -16499,7 +16499,7 @@ static PyBufferProcs __pyx_tp_as_buffer_array = {
 
 static PyTypeObject __pyx_type___pyx_array = {
   PyVarObject_HEAD_INIT(0, 0)
-  "vulchecker._graphs.array", /*tp_name*/
+  "hector_ml._graphs.array", /*tp_name*/
   sizeof(struct __pyx_array_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_array, /*tp_dealloc*/
@@ -16618,7 +16618,7 @@ static PyMethodDef __pyx_methods_Enum[] = {
 
 static PyTypeObject __pyx_type___pyx_MemviewEnum = {
   PyVarObject_HEAD_INIT(0, 0)
-  "vulchecker._graphs.Enum", /*tp_name*/
+  "hector_ml._graphs.Enum", /*tp_name*/
   sizeof(struct __pyx_MemviewEnum_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_Enum, /*tp_dealloc*/
@@ -16879,7 +16879,7 @@ static PyBufferProcs __pyx_tp_as_buffer_memoryview = {
 
 static PyTypeObject __pyx_type___pyx_memoryview = {
   PyVarObject_HEAD_INIT(0, 0)
-  "vulchecker._graphs.memoryview", /*tp_name*/
+  "hector_ml._graphs.memoryview", /*tp_name*/
   sizeof(struct __pyx_memoryview_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_memoryview, /*tp_dealloc*/
@@ -17017,7 +17017,7 @@ static struct PyGetSetDef __pyx_getsets__memoryviewslice[] = {
 
 static PyTypeObject __pyx_type___pyx_memoryviewslice = {
   PyVarObject_HEAD_INIT(0, 0)
-  "vulchecker._graphs._memoryviewslice", /*tp_name*/
+  "hector_ml._graphs._memoryviewslice", /*tp_name*/
   sizeof(struct __pyx_memoryviewslice_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc__memoryviewslice, /*tp_dealloc*/
@@ -17196,7 +17196,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_u_fortran, __pyx_k_fortran, sizeof(__pyx_k_fortran), 0, 1, 0, 1},
   {&__pyx_n_s_getstate, __pyx_k_getstate, sizeof(__pyx_k_getstate), 0, 0, 1, 1},
   {&__pyx_kp_s_got_differing_extents_in_dimensi, __pyx_k_got_differing_extents_in_dimensi, sizeof(__pyx_k_got_differing_extents_in_dimensi), 0, 0, 1, 0},
-  {&__pyx_n_s_vulchecker__graphs, __pyx_k_vulchecker__graphs, sizeof(__pyx_k_vulchecker__graphs), 0, 0, 1, 1},
+  {&__pyx_n_s_hector_ml__graphs, __pyx_k_hector_ml__graphs, sizeof(__pyx_k_hector_ml__graphs), 0, 0, 1, 1},
   {&__pyx_n_s_i, __pyx_k_i, sizeof(__pyx_k_i), 0, 0, 1, 1},
   {&__pyx_n_s_id, __pyx_k_id, sizeof(__pyx_k_id), 0, 0, 1, 1},
   {&__pyx_n_u_id, __pyx_k_id, sizeof(__pyx_k_id), 0, 1, 0, 1},
@@ -17255,7 +17255,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_source, __pyx_k_source, sizeof(__pyx_k_source), 0, 0, 1, 1},
   {&__pyx_n_u_source, __pyx_k_source, sizeof(__pyx_k_source), 0, 1, 0, 1},
   {&__pyx_n_s_sp, __pyx_k_sp, sizeof(__pyx_k_sp), 0, 0, 1, 1},
-  {&__pyx_kp_s_src_vulchecker__graphs_pyx, __pyx_k_src_vulchecker__graphs_pyx, sizeof(__pyx_k_src_vulchecker__graphs_pyx), 0, 0, 1, 0},
+  {&__pyx_kp_s_src_hector_ml__graphs_pyx, __pyx_k_src_hector_ml__graphs_pyx, sizeof(__pyx_k_src_hector_ml__graphs_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_start, __pyx_k_start, sizeof(__pyx_k_start), 0, 0, 1, 1},
   {&__pyx_n_s_step, __pyx_k_step, sizeof(__pyx_k_step), 0, 0, 1, 1},
   {&__pyx_n_s_stop, __pyx_k_stop, sizeof(__pyx_k_stop), 0, 0, 1, 1},
@@ -17486,7 +17486,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__18);
   __Pyx_GIVEREF(__pyx_tuple__18);
 
-  /* "vulchecker/_graphs.pyx":10
+  /* "hector_ml/_graphs.pyx":10
  * 
  * 
  * def mean_field_from_node_link_data(             # <<<<<<<<<<<<<<
@@ -17496,7 +17496,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__20 = PyTuple_Pack(26, __pyx_n_s_nldata, __pyx_n_s_node_features, __pyx_n_s_edge_features, __pyx_n_s_nodes, __pyx_n_s_n_nodes, __pyx_n_s_links, __pyx_n_s_n_edges, __pyx_n_s_node_feature_mat, __pyx_n_s_edge_feature_mat, __pyx_n_s_adj_row_indexes, __pyx_n_s_adj_col_indexes, __pyx_n_s_adj_data, __pyx_n_s_inc_row_indexes, __pyx_n_s_inc_col_indexes, __pyx_n_s_inc_data, __pyx_n_s_node_feature_array, __pyx_n_s_edge_feature_array, __pyx_n_s_adj_row_index_array, __pyx_n_s_adj_col_index_array, __pyx_n_s_inc_row_index_array, __pyx_n_s_inc_col_index_array, __pyx_n_s_node_indexes, __pyx_n_s_i, __pyx_n_s_data, __pyx_n_s_source, __pyx_n_s_target); if (unlikely(!__pyx_tuple__20)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__20);
   __Pyx_GIVEREF(__pyx_tuple__20);
-  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(3, 0, 26, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_vulchecker__graphs_pyx, __pyx_n_s_mean_field_from_node_link_data, 10, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(3, 0, 26, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_hector_ml__graphs_pyx, __pyx_n_s_mean_field_from_node_link_data, 10, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 10, __pyx_L1_error)
 
   /* "View.MemoryView":286
  *         return self.name
@@ -17690,11 +17690,11 @@ static int __Pyx_modinit_type_import_code(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_import_code", 0);
   /*--- Type import code ---*/
-  __pyx_t_1 = PyImport_ImportModule("vulchecker._features"); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 4, __pyx_L1_error)
+  __pyx_t_1 = PyImport_ImportModule("hector_ml._features"); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 4, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_ptype_9vulchecker_9_features_FeatureSet = __Pyx_ImportType(__pyx_t_1, "vulchecker._features", "FeatureSet", sizeof(struct __pyx_obj_9vulchecker_9_features_FeatureSet), __Pyx_ImportType_CheckSize_Warn);
-   if (!__pyx_ptype_9vulchecker_9_features_FeatureSet) __PYX_ERR(2, 4, __pyx_L1_error)
-  __pyx_vtabptr_9vulchecker_9_features_FeatureSet = (struct __pyx_vtabstruct_9vulchecker_9_features_FeatureSet*)__Pyx_GetVtable(__pyx_ptype_9vulchecker_9_features_FeatureSet->tp_dict); if (unlikely(!__pyx_vtabptr_9vulchecker_9_features_FeatureSet)) __PYX_ERR(2, 4, __pyx_L1_error)
+  __pyx_ptype_9hector_ml_9_features_FeatureSet = __Pyx_ImportType(__pyx_t_1, "hector_ml._features", "FeatureSet", sizeof(struct __pyx_obj_9hector_ml_9_features_FeatureSet), __Pyx_ImportType_CheckSize_Warn);
+   if (!__pyx_ptype_9hector_ml_9_features_FeatureSet) __PYX_ERR(2, 4, __pyx_L1_error)
+  __pyx_vtabptr_9hector_ml_9_features_FeatureSet = (struct __pyx_vtabstruct_9hector_ml_9_features_FeatureSet*)__Pyx_GetVtable(__pyx_ptype_9hector_ml_9_features_FeatureSet->tp_dict); if (unlikely(!__pyx_vtabptr_9hector_ml_9_features_FeatureSet)) __PYX_ERR(2, 4, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_RefNannyFinishContext();
   return 0;
@@ -17896,14 +17896,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_vulchecker___graphs) {
+  if (__pyx_module_is_main_hector_ml___graphs) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name_2, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "vulchecker._graphs")) {
-      if (unlikely(PyDict_SetItemString(modules, "vulchecker._graphs", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "hector_ml._graphs")) {
+      if (unlikely(PyDict_SetItemString(modules, "hector_ml._graphs", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -17924,7 +17924,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "vulchecker/_graphs.pyx":3
+  /* "hector_ml/_graphs.pyx":3
  * # cython: language_level=3, wraparound=False
  * 
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -17936,7 +17936,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "vulchecker/_graphs.pyx":4
+  /* "hector_ml/_graphs.pyx":4
  * 
  * import numpy as np
  * import scipy.sparse as sp             # <<<<<<<<<<<<<<
@@ -17954,12 +17954,12 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_sp, __pyx_t_2) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "vulchecker/_graphs.pyx":5
+  /* "hector_ml/_graphs.pyx":5
  * import numpy as np
  * import scipy.sparse as sp
  * from structure2vec.graph_collate import Graph             # <<<<<<<<<<<<<<
  * 
- * from vulchecker._features cimport FeatureSet
+ * from hector_ml._features cimport FeatureSet
  */
   __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -17975,19 +17975,19 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "vulchecker/_graphs.pyx":10
+  /* "hector_ml/_graphs.pyx":10
  * 
  * 
  * def mean_field_from_node_link_data(             # <<<<<<<<<<<<<<
  *     dict nldata, FeatureSet node_features, FeatureSet edge_features
  * ):
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_9vulchecker_7_graphs_1mean_field_from_node_link_data, NULL, __pyx_n_s_vulchecker__graphs); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_9hector_ml_7_graphs_1mean_field_from_node_link_data, NULL, __pyx_n_s_hector_ml__graphs); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_mean_field_from_node_link_data, __pyx_t_1) < 0) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "vulchecker/_graphs.pyx":1
+  /* "hector_ml/_graphs.pyx":1
  * # cython: language_level=3, wraparound=False             # <<<<<<<<<<<<<<
  * 
  * import numpy as np
@@ -18158,11 +18158,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init vulchecker._graphs", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init hector_ml._graphs", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init vulchecker._graphs");
+    PyErr_SetString(PyExc_ImportError, "init hector_ml._graphs");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

@@ -1,0 +1,28 @@
+exclude: '^src/hector_ml/configure/ninja_syntax\.py$'
+
+repos:
+
+  - repo: https://github.com/psf/black
+    rev: 20.8b1
+    hooks:
+      - id: black
+
+  - repo: https://github.com/pycqa/isort
+    rev: 5.4.2
+    hooks:
+      - id: isort
+
+  - repo: https://gitlab.com/pycqa/flake8.git
+    rev: 3.8.3
+    hooks:
+      - id: flake8
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+      - id: check-byte-order-marker
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: debug-statements
+      - id: end-of-file-fixer
+      - id: trailing-whitespace

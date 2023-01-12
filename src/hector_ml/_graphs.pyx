@@ -4,7 +4,7 @@ import numpy as np
 import scipy.sparse as sp
 from structure2vec.graph_collate import Graph
 
-from vulchecker._features cimport FeatureSet
+from hector_ml._features cimport FeatureSet
 
 
 def mean_field_from_node_link_data(

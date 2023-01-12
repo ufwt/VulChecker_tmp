@@ -2,7 +2,7 @@ import gzip
 
 import pytest
 
-from vulchecker.click_helpers import smart_open
+from hector_ml.click_helpers import smart_open
 
 
 @pytest.mark.parametrize(

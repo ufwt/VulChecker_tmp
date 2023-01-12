@@ -7,31 +7,31 @@ from typing import Iterable, Optional
 
 from more_itertools import one
 
-from vulchecker.configure import ninja
-from vulchecker.configure.base import SourceFile
-from vulchecker.paths import relative_to_with_parents
+from hector_ml.configure import ninja
+from hector_ml.configure.base import SourceFile
+from hector_ml.paths import relative_to_with_parents
 
 
-def _cmake_to_ninja(build_dir: Path, vulchecker_dir: Path):
+def _cmake_to_ninja(build_dir: Path, hector_dir: Path):
     cmakelists_file = build_dir / "CMakeLists.txt"
     if not cmakelists_file.exists():
         raise FileNotFoundError(cmakelists_file)
 
-    ninja_file = vulchecker_dir / "build.ninja"
+    ninja_file = hector_dir / "build.ninja"
     if not ninja_file.exists():
         subprocess.run(
-            ["cmake", "-GNinja", str(relative_to_with_parents(build_dir, vulchecker_dir))],
-            cwd=vulchecker_dir,
+            ["cmake", "-GNinja", str(relative_to_with_parents(build_dir, hector_dir))],
+            cwd=hector_dir,
             check=True,
         )
     else:
-        subprocess.run(["ninja", "build.ninja"], cwd=vulchecker_dir, check=True)
-    subprocess.run(["ninja"], cwd=vulchecker_dir)
+        subprocess.run(["ninja", "build.ninja"], cwd=hector_dir, check=True)
+    subprocess.run(["ninja"], cwd=hector_dir)
 
 
-def get_targets(build_dir: Path, vulchecker_dir: Path) -> Iterable[str]:
-    _cmake_to_ninja(build_dir, vulchecker_dir)
-    dependency_graph = ninja.load_dependency_graph(vulchecker_dir)
+def get_targets(build_dir: Path, hector_dir: Path) -> Iterable[str]:
+    _cmake_to_ninja(build_dir, hector_dir)
+    dependency_graph = ninja.load_dependency_graph(hector_dir)
     for node, data in dependency_graph.nodes(data=True):
         if (
             data["kind"] == ninja.NodeKind.BUILD
@@ -85,7 +85,7 @@ def _infer_target(
 
 
 def infer_target(
-    build_dir: Path, vulchecker_dir: Path, *, labels_file_name: str = "vulchecker_labels.json"
+    build_dir: Path, hector_dir: Path, *, labels_file_name: str = "hector_labels.json"
 ) -> Optional[str]:
     """Choose a target that covers the most labeled vulnerabilities.
 
@@ -95,26 +95,26 @@ def infer_target(
     This should do the best possible.
 
     """
-    _cmake_to_ninja(build_dir, vulchecker_dir)
-    dependency_graph = ninja.load_dependency_graph(vulchecker_dir)
+    _cmake_to_ninja(build_dir, hector_dir)
+    dependency_graph = ninja.load_dependency_graph(hector_dir)
     _extend_dependency_graph_with_headers(dependency_graph)
 
     with open(build_dir / labels_file_name) as f:
         labels = json.load(f)
 
     return _infer_target(
-        dependency_graph, labels, relative_to_with_parents(build_dir, vulchecker_dir)
+        dependency_graph, labels, relative_to_with_parents(build_dir, hector_dir)
     )
 
 
 def get_sources(
-    build_dir: os.PathLike, vulchecker_dir: os.PathLike, target: str
+    build_dir: os.PathLike, hector_dir: os.PathLike, target: str
 ) -> Iterable[SourceFile]:
-    _cmake_to_ninja(build_dir, vulchecker_dir)
-    return ninja.get_sources(vulchecker_dir, vulchecker_dir, target)
+    _cmake_to_ninja(build_dir, hector_dir)
+    return ninja.get_sources(hector_dir, hector_dir, target)
 
 
 def get_reconfigure_inputs(
-    build_dir: os.PathLike, vulchecker_dir: os.PathLike, target: str
+    build_dir: os.PathLike, hector_dir: os.PathLike, target: str
 ) -> Iterable[Path]:
     return Path(build_dir).glob("**/CMakeLists.txt")

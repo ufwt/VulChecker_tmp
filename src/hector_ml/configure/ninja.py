@@ -18,7 +18,7 @@ from typing import Collection, Iterable, Mapping, NewType, Text
 
 import networkx as nx
 
-from vulchecker.configure.base import SourceFile
+from hector_ml.configure.base import SourceFile
 
 SOURCE_SUFFIXES = (".c", ".cpp", ".c++", ".cc", ".C", ".cxx")
 FLAGS_TO_KEEP = ("-D", "-std=", "-m")
@@ -118,7 +118,7 @@ def get_extra_flags(build_dir: pathlib.Path) -> Mapping[pathlib.Path, Collection
     return {k: tuple(v) for k, v in extra_flags.items()}
 
 
-def get_targets(build_dir: pathlib.Path, vulchecker_dir: pathlib.Path) -> Iterable[str]:
+def get_targets(build_dir: pathlib.Path, hector_dir: pathlib.Path) -> Iterable[str]:
     ninja_build_file = build_dir / "build.ninja"
     if not ninja_build_file.exists():
         raise FileNotFoundError(ninja_build_file)
@@ -129,7 +129,7 @@ def get_targets(build_dir: pathlib.Path, vulchecker_dir: pathlib.Path) -> Iterab
 
 
 def get_sources(
-    build_dir: pathlib.Path, vulchecker_dir: pathlib.Path, target: str
+    build_dir: pathlib.Path, hector_dir: pathlib.Path, target: str
 ) -> Iterable[SourceFile]:
     ninja_build_file = build_dir / "build.ninja"
     if not ninja_build_file.exists():
@@ -145,6 +145,6 @@ def get_sources(
 
 
 def get_reconfigure_inputs(
-    build_dir: pathlib.Path, vulchecker_dir: pathlib.Path, target: str
+    build_dir: pathlib.Path, hector_dir: pathlib.Path, target: str
 ) -> Iterable[pathlib.Path]:
     yield build_dir / "build.ninja"

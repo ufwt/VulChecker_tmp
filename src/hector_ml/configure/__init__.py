@@ -11,9 +11,9 @@ from typing import ClassVar, Iterable, Optional, Sequence, TextIO
 import attr
 import click
 
-from vulchecker.configure.base import SourceFile
-from vulchecker.configure.ninja_syntax import Writer
-from vulchecker.paths import relative_to_with_parents
+from hector_ml.configure.base import SourceFile
+from hector_ml.configure.ninja_syntax import Writer
+from hector_ml.paths import relative_to_with_parents
 
 KNOWN_SOURCE_TYPES = [
     "cmake",
@@ -51,32 +51,32 @@ class BuildSystem(abc.ABC):
 
     @abc.abstractmethod
     def get_targets(
-        self, build_dir: pathlib.Path, vulchecker_dir: pathlib.Path
+        self, build_dir: pathlib.Path, hector_dir: pathlib.Path
     ) -> Iterable[str]:
         """Get all available build targets."""
 
     @abc.abstractmethod
     def get_sources(
-        self, build_dir: pathlib.Path, vulchecker_dir: pathlib.Path, target: str
+        self, build_dir: pathlib.Path, hector_dir: pathlib.Path, target: str
     ) -> Iterable[SourceFile]:
         """Get source information to build a specific target."""
 
     @abc.abstractmethod
     def get_reconfigure_inputs(
-        self, build_dir: pathlib.Path, vulchecker_dir: pathlib.Path, target: str
+        self, build_dir: pathlib.Path, hector_dir: pathlib.Path, target: str
     ) -> Iterable[pathlib.Path]:
         """Get paths to files that should cause a re-configure."""
 
     @abc.abstractmethod
     def infer_target(
-        self, build_dir: pathlib.Path, vulchecker_dir: pathlib.Path
+        self, build_dir: pathlib.Path, hector_dir: pathlib.Path
     ) -> Optional[str]:
         """Guess what target should be built, based on labels."""
 
 
 def get_build_system(name: str) -> BuildSystem:
     """Import the named build system."""
-    return importlib.import_module(f"vulchecker.configure.{name}")
+    return importlib.import_module(f"hector_ml.configure.{name}")
 
 
 @click.command()
@@ -95,12 +95,12 @@ def get_build_system(name: str) -> BuildSystem:
     help="Directory where project source is located. [default: BUILD_DIR]",
 )
 @click.option(
-    "--vulchecker-dir",
-    metavar="vulchecker_DIR",
+    "--hector-dir",
+    metavar="HECTOR_DIR",
     type=click.Path(file_okay=False, writable=True),
     help=(
-        "Directory where vulchecker.ninja will be written. "
-        "[default: BUILD_DIR/vulchecker_build]"
+        "Directory where hector.ninja will be written. "
+        "[default: BUILD_DIR/hector_build]"
     ),
 )
 @click.option(
@@ -122,14 +122,14 @@ def get_build_system(name: str) -> BuildSystem:
 def main(
     build_dir: str,
     source_dir: Optional[str],
-    vulchecker_dir: Optional[str],
+    hector_dir: Optional[str],
     labels: Optional[str],
     llap_lib_dir: str,
     build_system: str,
     target: Optional[str],
     cwes: Sequence[int],
 ):
-    """Configure a codebase to be analyzed by vulchecker.
+    """Configure a codebase to be analyzed by HECTOR.
 
     If you pass the empty string (i.e. "") as TARGET,
     all known targets will be listed
@@ -141,23 +141,23 @@ def main(
         source_dir = build_dir
     else:
         source_dir = pathlib.Path(source_dir).resolve()
-    if vulchecker_dir is None:
-        vulchecker_dir = build_dir / "vulchecker_build"
+    if hector_dir is None:
+        hector_dir = build_dir / "hector_build"
     else:
-        vulchecker_dir = pathlib.Path(vulchecker_dir).resolve()
-    vulchecker_dir.mkdir(parents=True, exist_ok=True)
+        hector_dir = pathlib.Path(hector_dir).resolve()
+    hector_dir.mkdir(parents=True, exist_ok=True)
     if labels is not None:
         labels = pathlib.Path(labels).resolve()
 
     llap_lib_dir = pathlib.Path(llap_lib_dir).resolve()
 
     if not target:
-        _list_targets(build_dir, vulchecker_dir, build_system)
+        _list_targets(build_dir, hector_dir, build_system)
     else:
-        vulcheckerConfig(
+        HectorConfig(
             source_dir,
             build_dir,
-            vulchecker_dir,
+            hector_dir,
             llap_lib_dir,
             build_system,
             target,
@@ -166,9 +166,9 @@ def main(
         ).build_ninja_file()
 
 
-def _list_targets(build_dir, vulchecker_dir, build_system):
+def _list_targets(build_dir, hector_dir, build_system):
     build_system_module = get_build_system(build_system)
-    for target in build_system_module.get_targets(build_dir, vulchecker_dir):
+    for target in build_system_module.get_targets(build_dir, hector_dir):
         print(target)
 
 
@@ -176,14 +176,14 @@ ALLOW_OPTIMIZATION_SED = "/^attributes #[0-9]+ =/ { s/ noinline / /; s/ optnone 
 
 
 @attr.s(auto_attribs=True, slots=True, frozen=True)
-class vulcheckerConfig:
+class HectorConfig:
     """Options for setting up the LLAP pipeline.
 
     For now,
-    you should always set ``source_dir``, ``build_dir``, and ``vulchecker_dir``
+    you should always set ``source_dir``, ``build_dir``, and ``hector_dir``
     to the top level directory containing the code.
     This ensures that the outputs have the appropriate relative paths until
-    `issue #35 <https://github.gatech.edu/vulchecker/vulchecker/issues/35>`_
+    `issue #35 <https://github.gatech.edu/HECTOR/hector_ml/issues/35>`_
     is addressed.
 
     :param source_dir: The top-level directory of the source code of the program.
@@ -191,14 +191,14 @@ class vulcheckerConfig:
         The top-level directory of the build system of the program.
         In most cases,
         this will be the same as ``source_dir``.
-    :param vulchecker_dir:
-        The directory where the ``vulchecker.ninja`` file will be written.
+    :param hector_dir:
+        The directory where the ``hector.ninja`` file will be written.
         The LLAP intermediate and output files
-        (i.e. ``*.ll`` and ``vulchecker-$cwe.json``)
+        (i.e. ``*.ll`` and ``hector-$cwe.json``)
         will also be created under this directory.
     :param llap_lib_dir:
         The directory containing the LLAP plugin libraries
-        (i.e. ``LLVM_vulchecker_$cwe.so``).
+        (i.e. ``LLVM_HECTOR_$cwe.so``).
     :param build_system:
         The build system of the code under analysis.
         If you don't know the build system from out-of-band means,
@@ -223,7 +223,7 @@ class vulcheckerConfig:
 
     source_dir: pathlib.Path = attr.ib(converter=pathlib.Path)
     build_dir: pathlib.Path = attr.ib(converter=pathlib.Path)
-    vulchecker_dir: pathlib.Path = attr.ib(converter=pathlib.Path)
+    hector_dir: pathlib.Path = attr.ib(converter=pathlib.Path)
     llap_lib_dir: pathlib.Path = attr.ib(converter=pathlib.Path)
     build_system: str
     target: str
@@ -235,29 +235,29 @@ class vulcheckerConfig:
     _NINJA_PREFIX: ClassVar[str] = "# CONFIG="
 
     def _to_ninja_file(self, writer: TextIO):
-        """Serialize this config to the vulchecker.ninja file."""
-        vulchecker_configuration = json.dumps(attr.asdict(self), default=str)
-        writer.write(f"{self._NINJA_PREFIX}{vulchecker_configuration}\n")
+        """Serialize this config to the hector.ninja file."""
+        hector_configuration = json.dumps(attr.asdict(self), default=str)
+        writer.write(f"{self._NINJA_PREFIX}{hector_configuration}\n")
 
     @classmethod
-    def _from_ninja_file(cls, reader: TextIO) -> Optional["vulcheckerConfig"]:
-        """Load this config from a vulchecker.ninja file."""
+    def _from_ninja_file(cls, reader: TextIO) -> Optional["HectorConfig"]:
+        """Load this config from a hector.ninja file."""
         for line in reader:
             if line.startswith(cls._NINJA_PREFIX):
                 return cls(**json.loads(line[len(cls._NINJA_PREFIX) :]))
         return None
 
     def _reconfigure_args(self) -> Iterable[str]:
-        """Args to re-invoke this configure through vulchecker configure."""
+        """Args to re-invoke this configure through hector configure."""
         yield from [
-            str(pathlib.Path(sys.executable).parent / "vulchecker"),
+            str(pathlib.Path(sys.executable).parent / "hector"),
             "configure",
             "--source-dir",
             str(self.source_dir),
             "--build-dir",
             str(self.build_dir),
-            "--vulchecker-dir",
-            str(self.vulchecker_dir),
+            "--hector-dir",
+            str(self.hector_dir),
             "--llap-lib-dir",
             str(self.llap_lib_dir),
         ]
@@ -267,15 +267,15 @@ class vulcheckerConfig:
         yield from (str(cwe) for cwe in self.cwes)
 
     def configure_if_needed(self):
-        """Build the vulchecker.ninja file if needed.
+        """Build the hector.ninja file if needed.
 
-        A rebuild is needed if vulchecker.ninja does not exist,
+        A rebuild is needed if hector.ninja does not exist,
         or if the configuration stored therein does not match.
 
         """
         try:
-            with open(self.vulchecker_dir / "vulchecker.ninja") as f:
-                existing_config = vulcheckerConfig._from_ninja_file(f)
+            with open(self.hector_dir / "hector.ninja") as f:
+                existing_config = HectorConfig._from_ninja_file(f)
             need_configure = self != existing_config
         except FileNotFoundError:
             need_configure = True
@@ -291,13 +291,13 @@ class vulcheckerConfig:
 
         """
         self.configure_if_needed()
-        subprocess.run(["ninja", "-f", "vulchecker.ninja"], check=True, cwd=self.vulchecker_dir)
+        subprocess.run(["ninja", "-f", "hector.ninja"], check=True, cwd=self.hector_dir)
 
     def _relative(self, path: pathlib.Path) -> pathlib.Path:
-        return relative_to_with_parents(path, self.vulchecker_dir)
+        return relative_to_with_parents(path, self.hector_dir)
 
     def build_ninja_file(self):
-        """Build the vulchecker.ninja file (unconditionally)."""
+        """Build the hector.ninja file (unconditionally)."""
         build_system_module = get_build_system(self.build_system)
         if self.labels:
             relative_labels = self._relative(self.labels)
@@ -305,10 +305,10 @@ class vulcheckerConfig:
             relative_labels = None
 
         with click.open_file(
-            self.vulchecker_dir / "vulchecker.ninja", "wt", atomic=True
+            self.hector_dir / "hector.ninja", "wt", atomic=True
         ) as ninja_file:
             writer = Writer(ninja_file)
-            writer.comment("Generated by vulchecker")
+            writer.comment("Generated by HECTOR")
             self._to_ninja_file(ninja_file)
             writer.variable("llap_path", str(self.llap_lib_dir))
             writer.variable(
@@ -341,18 +341,18 @@ class vulcheckerConfig:
             writer.rule(
                 "opt_llap",
                 (
-                    "opt -load $llap_path/LLVM_vulchecker_$llap_plugin.so "
-                    "-vulchecker_$llap_plugin $labels -outputFilename $out $in >/dev/null"
+                    "opt -load $llap_path/LLVM_HECTOR_$llap_plugin.so "
+                    "-HECTOR_$llap_plugin $labels -outputFilename $out $in >/dev/null"
                 ),
             )
             writer.rule(
-                "reconfigure_vulchecker",
+                "reconfigure_hector",
                 shlex_join(self._reconfigure_args()),
                 generator=True,
             )
 
             source_files: Iterable[SourceFile] = build_system_module.get_sources(
-                self.build_dir, self.vulchecker_dir, self.target
+                self.build_dir, self.hector_dir, self.target
             )
 
             all_ll_files = []
@@ -386,11 +386,11 @@ class vulcheckerConfig:
                 previous_target = this_target
 
             for cwe in self.cwes:
-                llap_implicits = [f"$llap_path/LLVM_vulchecker_{cwe}.so"]
+                llap_implicits = [f"$llap_path/LLVM_HECTOR_{cwe}.so"]
                 if self.labels:
                     llap_implicits.append(str(relative_labels))
                 writer.build(
-                    [f"vulchecker-{cwe}.json"],
+                    [f"hector-{cwe}.json"],
                     "opt_llap",
                     previous_target,
                     implicit=llap_implicits,
@@ -398,12 +398,12 @@ class vulcheckerConfig:
                 )
 
             writer.build(
-                ["vulchecker.ninja"],
-                "reconfigure_vulchecker",
+                ["hector.ninja"],
+                "reconfigure_hector",
                 [
                     str(self._relative(p))
                     for p in build_system_module.get_reconfigure_inputs(
-                        self.build_dir, self.vulchecker_dir, self.target
+                        self.build_dir, self.hector_dir, self.target
                     )
                 ],
             )

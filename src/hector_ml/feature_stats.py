@@ -5,9 +5,9 @@ import click
 import numpy as np
 from structure2vec.graph_collate import graph_collate
 
-from vulchecker.click_helpers import smart_open
-from vulchecker.features import EDGE_FEATURES, FeatureKind, feature_set, node_features
-from vulchecker.graphs import GraphDataset, JSONGraphs
+from hector_ml.click_helpers import smart_open
+from hector_ml.features import EDGE_FEATURES, FeatureKind, feature_set, node_features
+from hector_ml.graphs import GraphDataset, JSONGraphs
 
 
 @click.command()

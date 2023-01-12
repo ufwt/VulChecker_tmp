@@ -3,7 +3,7 @@ import numpy as np
 import torch
 from structure2vec.graph_collate import Graph, graph_collate
 
-from vulchecker.model import Model, Predictor
+from hector_ml.model import Model, Predictor
 
 node_features = 4
 edge_features = 5

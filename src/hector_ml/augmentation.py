@@ -12,8 +12,8 @@ import click
 import networkx as nx
 from more_itertools import first, one
 
-from vulchecker.click_helpers import smart_open
-from vulchecker.preprocess import remove_llvm_internal_functions
+from hector_ml.click_helpers import smart_open
+from hector_ml.preprocess import remove_llvm_internal_functions
 
 T = TypeVar("T")
 

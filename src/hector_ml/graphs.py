@@ -3,7 +3,7 @@ import json
 import networkx as nx
 from torch.utils.data import IterableDataset
 
-from vulchecker._graphs import mean_field_from_node_link_data
+from hector_ml._graphs import mean_field_from_node_link_data
 
 
 def bfs_with_depth(graph, start, reverse=False, depth_limit=None):

@@ -7,9 +7,9 @@ import networkx as nx
 import numpy as np
 import torch
 
-from vulchecker.click_helpers import smart_open
-from vulchecker.graphs import JSONGraphs, sink_graph
-from vulchecker.model import PredictionStyle, Predictor
+from hector_ml.click_helpers import smart_open
+from hector_ml.graphs import JSONGraphs, sink_graph
+from hector_ml.model import PredictionStyle, Predictor
 
 
 @attr.s(auto_attribs=True, slots=True, frozen=True)

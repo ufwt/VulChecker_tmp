@@ -1,46 +1,45 @@
-# VulChecker Pipeline
+# HECTOR Machine Learning Component
 
-A deep learning system for detecting vulnerabilites (CWEs) in source code. 
-The pipeline has been desinged to work on cmake C/C++ projects only.
+HECTOR component that predicts the existence of weird machines
 
 # Using the Pipeline
 
 ## Setup
 
-You will need to build [LLAP](https://github.gatech.edu/vulchecker/llap).
+You will need to build [LLAP](https://github.gatech.edu/HECTOR/llap).
 Follow the instructions there to build LLAP.
-As a final step, collect all of the `vulchecker_*.so` files into a single directory.
+As a final step, collect all of the `HECTOR_*.so` files into a single directory.
 
-Then, set up a virtual environment in which to run vulchecker.
+Then, set up a virtual environment in which to run HECTOR.
 Clone this repository and structure2vec:
 
 ```bash
-git clone git@github.gatech.edu:vulchecker/vulchecker.git
-git clone git@github.gatech.edu:vulchecker/structure2vec.git
+git clone git@github.gatech.edu:HECTOR/hector_ml.git
+git clone git@github.gatech.edu:HECTOR/structure2vec.git
 ```
 
 Then, build a virtual environment and install all the components:
 
 ```bash
-python3.7 -m venv vulchecker_env
-. vulchecker_env/bin/activate
+python3.7 -m venv hector_env
+. hector_env/bin/activate
 python -m pip install -U pip setuptools wheel
 python -m pip install cython cmake
-python -m pip install ./structure2vec ./vulchecker
+python -m pip install ./structure2vec ./hector_ml
 ```
 
 After doing this the first time, you can simply
 
 ```bash
-. vulchecker_env/bin/activate
+. hector_env/bin/activate
 ```
 
 to get a new shell ready to work.
-This project exposes a command-line tool, `vulchecker`,
+This project exposes a command-line tool, `hector`,
 that is used for all operations.
 There is built-in help,
 which can be printed by passing the `--help` flag to any command or subcommand.
-For example, `vulchecker --help` prints all of the available subcommands.
+For example, `hector --help` prints all of the available subcommands.
 
 ## Training a Model
 
@@ -91,17 +90,17 @@ ninja foo
 You can analyze this project with LLAP by running
 
 ```bash
-vulchecker configure \
+hector configure \
     --llap-lib-dir /path/to/llap/lib \
     --labels labels.json \
     cmake \
     foo \
     121 190 415 416
-cd vulchecker_build
-ninja -f vulchecker.ninja
+cd hector_build
+ninja -f hector.ninja
 ```
 
-This will produce files named `vulchecker-{121,190,415,416}.json`
+This will produce files named `hector-{121,190,415,416}.json`
 containing the annotated PDGs for each pipeline.
 These correspond to the *pipelines*, which may cover more than one CWE.
 
@@ -130,10 +129,10 @@ find CWE121/labeled_graphs -name '*.json' | xargs cat >juliet-121-pdgs.nljson
 Then, you can augment a program like this:
 
 ```bash
-vulchecker augmentation \
-    --output vulchecker-121-augmented.json \
+hector augmentation \
+    --output hector-121-augmented.json \
     juliet-121-pdgs.nljson \
-    vulchecker-121.json
+    hector-121.json
 ```
 
 ### Preprocessing Graphs
@@ -141,12 +140,12 @@ vulchecker augmentation \
 For eacn program, run
 
 ```bash
-vulchecker preprocess \
+hector preprocess \
     --training-indexes /path/to/indexes/indexes-121.json \
     --source-dir $PWD \
     --cwe 121 \
-    --output vulchecker-121-preproc.json \
-    vulchecker-121.json
+    --output hector-121-preproc.json \
+    hector-121.json
 ```
 
 Some pipelines correspond to more than one CWE.
@@ -155,12 +154,12 @@ you'll need to make additional calls to `preprocess` for the additional CWEs.
 For example, CWE-122:
 
 ```bash
-vulchecker preprocess \
+hector preprocess \
     --training-indexes /path/to/indexes/indexes-122.json \
     --source-dir $PWD \
     --cwe 122 \
-    --output vulchecker-122-preproc.json \
-    vulchecker-121.json
+    --output hector-122-preproc.json \
+    hector-121.json
 ```
 
 These steps can be run concurrently by CWE.
@@ -172,7 +171,7 @@ so all preprocessing for each CWE must be run serially.
 You need to gather the graphs for each CWE:
 
 ```bash
-find . -name 'vulchecker-121-preproc.json' | xargs cat >real-world-121.nljson
+find . -name 'hector-121-preproc.json' | xargs cat >real-world-121.nljson
 ```
 
 and so on.
@@ -182,7 +181,7 @@ and so on.
 Run
 
 ```bash
-vulchecker validate_data \
+hector validate_data \
     --check-labels \
     --output real-world-121-clean.nljson \
     real-world-121.nljson
@@ -198,7 +197,7 @@ It outputs the good data.
 ### Train/Test Split
 
 ```bash
-vulchecker train_test_split \
+hector train_test_split \
     --test-fraction 0.1 \
     real-world-121-clean.nljson \
     real-world-121-clean-train.nljson \
@@ -215,7 +214,7 @@ and I usually adjust the sampling rate until
 the classes are approximately balanced.
 
 ```bash
-vulchecker sample_data \
+hector sample_data \
     --negative 0.00025 \
     real-world-121-clean-train.nljson \
     real-world-121-clean-0.00025-1.0-train.nljson
@@ -232,7 +231,7 @@ Output will be like:
 The basic command is
 
 ```bash
-vulchecker train \
+hector train \
     --indexes /path/to/indexes/indexes-121.json \
     121 \
     real-world-121-model \
@@ -241,7 +240,7 @@ vulchecker train \
 ```
 
 but there are many options controlling the hyperparameters.
-Run `vulchecker train --help` to see the available options.
+Run `hector train --help` to see the available options.
 
 The model is writetn into the directory `real-world-121-model` in this example.
 This directory can exist, but, if it does, it must be empty.
@@ -255,7 +254,7 @@ The `stats` subcommand computes basic statistics about the test set,
 and writes more detailed information to disk.
 
 ```bash
-vulchecker stats \
+hector stats \
     --predictions-csv predictions-121.csv \
     --dump stats-121.npz \
     --roc-file roc-121.png \
@@ -268,7 +267,7 @@ vulchecker stats \
 Again, from the working directory of a project:
 
 ```bash
-vulchecker lint \
+hector lint \
     --llap-lib-dir /path/to/llap/lib \
     . \
     foo \
@@ -283,7 +282,7 @@ You can send the output to a file by passing `--output path/to/file`.
 
 # Developer Quickstart
 
-vulchecker depends on [NetworKit](https://networkit.github.io/),
+hector_ml depends on [NetworKit](https://networkit.github.io/),
 which uses Cython but doesn't declare that according to PEP 518.
 You must have Cython installed before attempting to resolve the NetworKit dependency.
 We can work around this by pre-building wheels and
@@ -303,7 +302,7 @@ export PIP_FIND_LINKS="$PWD/wheelhouse"
 ```
 
 You will also need to add a wheel for
-[`structure2vec`](https://github.gatech.edu/vulchecker/structure2vec)
+[`structure2vec`](https://github.gatech.edu/HECTOR/structure2vec)
 to the `wheelhouse` directory.
 Don't forget to set `PIP_FIND_LINKS` each time you start a new shell.
 
@@ -330,7 +329,7 @@ tox
 
 # Performance Critical Code (Cython)
 
-vulchecker uses [Cython](https://cython.org/) for performance-critical functions.
+hector_ml uses [Cython](https://cython.org/) for performance-critical functions.
 The Cython files are named `_foo.pyx`,
 and should be imported in the corresponding `foo.py` file.
 It's also OK to `cimport` the Cython objects from other Cython source files.
@@ -362,12 +361,12 @@ becomes an indirect function call at the C level.
 | Basic Function | `function` | | name of function defined in other compilation unit |
 | Output dtype | `dtype` | LLAP | |
 | Part of "if" clause | `condition` | LLAP | |
-| Number of data dependents | `def_use_out_degree` | vulchecker ML | |
-| Number of control dependents | `control_flow_out_degree` | vulchecker ML | |
-| Betweenness | `betweenness` | vulchecker ML | |
-| Distance to manifestation point | `distance_manifestation` | vulchecker ML | |
-| Distances to nearest root cause point | `distance_root_cause` | vulchecker ML | |
-| Operation of nearest root cause point | `nearest_root_cause_op` | vulchecker ML | `call` or plurality or uniform random |
+| Number of data dependents | `def_use_out_degree` | HECTOR ML | |
+| Number of control dependents | `control_flow_out_degree` | HECTOR ML | |
+| Betweenness | `betweenness` | HECTOR ML | |
+| Distance to manifestation point | `distance_manifestation` | HECTOR ML | |
+| Distances to nearest root cause point | `distance_root_cause` | HECTOR ML | |
+| Operation of nearest root cause point | `nearest_root_cause_op` | HECTOR ML | `call` or plurality or uniform random |
 | Node tag | `tag` | LLAP | list-set of {`root_cause`, `manifestation`} |
 
 ## Node Metadata

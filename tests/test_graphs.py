@@ -12,14 +12,14 @@ from hypothesis import given
 from hypothesis import strategies as S
 from hypothesis_networkx import graph_builder
 
-from vulchecker.features import (
+from hector_ml.features import (
     EDGE_FEATURES,
     Feature,
     FeatureKind,
     feature_set,
     node_features,
 )
-from vulchecker.graphs import (
+from hector_ml.graphs import (
     GraphDataset,
     bfs_with_depth,
     mean_field_from_graph,

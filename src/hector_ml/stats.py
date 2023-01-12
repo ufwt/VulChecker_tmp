@@ -13,9 +13,9 @@ from more_itertools import ilen
 from sklearn import metrics
 from structure2vec.graph_collate import graph_collate
 
-from vulchecker.click_helpers import smart_open
-from vulchecker.graphs import GraphDataset, JSONGraphs, sink_graph_infos
-from vulchecker.model import Predictor
+from hector_ml.click_helpers import smart_open
+from hector_ml.graphs import GraphDataset, JSONGraphs, sink_graph_infos
+from hector_ml.model import Predictor
 
 
 def get_source_line(root, filename, line):
@@ -172,7 +172,7 @@ def main(
                 plt.ylim([0.0, 1.05])
                 plt.xlabel("False positive rate")
                 plt.ylabel("True positive rate")
-                plt.title(f"vulchecker - CWE{predictor.cwe} (AUC = {auc:.3})")
+                plt.title(f"HECTOR - CWE{predictor.cwe} (AUC = {auc:.3})")
                 plt.savefig(roc_file)
 
             print("Decision threshold:", thresh[decision_index])
